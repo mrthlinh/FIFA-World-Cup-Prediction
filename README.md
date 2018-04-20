@@ -5,12 +5,12 @@ Prediction the winner of FIFA world cup 2018 based on match history.
 2. https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data
 
 ### Feature List
-Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
+
+| Feature Name  | Description | Source | Status |
+|:-------------:|:-------------:|:-----:|----:|
+| Team 1      | Nation Code (e.g US, NZ) | 1 |[x]|
+| Team 2     | Nation Code  (e.g US, NZ) | 1 |[x]|
 | zebra stripes | are neat      |    $1 |
 
 ### Model:
