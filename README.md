@@ -53,7 +53,13 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 - Test set : EURO 2016 and World Cup 2014
 
 ### Exploratory Data
-Some image and observations
+Some image and observations. Some question for EDA
+- Is there any difference between "form" of winning team and lose team
+- How many time a bad-form team won a good-form team?
+- What is a good-form / bad-form team?
+- Is playing as "Home Team" better than playing as "Away Team"?
+- Is ratio-odd usually right? How much are they likely to be correct?
+
 # Model
 Model I used and evaluation criteria
 ### Machine learning models
