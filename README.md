@@ -53,18 +53,27 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 - Test set : EURO 2016 and World Cup 2014
 
 ### Exploratory Data
-Some image and observations. Some question for EDA
 
 - Is playing as "Home Team" better than playing as "Away Team"?
-![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
+    I investigate the how frequent a home-team wins a match. Clearly, home-team plays a key role for a win.
 
+    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/home_team.png)
 
-- Is there any difference between "form" of winning team and lose team
+- Does head-to-head matchup history affact the current match?
+
+    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/win_diff.png)
+
+- Is there any difference between "form" of winning team and lose team?
+
+    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/recent_form.png)
+
 - How many time a bad-form team won a good-form team?
 - What is a good-form / bad-form team?
-- Is playing as "Home Team" better than playing as "Away Team"?
+
 - Is ratio-odd usually right? How much are they likely to be correct?
+
+    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/avg_odd_win.png)
 
 # Model
 Model I used and evaluation criteria
