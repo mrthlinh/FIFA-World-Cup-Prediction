@@ -23,6 +23,8 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 5. [Player Rating Through time](https://www.futhead.com/10/players/?page=2)
 6. [Squad for each tournament](https://github.com/openfootball/world-cup)
 
+[Source 4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+
 ### Feature List
 
 | Feature Name  | Group | Description              | Source | Status |
@@ -53,30 +55,55 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 - Test set : EURO 2016 and World Cup 2014
 
 ### Exploratory Data
+There are few questions in order to understand data better
 
-- Is playing as "Home Team" better than playing as "Away Team"?
+1. Is playing as "Home Team" better than playing as "Away Team"?
 
-    I investigate the how frequent a home-team wins a match. Clearly, home-team plays a key role for a win.
+   To answer this question, we investigate the how frequent a home-team wins a match.
+   According to the bar graph, home teams are more likely, twice exactly, to win the game.
 
     ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/home_team.png)
 
-- Does head-to-head matchup history affact the current match?
+2. Does head-to-head matchup history affect the current match?
 
+    Now we compare the difference between "win difference" of winner / loser and draw-er
+    "Win difference" is defined as number of wins of team A - number of wins of team B
     ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/win_diff.png)
 
-- Is there any difference between "form" of winning team and lose team?
+    Perform to t-test with hypothesis "mean of win difference between winner and loser are the same"
+    ```python
+    Ttest_indResult(statistic=35.432781367462361, pvalue=5.3865361955241691e-266)
+    ```
+    Very small of p-value means we can reject the hypothesis. Therefore, we can say __history of head-to-head matches of two
+    teams contribute significantly to the result__
+
+3. Is there any difference between "form" of winning team and lose team?
+    We compare the difference between goals / goals conceded / number of wins / number of draws of winner, loser or draw-er.
 
     ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/recent_form.png)
 
+    As you can see, while goals, goals conceded and number of draw show no significant difference, number of wins tell us more about who is more likely to win.
+    t-test also confirms our assumption
+    ```python
+    Ttest_indResult(statistic=29.488698758378064, pvalue=9.6646508941629036e-187)
+    ```
 - How many time a bad-form team won a good-form team?
 - What is a good-form / bad-form team?
 
-- Is ratio-odd usually right? How much are they likely to be correct?
+4. Is ratio-odd usually right? How much are they likely to be correct?
+    For this question, we use the average odd getting from [Bet Odd][Source 4] before matches.
 
     ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/avg_odd_win.png)
 
+
+    ```python
+    Ttest_indResult(statistic=-43.22461132125629, pvalue=0.0)
+    ```
+
+    We can say that we can reply on bet odd to predict the match results.
+
 # Model
-Model I used and evaluation criteria
+Model we used and evaluation criteria
 ### Machine learning models
 - Logistic Regression
 - SVM with Gaussian Kernel
@@ -103,10 +130,9 @@ __Ongoing__
 - [ ] Build a web crawler for Ranking over time
 - [ ] A table of title won for each team
 - [ ] Integrate player rating and squad value to data
-- [ ] Simple EDA and a small story
 
 __Complete__
 - [x] Add features group 2
-
+- [x] Simple EDA and a small story
 
 
