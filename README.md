@@ -23,8 +23,13 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 5. [Player Rating Through time](https://www.futhead.com/10/players/?page=2)
 6. [Squad for each tournament](https://github.com/openfootball/world-cup)
 
-[Source 4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
 
+[1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
+[2]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+[3]: http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html
+[4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+[5]: https://www.futhead.com/10/players/?page=2
+[6]: https://github.com/openfootball/world-cup
 ### Feature List
 
 | Feature Name  | Group | Description              | Source | Status |
@@ -48,11 +53,9 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 | f_draw_2      |   2   |#Draw of T2 in 10 recent matches     |2|Done|
 |ratio_odds     |   3   |average of bet odd t1 / t2           |4||
 |avg_odds_draw  |   3   |average of bet odd of draw           |4||
+|top_200        |   4   |number of players in top 200         |5||
 
 
-### Train-Test
-- Train set: International matches from 2000 - 2017 (exclude EURO 2016 and World Cup 2014)
-- Test set : EURO 2016 and World Cup 2014
 
 ### Exploratory Data
 There are few questions in order to understand data better
@@ -91,7 +94,7 @@ There are few questions in order to understand data better
 - What is a good-form / bad-form team?
 
 4. Is ratio-odd usually right? How much are they likely to be correct?
-    For this question, we use the average odd getting from [Bet Odd][Source 4] before matches.
+    For this question, we use the average odd getting from [Bet Odd][2] before matches.
 
     ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/avg_odd_win.png)
 
@@ -103,6 +106,7 @@ There are few questions in order to understand data better
     We can say that we can reply on bet odd to predict the match results.
 
 # Model
+
 Model we used and evaluation criteria
 ### Machine learning models
 - Logistic Regression
@@ -112,7 +116,14 @@ Model we used and evaluation criteria
 - Random Forest
 - Deep Learning
 
+### Train-Test
+- Train set:
+- Test set :
+
 ### Evaluation Criteria
+- Precision
+- Recall
+- F1
 
 # Results
 
@@ -130,6 +141,7 @@ __Ongoing__
 - [ ] Build a web crawler for Ranking over time
 - [ ] A table of title won for each team
 - [ ] Integrate player rating and squad value to data
+- [ ] Prepare framework for running classifiers
 
 __Complete__
 - [x] Add features group 2
