@@ -54,6 +54,12 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 
 ### Exploratory Data
 Some image and observations. Some question for EDA
+
+- Is playing as "Home Team" better than playing as "Away Team"?
+![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+
+
 - Is there any difference between "form" of winning team and lose team
 - How many time a bad-form team won a good-form team?
 - What is a good-form / bad-form team?
