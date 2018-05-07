@@ -10,7 +10,7 @@ __Feature Selection__: To determine who will more likely to win a match, based o
 4. squad value or how many players are in top 200 (from video game)
 Feature list reflects those factors. 
 
-__Superviser__: Pratibha Rathore
+__Supervisor__: Pratibha Rathore
 
 __Lifecycle__
 
