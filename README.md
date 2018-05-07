@@ -10,8 +10,11 @@ __Feature Selection__: To determine who will more likely to win a match, based o
 4. squad value or how many players are in top 200 (from video game)
 Feature list reflects those factors. 
 
+__Superviser__: Pratibha Rathore
+
 __Lifecycle__
-Some images here
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
 
 # Data
 ### Data Source
@@ -51,7 +54,8 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 | f_win_2       |   2   |#Win of T2 in 10 recent matches     |2|Done|
 | f_draw_1      |   2   |#Draw of T1 in 10 recent matches     |2|Done|
 | f_draw_2      |   2   |#Draw of T2 in 10 recent matches     |2|Done|
-|ratio_odds     |   3   |average of bet odd t1 / t2           |4||
+|avg_odds_win_1 |   3   |average of bet odd for team 1        |4||
+|avg_odds_win_2 |   3   |average of bet odd for team 2        |4||
 |avg_odds_draw  |   3   |average of bet odd of draw           |4||
 |top_200        |   4   |number of players in top 200         |5||
 
@@ -118,7 +122,7 @@ Model we used and evaluation criteria
 
 ### Train-Test
 - Train set:
-- Test set :
+- Test set : EURO 2016
 
 ### Evaluation Criteria
 - Precision
@@ -135,7 +139,6 @@ __Ongoing__
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
-- [ ] Add features group 3
 - [ ] Add features group 4
 - [ ] Build a data without player rating and squad value
 - [ ] Build a web crawler for Ranking over time
@@ -145,6 +148,7 @@ __Ongoing__
 
 __Complete__
 - [x] Add features group 2
+- [x] Add features group 3
 - [x] Simple EDA and a small story
 
 
