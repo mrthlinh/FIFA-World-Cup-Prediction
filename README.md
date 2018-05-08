@@ -44,8 +44,8 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 | tournament    |   N/A |Friendly,EURO, AFC, FIFA WC   |   2    |Done|
 | h_win_diff    |   1   |#Win T1 - T2         |   2    |Done|
 | h_draw        |   1   |#Draw                |   2    |Done|
-| rank_diff     |   1   |#Rank T1 - T2                 |   3    |Crawler|
-| title_diff    |   1   |#Title won T1 - T2            |   3    |Crawler|
+| rank_diff     |   1   |#Rank T1 - T2                 |   3    ||
+| title_diff    |   1   |#Title won T1 - T2            |   3    ||
 | f_goalF_1     |   2   |#Goal of T1 in 10 recent matches    |2|Done|
 | f_goalF_2     |   2   |#Goal of T2 in 10 recent matches    |2|Done|
 | f_goalA_1     |   2   |#Goal conceded of T1 in 10 recent matches    |2|Done|
@@ -54,9 +54,9 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 | f_win_2       |   2   |#Win of T2 in 10 recent matches     |2|Done|
 | f_draw_1      |   2   |#Draw of T1 in 10 recent matches     |2|Done|
 | f_draw_2      |   2   |#Draw of T2 in 10 recent matches     |2|Done|
-|avg_odds_win_1 |   3   |average of bet odd for team 1        |4||
-|avg_odds_win_2 |   3   |average of bet odd for team 2        |4||
-|avg_odds_draw  |   3   |average of bet odd of draw           |4||
+|avg_odds_win_1 |   3   |average of bet odd for team 1        |4|Done|
+|avg_odds_win_2 |   3   |average of bet odd for team 2        |4|Done|
+|avg_odds_draw  |   3   |average of bet odd of draw           |4|Done|
 |top_200        |   4   |number of players in top 200         |5||
 
 
