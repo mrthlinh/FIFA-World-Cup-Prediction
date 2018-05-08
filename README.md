@@ -113,12 +113,12 @@ There are few questions in order to understand data better
 
 Model we used and evaluation criteria
 ### Machine learning models
-- Logistic Regression
-- SVM with Gaussian Kernel
-- Naive Bayes
-- Decision Tree
-- Random Forest
-- Deep Learning
+1. Logistic Regression
+2. SVM with Gaussian Kernel
+3. Naive Bayes
+4. Decision Tree
+5. Random Forest
+6. Deep Learning
 
 ### Train-Test
 - Train set:
@@ -128,6 +128,8 @@ Model we used and evaluation criteria
 - Precision
 - Recall
 - F1
+- accuracy
+- ROC curve
 
 # Results
 
@@ -145,14 +147,18 @@ __Ongoing__
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
-- [ ] Add features group 4
+- [ ] Prepare framework for running classifiers
+- [ ] Add evaluation metrics and plot
+  - [ ] Add accuracy, precision, recall, F1
+  - [ ] Add ROC curves
+- [ ] Migrate code of pre-processing plot function to python file with Spyder
 - [ ] Build a data without player rating and squad value
 - [ ] Build a web crawler for Ranking over time
 - [ ] A table of title won for each team
 - [ ] Integrate player rating and squad value to data
-- [ ] Prepare framework for running classifiers
 
 __Complete__
 - [x] Add features group 2
 - [x] Add features group 3
 - [x] Simple EDA and a small story
+- [x] Add features group 4
