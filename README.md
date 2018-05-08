@@ -1,14 +1,14 @@
 # Project Description
-__Objective__: Prediction of the winner of FIFA world cup 2018. Prediction results are  Win / Lose / Draw 
+__Objective__: Prediction of the winner of FIFA world cup 2018. Prediction results are  Win / Lose / Draw
 
 __Data__: Data are assembled from multiple sources, most of them are frome Kaggle, others come from FIFA website / EA games and I need to build a data crawler.
- 
+
 __Feature Selection__: To determine who will more likely to win a match, based on my knowledge, I come up with 4 main groups of features as follows:
 1. head-to-head match history
 2. recent performance of each team (10 recent matches), aka "form"
 3. bet-ratio before matches
 4. squad value or how many players are in top 200 (from video game)
-Feature list reflects those factors. 
+Feature list reflects those factors.
 
 __Supervisor__: Pratibha Rathore
 
@@ -133,7 +133,13 @@ Model we used and evaluation criteria
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
-2. [t-test](https://en.wikipedia.org/wiki/Student%27s_t-test)
+2. [t-test definition](https://en.wikipedia.org/wiki/Student%27s_t-test)
+3. [Confusion Matrix Multi-Label example](http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py)
+4. [Precision-Recall Multi-Label example](http://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#in-multi-label-settings)
+5. [ROC curve example](http://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html#sphx-glr-auto-examples-model-selection-plot-roc-py)
+6. [Model evaluation](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics)
+7. [Tuning the hyper-parameters of an estimator](http://scikit-learn.org/stable/modules/grid_search.html)
+8. [Validation curves](http://scikit-learn.org/stable/modules/learning_curve.html)
 # Task List
 __Ongoing__
 - [ ] Add feature group 1
@@ -150,5 +156,3 @@ __Complete__
 - [x] Add features group 2
 - [x] Add features group 3
 - [x] Simple EDA and a small story
-
-
