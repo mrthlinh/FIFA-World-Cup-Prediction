@@ -133,7 +133,7 @@ Model we used and evaluation criteria
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
-
+2. [t-test](https://en.wikipedia.org/wiki/Student%27s_t-test)
 # Task List
 __Ongoing__
 - [ ] Add feature group 1
