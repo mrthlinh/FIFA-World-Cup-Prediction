@@ -124,13 +124,14 @@ Model we used and evaluation criteria
   ```
 
 | Confusion matrix  | ROC curve |
-|:-----------------:|:---------:|
-| ![](cm_lr)         |   N/A |
+|:------------------------------:|:---------:|
+| ![alt text][pic3]         |   N/A |
 
   - Confusion matrix, table and plot
 
 
-[cm_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png
+[pic3]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png
+
   - ROC curve and Area Under Curve
 
   ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_lr.png)  
