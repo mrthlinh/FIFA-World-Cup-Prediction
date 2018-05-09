@@ -8,3 +8,4 @@
 .spyproject/workspace.ini
 __pycache__/result_plot.cpython-35.pyc
 __pycache__/test_LE.cpython-35.pyc
+*.pyc
