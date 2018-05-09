@@ -126,6 +126,7 @@ Model we used and evaluation criteria
 
   ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png)  
   - ROC curve and Area Under Curve
+
   ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_lr.png)  
 
 2. SVM with Gaussian Kernel
