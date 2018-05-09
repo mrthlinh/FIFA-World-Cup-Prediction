@@ -114,7 +114,8 @@ There are few questions in order to understand data better
 Model we used and evaluation criteria
 ### Machine learning models
 1. Logistic Regression
-  - Best parameters:
+
+  Best parameters:
   ```python
   LogisticRegression(C=0.00046415888336127773, class_weight=None, dual=False,
           fit_intercept=True, intercept_scaling=1, max_iter=100,
@@ -123,18 +124,12 @@ Model we used and evaluation criteria
           warm_start=False)
   ```
 
-| Confusion matrix  | ROC curve |
-|:------------------------------:|:---------:|
-| ![alt text][pic3]         |   N/A |
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_lr]    | ![alt text][roc_lr]  |
 
-  - Confusion matrix, table and plot
-
-
-[pic3]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png
-
-  - ROC curve and Area Under Curve
-
-  ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_lr.png)  
+[cm_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png
+[roc_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_lr.png
 
 2. SVM with Gaussian Kernel
 3. Naive Bayes
