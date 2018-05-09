@@ -48,9 +48,10 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     
-def plot_ROC_curve(y_test,y_score):
+def plot_ROC_curve(y_test,y_score,title,class_names):
     
     # Binarize the output
+#    y = label_binarize(y_test, classes=[0, 1, 2])
     y = label_binarize(y_test, classes=[0, 1, 2])
     n_classes = y.shape[1]
     
@@ -96,16 +97,21 @@ def plot_ROC_curve(y_test,y_score):
              color='navy', linestyle=':', linewidth=4)
     
     colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
+
+#    for i, color in zip(class_names, colors):
+#        plt.plot(fpr[i], tpr[i], color=color, lw=lw,
+#                 label='ROC curve of class {0} (area = {1:0.2f})'
+#                 ''.format(i, roc_auc[i]))
     for i, color in zip(range(n_classes), colors):
         plt.plot(fpr[i], tpr[i], color=color, lw=lw,
-                 label='ROC curve of class {0} (area = {1:0.2f})'
-                 ''.format(i, roc_auc[i]))
+                 label='ROC curve of class "{0}" (area = {1:0.2f})'
+                 ''.format(class_names[i], roc_auc[i]))
     
     plt.plot([0, 1], [0, 1], 'k--', lw=lw)
     plt.xlim([0.0, 1.0])
     plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Some extension of Receiver operating characteristic to multi-class')
+    plt.title(title)
     plt.legend(loc="lower right")
     plt.show()
