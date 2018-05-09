@@ -122,9 +122,15 @@ Model we used and evaluation criteria
           random_state=None, solver='lbfgs', tol=0.0001, verbose=0,
           warm_start=False)
   ```
+
+| Confusion matrix  | ROC curve |
+|:-----------------:|:---------:|
+| ![](cm_lr)         |   N/A |
+
   - Confusion matrix, table and plot
 
-  ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png)  
+
+[cm_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png
   - ROC curve and Area Under Curve
 
   ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_lr.png)  
