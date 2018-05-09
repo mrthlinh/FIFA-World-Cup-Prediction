@@ -162,4 +162,6 @@ __Complete__
 - [x] Add evaluation metrics and plot
   - [x] Add accuracy, precision, recall, F1
   - [x] Add ROC curves
-Last Modified on <script type="text/javascript">document.write(document.lastModified)
+
+
+Last modification: {{ file.mtime }}
