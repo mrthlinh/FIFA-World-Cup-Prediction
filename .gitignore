@@ -2,3 +2,9 @@
 .ipynb_checkpoints/pre_processingData-checkpoint.ipynb
 .ipynb_checkpoints/EDA-checkpoint.ipynb
 .ipynb_checkpoints/Model-checkpoint.ipynb
+.spyproject/codestyle.ini
+.spyproject/encoding.ini
+.spyproject/vcs.ini
+.spyproject/workspace.ini
+__pycache__/result_plot.cpython-35.pyc
+__pycache__/test_LE.cpython-35.pyc
