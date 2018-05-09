@@ -131,11 +131,178 @@ Model we used and evaluation criteria
 [cm_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png
 [roc_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_lr.png
 
-2. SVM with Gaussian Kernel
-3. Naive Bayes
-4. Decision Tree
-5. Random Forest
-6. Deep Learning
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.25    |   0.01 |   0.01   |
+| Win   |   0.60    |   0.85 |   0.70   |
+| Lose  |   0.61    |   0.74 |   0.66   |
+| avg / total |   0.51  |    0.60   |   0.52   |
+
+
+2. SVM
+
+Best parameters:
+```python
+SVC(C=0.001, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='linear',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_SVM]    | ![alt text][roc_SVM]  |
+
+[cm_SVM]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_svm.png
+[roc_SVM]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_svm.png
+
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.25    |   0.01 |   0.01   |
+| Win   |   0.60    |   0.85 |   0.70   |
+| Lose  |   0.61    |   0.74 |   0.66   |
+| avg / total |   0.51  |    0.60   |   0.52   |
+
+3. Decision Tree
+
+Best parameters:
+```python
+
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_dt]    | ![alt text][roc_dt]  |
+
+[cm_dt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_dt.png
+[roc_dt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_dt.png
+
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.25    |   0.01 |   0.01   |
+| Win   |   0.60    |   0.85 |   0.70   |
+| Lose  |   0.61    |   0.74 |   0.66   |
+| avg / total |   0.51  |    0.60   |   0.52   |
+
+4. Random Forest
+
+Current parameters:
+```python
+RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=2000, n_jobs=-1,
+            oob_score=False, random_state=0, verbose=True,
+            warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_rf]    | N/A  |
+
+[cm_rf]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_rf.png
+
+
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.35    |  0.10  |   0.16   |
+| Win   |   0.61    |  0.79  |    0.69  |
+| Lose  |   0.61    |  0.71  |    0.66   |
+| avg / total |    0.54   |   0.59   |   0.54   |
+
+5. Gradient Boosting tree
+
+Current parameters:
+```python
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=7,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=1000,
+              presort='auto', random_state=0, subsample=1.0, verbose=True,
+              warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_gbt]    | ![alt text][roc_gbt]  |
+
+[cm_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_gbt.png
+[roc_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_gbt.png
+
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.30    |  0.17  |    0.21    |
+| Win   |   0.59    |  0.71  |    0.64  |
+| Lose  |   0.61    |  0.66  |    0.64   |
+| avg / total |   0.52  |    0.56   |   0.53   |
+
+
+5. ADA boost tree
+
+Best parameters:
+```python
+
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_ada]    | ![alt text][roc_ada]  |
+
+[cm_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_ada.png
+[roc_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_ada.png
+
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.25    |   0.01 |   0.01   |
+| Win   |   0.60    |   0.85 |   0.70   |
+| Lose  |   0.61    |   0.74 |   0.66   |
+| avg / total |   0.51  |    0.60   |   0.52   |
+
+
+6. Naive Bayes
+
+Best parameters:
+```python
+
+```
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_nb]    | ![alt text][roc_nb]  |
+
+[cm_nb]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_nb.png
+[roc_nb]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_nb.png
+
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.25    |   0.01 |   0.01   |
+| Win   |   0.60    |   0.85 |   0.70   |
+| Lose  |   0.61    |   0.74 |   0.66   |
+| avg / total |   0.51  |    0.60   |   0.52   |
+
+7. Neural Net
+
+Best parameters:
+```python
+
+```
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_nn]    | ![alt text][roc_nn]  |
+
+[cm_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_nn.png
+[roc_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_nn.png
+
+| Label | Precision | Recall | F1-score |
+|:-----:|:---------:|:------:|:--------:|
+| Draw  |   0.25    |   0.01 |   0.01   |
+| Win   |   0.60    |   0.85 |   0.70   |
+| Lose  |   0.61    |   0.74 |   0.66   |
+| avg / total |   0.51  |    0.60   |   0.52   |
+
+
 
 ### Train-Test
 - Train set:
