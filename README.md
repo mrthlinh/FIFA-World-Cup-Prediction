@@ -1,7 +1,7 @@
 # Project Description
 __Objective__: Prediction of the winner of FIFA world cup 2018. Prediction results are  Win / Lose / Draw
 
-__Data__: Data are assembled from multiple sources, most of them are frome Kaggle, others come from FIFA website / EA games and I need to build a data crawler.
+__Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games and I need to build a data crawler.
 
 __Feature Selection__: To determine who will more likely to win a match, based on my knowledge, I come up with 4 main groups of features as follows:
 1. head-to-head match history
@@ -147,10 +147,6 @@ __Ongoing__
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
-- [ ] Prepare framework for running classifiers
-- [ ] Add evaluation metrics and plot
-  - [ ] Add accuracy, precision, recall, F1
-  - [ ] Add ROC curves
 - [ ] Migrate code of pre-processing plot function to python file with Spyder
 - [ ] Build a data without player rating and squad value
 - [ ] Build a web crawler for Ranking over time
@@ -162,3 +158,8 @@ __Complete__
 - [x] Add features group 3
 - [x] Simple EDA and a small story
 - [x] Add features group 4
+- [x] Prepare framework for running classifiers
+- [x] Add evaluation metrics and plot
+  - [x] Add accuracy, precision, recall, F1
+  - [x] Add ROC curves
+Last Modified on <script type="text/javascript">document.write(document.lastModified)
