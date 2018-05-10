@@ -109,10 +109,25 @@ There are few questions in order to understand data better
 
     We can say that we can reply on bet odd to predict the match results.
 
-# Model
+# Model Training and Evaluation
+### Train-Test ratio
+We split data into 70:30
+### Model
+1. Logistic Regression
+2. SVM
+3. Random Random Forest
+4. Gradient Boosting Tree
+5. ADA Boost Tree
+6. Neural Network
 
-Model we used and evaluation criteria
-### Machine learning models
+### Evaluation Criteria
+- Precision
+- Recall
+- F1
+- Accuracy
+- ROC curve
+
+### Preliminary Result
 1. Logistic Regression
 
   Best parameters:
@@ -138,12 +153,14 @@ Model we used and evaluation criteria
 | Lose  |   0.61    |   0.74 |   0.66   |
 | avg / total |   0.51  |    0.60   |   0.52   |
 
+Total accuracy = 0.5987224157955865
 
 2. SVM
 
 Best parameters:
 ```python
-SVC(C=0.001, cache_size=200, class_weight=None, coef0=0.0,
+grid_SVM = [{'kernel': ['rbf','linear'], 'C': np.logspace(-6, 0, 3)}]
+SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
   decision_function_shape='ovr', degree=3, gamma='auto', kernel='linear',
   max_iter=-1, probability=False, random_state=None, shrinking=True,
   tol=0.001, verbose=False)
@@ -158,33 +175,14 @@ SVC(C=0.001, cache_size=200, class_weight=None, coef0=0.0,
 
 | Label | Precision | Recall | F1-score |
 |:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.25    |   0.01 |   0.01   |
-| Win   |   0.60    |   0.85 |   0.70   |
-| Lose  |   0.61    |   0.74 |   0.66   |
-| avg / total |   0.51  |    0.60   |   0.52   |
+| Draw  |   0.00    |   0.00 |   0.00   |
+| Win   |   0.60    |  0.82  |    0.69   |
+| Lose  |    0.59   |   0.75 |     0.66 |
+| avg / total |   0.44  |    0.59  |    0.51    |
 
-3. Decision Tree
+Total Accuracy = 0.591753774680604
 
-Best parameters:
-```python
-
-```
-
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_dt]    | ![alt text][roc_dt]  |
-
-[cm_dt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_dt.png
-[roc_dt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_dt.png
-
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.25    |   0.01 |   0.01   |
-| Win   |   0.60    |   0.85 |   0.70   |
-| Lose  |   0.61    |   0.74 |   0.66   |
-| avg / total |   0.51  |    0.60   |   0.52   |
-
-4. Random Forest
+3. Random Forest
 
 Current parameters:
 ```python
@@ -206,21 +204,24 @@ RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
 
 | Label | Precision | Recall | F1-score |
 |:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.35    |  0.10  |   0.16   |
-| Win   |   0.61    |  0.79  |    0.69  |
-| Lose  |   0.61    |  0.71  |    0.66   |
-| avg / total |    0.54   |   0.59   |   0.54   |
+| Draw  |   0.37    |  0.08  |    0.14   |
+| Win   |   0.60    |  0.80  |    0.68  |
+| Lose  |   0.61    |  0.71  |    0.66    |
+| avg / total |    0.55  |    0.59  |    0.54    |
 
-5. Gradient Boosting tree
+Total accuracy = 0.5894308943089431
 
-Current parameters:
+4. Gradient Boosting tree
+
+Best parameters:
 ```python
+grid_GBT = [{'max_depth': [3,5,7], 'n_estimators': [100,1000,2000]}]
 GradientBoostingClassifier(criterion='friedman_mse', init=None,
-              learning_rate=0.1, loss='deviance', max_depth=7,
+              learning_rate=0.1, loss='deviance', max_depth=3,
               max_features=None, max_leaf_nodes=None,
               min_impurity_decrease=0.0, min_impurity_split=None,
               min_samples_leaf=1, min_samples_split=2,
-              min_weight_fraction_leaf=0.0, n_estimators=1000,
+              min_weight_fraction_leaf=0.0, n_estimators=100,
               presort='auto', random_state=0, subsample=1.0, verbose=True,
               warm_start=False)
 ```
@@ -234,88 +235,68 @@ GradientBoostingClassifier(criterion='friedman_mse', init=None,
 
 | Label | Precision | Recall | F1-score |
 |:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.30    |  0.17  |    0.21    |
-| Win   |   0.59    |  0.71  |    0.64  |
-| Lose  |   0.61    |  0.66  |    0.64   |
-| avg / total |   0.52  |    0.56   |   0.53   |
+| Draw  |   0.39    |  0.11  |    0.18    |
+| Win   |    0.61   |   0.80 |     0.69   |
+| Lose  |  0.61     | 0.71   |   0.66    |
+| avg / total |   0.56   |   0.60  |    0.55   |
 
+Total accuracy = 0.5958188153310104
 
 5. ADA boost tree
 
 Best parameters:
 ```python
-
+grid_ADA = [{'base_estimator': [DT_3,DT_5], 'n_estimators': [100,1000,2000,3000]}]
+AdaBoostClassifier(algorithm='SAMME',
+          base_estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=3,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
+            splitter='best'),
+          learning_rate=1, n_estimators=100, random_state=None)
 ```
 
 | Confusion matrix      |       ROC curve      |
 |:---------------------:|:--------------------:|
-| ![alt text][cm_ada]    | ![alt text][roc_ada]  |
+| ![alt text][cm_ada]    | ![alt text][roc_ada]    |
 
 [cm_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_ada.png
 [roc_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_ada.png
 
 | Label | Precision | Recall | F1-score |
 |:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.25    |   0.01 |   0.01   |
-| Win   |   0.60    |   0.85 |   0.70   |
-| Lose  |   0.61    |   0.74 |   0.66   |
-| avg / total |   0.51  |    0.60   |   0.52   |
+| Draw  |  0.32     | 0.15   |   0.20   |
+| Win   |   0.60    |  0.75  |    0.67  |
+| Lose  |   0.60    |  0.66  |    0.63    |
+| avg / total |   0.53  |    0.57  |    0.54    |
 
+Total accuracy = 0.6027874564459931
 
-6. Naive Bayes
-
-Best parameters:
-```python
-
-```
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_nb]    | ![alt text][roc_nb]  |
-
-[cm_nb]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_nb.png
-[roc_nb]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_nb.png
-
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.25    |   0.01 |   0.01   |
-| Win   |   0.60    |   0.85 |   0.70   |
-| Lose  |   0.61    |   0.74 |   0.66   |
-| avg / total |   0.51  |    0.60   |   0.52   |
-
-7. Neural Net
+6. Neural Net
 
 Best parameters:
 ```python
-
+MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
+                    solver='adam', verbose=True, tol=1e-10, random_state=1, learning_rate_init=.1)
 ```
 | Confusion matrix      |       ROC curve      |
 |:---------------------:|:--------------------:|
-| ![alt text][cm_nn]    | ![alt text][roc_nn]  |
+| ![alt text][cm_nn]    | N/A  |
 
 [cm_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_nn.png
-[roc_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_nn.png
+
 
 | Label | Precision | Recall | F1-score |
 |:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.25    |   0.01 |   0.01   |
-| Win   |   0.60    |   0.85 |   0.70   |
-| Lose  |   0.61    |   0.74 |   0.66   |
-| avg / total |   0.51  |    0.60   |   0.52   |
+| Draw  |   0.00    |   0.00 |   0.00   |
+| Win   |   0.62    |  0.82  |    0.71  |
+| Lose  |   0.59    |  0.80  |    0.68   |
+| avg / total |   0.46   |   0.61  |    0.52  |
 
 
+Total accuracy = 0.60801393728223
 
-### Train-Test
-- Train set:
-- Test set : EURO 2016
-
-### Evaluation Criteria
-- Precision
-- Recall
-- F1
-- accuracy
-- ROC curve
-
-# Results
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
