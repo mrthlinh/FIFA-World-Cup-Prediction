@@ -153,7 +153,7 @@ We split data into 70:30
 | Lose  |   0.61    |   0.74 |   0.66   |
 | avg / total |   0.51  |    0.60   |   0.52   |
 
-Total accuracy = 0.5987224157955865
+Test accuracy = 0.5987224157955865
 
 2. SVM
 
@@ -180,7 +180,7 @@ SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
 | Lose  |    0.59   |   0.75 |     0.66 |
 | avg / total |   0.44  |    0.59  |    0.51    |
 
-Total Accuracy = 0.591753774680604
+Test Accuracy = 0.591753774680604
 
 3. Random Forest
 
@@ -209,7 +209,7 @@ RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
 | Lose  |   0.61    |  0.71  |    0.66    |
 | avg / total |    0.55  |    0.59  |    0.54    |
 
-Total accuracy = 0.5894308943089431
+Test accuracy = 0.5894308943089431
 
 4. Gradient Boosting tree
 
@@ -240,7 +240,7 @@ GradientBoostingClassifier(criterion='friedman_mse', init=None,
 | Lose  |  0.61     | 0.71   |   0.66    |
 | avg / total |   0.56   |   0.60  |    0.55   |
 
-Total accuracy = 0.5958188153310104
+Test accuracy = 0.5958188153310104
 
 5. ADA boost tree
 
@@ -271,7 +271,7 @@ AdaBoostClassifier(algorithm='SAMME',
 | Lose  |   0.60    |  0.66  |    0.63    |
 | avg / total |   0.53  |    0.57  |    0.54    |
 
-Total accuracy = 0.6027874564459931
+Test accuracy = 0.6027874564459931
 
 6. Neural Net
 
@@ -295,7 +295,7 @@ MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
 | avg / total |   0.46   |   0.61  |    0.52  |
 
 
-Total accuracy = 0.60801393728223
+Test accuracy = 0.60801393728223
 
 
 # Reference
