@@ -24,7 +24,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import tree
 from sklearn.model_selection import GridSearchCV
-
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, confusion_matrix
 
 # User Define Class
@@ -54,7 +54,6 @@ data_test[data_test.columns[:-1]] = MinMaxScaler().fit_transform(data_test[data_
 data = data_test.copy()
 
 
-
 # Split data training and testing
 x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
 
@@ -66,15 +65,23 @@ model_LR.score(x_train,y_train)
 y_pred_LR = model_LR.predict(x_test)
 print(classification_report(y_test, y_pred_LR))
 accuracy_score(y_test, y_pred_LR)
-accuracy_score(y_train, model_LR.predict(x_train))
 
+# Plot Confusion Matrix
+class_names = le_result.classes_
+cnf_matrix = confusion_matrix(y_test, y_pred_LR)
+plot_confusion_matrix(cnf_matrix, classes=class_names,title='Logistic Regression Confusion matrix, without normalization')
+
+# ROC curve
+y_score = model_LR.decision_function(x_test)
+plot_ROC_curve(y_test,y_score,title='Logistic Regression ROC curve',class_names = class_names)
 #==========================================================
 # Fit a LR with GridSearchCV
-#LR = LogisticRegression(multi_class='ovr',penalty='l1', class_weight= 'balanced' )
+#LR = LogisticRegression(multi_class='ovr',penalty='l1' )
 LR = LogisticRegression(multi_class='multinomial',penalty='l2',solver='lbfgs')
 grid_LR = [{'C': np.logspace(-6, 0, 10)}]
+#grid_LR = [{'C': np.logspace(-6, 0, 10), 'penalty' : ['l1','l2']}]
 clf_LR = GridSearchCV(estimator = LR,param_grid = grid_LR,scoring='f1_micro',
-                   cv = 5,n_jobs=-1)
+                   cv = 5,n_jobs=-1,verbose = True)
 clf_LR.fit(x_train,y_train)
 clf_LR.best_score_                                
 modelCV_LR = clf_LR.best_estimator_           
@@ -85,12 +92,12 @@ accuracy_score(y_test, y_predCV_LR)
 # Plot Confusion Matrix
 class_names = le_result.classes_
 cnf_matrix = confusion_matrix(y_test, y_predCV_LR)
-#plt.figure()
 plot_confusion_matrix(cnf_matrix, classes=class_names,title='Logistic Regression Confusion matrix, without normalization')
 
-plot_confusion_matrix(cnf_matrix, classes=class_names,normalize = True,title='Normalized Confusion matrix')
+#plot_confusion_matrix(cnf_matrix, classes=class_names,normalize = True,title='Normalized Confusion matrix')
 
-y_score = model_LR.decision_function(x_test)
+# ROC curve
+y_score = modelCV_LR.decision_function(x_test)
 #plot_ROC_curve(y_test,y_score,class_names,title='Logistic Regression ROC curve' )
 plot_ROC_curve(y_test,y_score,title='Logistic Regression ROC curve',class_names = class_names)
 
@@ -99,18 +106,37 @@ for params, mean_score, scores in clf_LR.grid_scores_:
 
 #==========================================================
 # Fit a simple SVM 
-SVM_ = SVC(C=0.001,kernel = 'linear')
+#SVM_ = SVC(C=0.001,kernel = 'linear')
+SVM_ = SVC(kernel = 'rbf')
 model_SVM_ = SVM_.fit(x_train,y_train)
 y_pred_SVM_ = model_SVM_.predict(x_test)
 print(classification_report(y_test, y_pred_SVM_))
 accuracy_score(y_test, y_pred_SVM_)
+
+# Plot Confusion Matrix
+class_names = le_result.classes_
+cnf_matrix = confusion_matrix(y_test, y_pred_SVM_)
+plot_confusion_matrix(cnf_matrix, classes=class_names,title='SVM Confusion matrix, without normalization')
+
+y_score = model_SVM_.decision_function(x_test)
+#plot_ROC_curve(y_test,y_score,class_names,title='Logistic Regression ROC curve' )
+plot_ROC_curve(y_test,y_score,title='SVM ROC curve',class_names = class_names)
+
 #==========================================================
+# Fit a simple SVM  linear
+from sklearn.svm import LinearSVC
+model_LinearSVC = LinearSVC(random_state=0,verbose = True,max_iter=10000).fit(x_train,y_train)
+y_pred_SVM_ = model_LinearSVC.predict(x_test)
+print(classification_report(y_test, model_LinearSVC))
+accuracy_score(y_test, y_pred_SVM_)
+#==========================================================
+
 # Fit a SVM with GridSearchCV
-SVM = SVC()
-grid_SVM = [{'kernel': ['linear'], 'C': np.logspace(-6, 0, 3),'degree': [3,4,5]}]
+SVM = SVC(verbose = True)
+grid_SVM = [{'kernel': ['rbf','linear'], 'C': np.logspace(-6, 0, 3)}]
  
-clf_SVM = GridSearchCV(estimator=SVM,param_grid = grid_SVM,scoring='f1_micro',
-                   cv = 5,n_jobs=-1)
+clf_SVM = GridSearchCV(estimator=SVM,param_grid = grid_SVM,scoring='f1_macro',
+                   cv = 5,n_jobs=-1,verbose = True)
 clf_SVM.fit(x_train,y_train)
 clf_SVM.best_score_                                 
 model_SVM = clf_SVM.best_estimator_           
@@ -159,14 +185,12 @@ cnf_matrix = confusion_matrix(y_test, y_pred_RF)
 plot_confusion_matrix(cnf_matrix, classes=class_names,title='Random Forest Confusion matrix, without normalization')
 
 #==========================================================
-# Fit Random Forest with GridSearch CV
-RF = RandomForestClassifier(random_state=0, n_jobs = -1, verbose = True)
-
-grid_RF= [{'n_estimators': [10,15]}]
- 
-clf_RF = GridSearchCV(estimator=RF,param_grid = grid_RF,scoring='f1_micro',cv = 3,n_jobs=-1)
-
+# Fit Random Forest with GridSearch CV: Sth wrong
+RF = RandomForestClassifier(random_state=0, verbose = True)
+grid_RF= [{'n_estimators': [10]}] 
+clf_RF = GridSearchCV(estimator = RF,param_grid = grid_RF,scoring='f1_micro',cv = 3,n_jobs=-1)
 clf_RF.fit(x_train,y_train)
+
 clf_RF.best_score_                                 
 model_RF = clf_RF.best_estimator_           
 y_pred_RF = model_RF.predict(x_test)
@@ -183,38 +207,81 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Random Forest Confu
 
 plot_confusion_matrix(cnf_matrix, classes=class_names,normalize = True,title='Normalized Confusion matrix')
 
-#y_score = model_RF.decision_function(x_test)
-##plot_ROC_curve(y_test,y_score,class_names,title='Logistic Regression ROC curve' )
-#plot_ROC_curve(y_test,y_score,title='Random Forest ROC curve',class_names = class_names)
 
 #==========================================================
-# GradientBoostingClassifier
-from sklearn.ensemble import GradientBoostingClassifier
+# GradientBoostingClassifier: need CV herer
+GBT = GradientBoostingClassifier(random_state=0, verbose = True)
+grid_GBT = [{'max_depth': [3,5,7], 'n_estimators': [100,1000,2000]}]
+clf_GBT = GridSearchCV(estimator=GBT,param_grid = grid_GBT,scoring='f1_micro',
+                   cv = 3,n_jobs=-1,verbose=True)
 
-model_GB  = GradientBoostingClassifier(n_estimators=1000,max_depth = 4,random_state=0, verbose = True).fit(x_train,y_train)
-y_pred_GB = model_GB.predict(x_test)
-print(classification_report(y_test, y_pred_GB))
-accuracy_score(y_test, y_pred_GB)
+clf_GBT.fit(x_train,y_train)
+clf_GBT.best_score_                                 
+model_GBT = clf_GBT.best_estimator_   
+
+#model_GB  = GradientBoostingClassifier(n_estimators=1000,max_depth = 7,random_state=0, verbose = True).fit(x_train,y_train)
+y_pred_GBT = model_GBT.predict(x_test)
+print(classification_report(y_test, y_pred_GBT))
+accuracy_score(y_test, y_pred_GBT)
 
 # Plot Confusion Matrix
 class_names = le_result.classes_
-cnf_matrix = confusion_matrix(y_test, y_pred_GB)
+cnf_matrix = confusion_matrix(y_test, y_pred_GBT)
 #plt.figure()
 plot_confusion_matrix(cnf_matrix, classes=class_names,title='Gradient Boosting DT Confusion matrix, without normalization')
 
-
-y_score = model_GB.decision_function(x_test)
+# ROC curve
+y_score = model_GBT.decision_function(x_test)
 plot_ROC_curve(y_test,y_score,title='Gradient Boosting DT ROC curve',class_names = class_names)
+
+#==========================================================
+# Fit a ADAboost Tree: seem promising, need CV here
+ADAboost = AdaBoostClassifier(algorithm="SAMME",learning_rate=1)
+
+DT_3 = DecisionTreeClassifier(max_depth=3)
+DT_5 = DecisionTreeClassifier(max_depth=5)
+grid_ADA = [{'base_estimator': [DT_3,DT_5], 'n_estimators': [100,1000,2000,3000]}]
+ 
+clf_ADA= GridSearchCV(estimator=ADAboost,param_grid = grid_ADA,scoring='accuracy',
+                   cv = 3,n_jobs=-1,verbose=True)
+clf_ADA.fit(x_train,y_train)
+
+clf_ADA.best_score_                                 
+model_ADA = clf_ADA.best_estimator_       
+
+
+y_pred_ADA  = model_ADA.predict(x_test)
+print(classification_report(y_test, y_pred_ADA))
+accuracy_score(y_test, y_pred_ADA)
+
+# Plot Confusion Matrix
+class_names = le_result.classes_
+cnf_matrix = confusion_matrix(y_test, y_pred_ADA)
+plot_confusion_matrix(cnf_matrix, classes=class_names,title='ADAboost DT Confusion matrix, without normalization')
+
+# ROC curve
+y_score = model_ADA.decision_function(x_test)
+plot_ROC_curve(y_test,y_score,title='AdaBoost DT ROC curve',class_names = class_names)
 
 
 #==========================================================
+from sklearn.naive_bayes import MultinomialNB
+model_NB = MultinomialNB().fit(x_train, y_train)
+y_pred_NB = model_NB.predict(x_test)
+print(classification_report(y_test, y_pred_NB))
+accuracy_score(y_test, y_pred_NB)
 
+# Plot Confusion Matrix
+class_names = le_result.classes_
+cnf_matrix = confusion_matrix(y_test, y_pred_NB)
+#plt.figure()
+plot_confusion_matrix(cnf_matrix, classes=class_names,title='Naive Bayes Confusion matrix, without normalization')
+
+#==========================================================
 # Fit a shallow NN
-
 #model_NN = MLPClassifier(hidden_layer_sizes = (500,400,300,100,50), max_iter = 1000, alpha=1e-4,
 #                    solver='adam', verbose=10, tol=1e-4, random_state=1,
 #                    learning_rate_init=.1).fit(x_train,y_train)
-
 
 model_NN = MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
                     solver='adam', verbose=True, tol=1e-10, random_state=1,
@@ -235,49 +302,10 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Random Forest Confu
 
 plot_confusion_matrix(cnf_matrix, classes=class_names,normalize = True,title='Normalized Confusion matrix')
 
-#y_score = model_RF.decision_function(x_test)
+#y_score = model_NN.decision_function(x_test)
 ##plot_ROC_curve(y_test,y_score,class_names,title='Logistic Regression ROC curve' )
 #plot_ROC_curve(y_test,y_score,title='Random Forest ROC curve',class_names = class_names)
-
 #==========================================================
-# Fit a ADAboost Tree
-bdt_real = AdaBoostClassifier(
-    DecisionTreeClassifier(max_depth=2),
-    n_estimators=600,
-    learning_rate=1)
-
-model_ADA_1 = bdt_real.fit(x_train,y_train)
-y_pred_ADA_1  = model_ADA_1.predict(x_test)
-print(classification_report(y_test, y_pred_ADA_1))
-accuracy_score(y_test, y_pred_ADA_1)
-
-
-bdt_discrete = AdaBoostClassifier(
-    DecisionTreeClassifier(max_depth=3),
-    n_estimators=600,
-    learning_rate=1.5,
-    algorithm="SAMME")
-model_ADA_2 = bdt_discrete.fit(x_train,y_train)
-
-y_pred_ADA_2  = model_ADA_2.predict(x_test)
-print(classification_report(y_test, y_pred_ADA_2))
-accuracy_score(y_test, y_pred_ADA_2)
-
-#==========================================================
-
-# Plot non-normalized confusion matrix
-class_names = le_result.classes_
-cnf_matrix = confusion_matrix(y_test, y_pred)
-
-plt.figure()
-plot_confusion_matrix(cnf_matrix, classes=class_names,title='Confusion matrix, without normalization')
-
-# Classification Report
-print(classification_report(y_test.squeeze(), y_pred))
-
-# ROC curve
-y_score = model_LR.decision_function(x_test)
-plot_ROC_curve(y_test,y_score)
 
 #Compare many classifiers
 #http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html#sphx-glr-auto-examples-classification-plot-classifier-comparison-py
