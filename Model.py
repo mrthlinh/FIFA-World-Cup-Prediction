@@ -27,6 +27,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, confusion_matrix
 
+from xgboost import XGBClassifier
+
 # User Define Class
 from LE import saveLabelEncoder,loadLabelEncoder
 from result_plot import plot_confusion_matrix,plot_ROC_curve
@@ -283,9 +285,54 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Naive Bayes Confusi
 #                    solver='adam', verbose=10, tol=1e-4, random_state=1,
 #                    learning_rate_init=.1).fit(x_train,y_train)
 
+# Standard Scale
+data_test = data.iloc[:,4:].copy()
+#data_test[data_test.columns[:-1]] = MinMaxScaler().fit_transform(data_test[data_test.columns[:-1]])
+data = data_test.copy()
+
+
+# Split data training and testing
+x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
+
+# Scale
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+scaler.fit(x_train)
+
+x_train = scaler.transform(x_train)
+x_test = scaler.transform(x_test)
+
+from sklearn.preprocessing import LabelBinarizer
+lb = LabelBinarizer().fit(y_train)
+lb.classes_
+lb.transform([0,1,2])
+
+y_train_lb = lb.transform(y_train)
+y_test_lb = lb.transform(y_test)
+
+y_train_draw = y_train_lb[:,0]
+y_test_draw = y_test_lb[:,0]
+
+# only train on Draw
+model_NN = MLPClassifier(hidden_layer_sizes = (500,250,100), max_iter = 1000, alpha=1e-4, 
+                         learning_rate = 'adaptive', activation = 'tanh' ,
+                        solver='adam', verbose=True, tol=1e-6, random_state=1,
+                        learning_rate_init=.001).fit(x_train,y_train)
+
+y_pred_NN = model_NN.predict(x_test)
+print(classification_report(y_test, y_pred_NN))
+accuracy_score(y_test, y_pred_NN)
+
+print("Training set score: %f" % model_NN.score(x_train, y_train))
+print("Test set score: %f" % model_NN.score(x_test, y_test))
+
+
+
 model_NN = MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
                     solver='adam', verbose=True, tol=1e-10, random_state=1,
                     learning_rate_init=.1).fit(x_train,y_train)
+
+#model_NN = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(13, 10), random_state=1).fit(x_train,y_train)
 
 y_pred_NN = model_NN.predict(x_test)
 print(classification_report(y_test, y_pred_NN))
@@ -306,6 +353,25 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,normalize = True,title='No
 ##plot_ROC_curve(y_test,y_score,class_names,title='Logistic Regression ROC curve' )
 #plot_ROC_curve(y_test,y_score,title='Random Forest ROC curve',class_names = class_names)
 #==========================================================
+#Fit with xgboost
+
+model_xgb = XGBClassifier(n_estimators = 1000,max_depth=7,silent = False)
+model_xgb.fit(x_train, y_train)
+# make predictions for test data
+y_pred = model_xgb.predict(x_test)
+predictions = [round(value) for value in y_pred]
+# evaluate predictions
+accuracy = accuracy_score(y_test, predictions)
+print("Accuracy: %.2f%%" % (accuracy * 100.0))
 
 #Compare many classifiers
 #http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html#sphx-glr-auto-examples-classification-plot-classifier-comparison-py
+
+#==================================================
+#fit KNN
+from sklearn.neighbors import KNeighborsClassifier
+neigh = KNeighborsClassifier(n_neighbors=3)
+neigh.fit(x_train,y_train_draw)
+y_pred_KNN = neigh.predict(x_test)
+print(classification_report(y_test_draw, y_pred_KNN))
+accuracy_score(y_test_draw, y_pred_NN)
