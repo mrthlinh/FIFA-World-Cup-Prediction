@@ -10,7 +10,7 @@ __Feature Selection__: To determine who will more likely to win a match, based o
 4. squad value or how many players are in top 200 (from video game)
 Feature list reflects those factors.
 
-__Supervisor__: Pratibha Rathore
+__Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/)
 
 __Lifecycle__
 
@@ -120,15 +120,24 @@ We split data into 70:30
 5. ADA Boost Tree
 6. Neural Network
 
+
 ### Evaluation Criteria
-- Precision
-- Recall
-- F1
-- Accuracy
-- ROC curve
+Each criteria is carried out for each label "win", "lose" and "draw"
+- __Precision__: Among our prediction of "True" value, how many percentage we hit?, the higher value, the better prediction
+- __Recall__: Among actual "True" value, how many percentage we hit?, the higher value, the better prediction
+- __F1__: A balance of Precision and Recall, the higher value, the better prediction, there are 2 types of F1
+  - __F1-micro__:
+  - __F1-macro__:
+- __10-fold cross validation test error__: A reliable estimation of test error of model evaluation (no need to split to train and test)
+- __ROC curve__:
+
+### Procedure
+- First we perform "normalization" of features, convert category to number
+- Second we perform k-fold cross validation to select the best parameters for each model based on above criteria.
+- Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
 
 ### Preliminary Result
-1. Logistic Regression
+1. __Logistic Regression__
 
   Best parameters:
   ```python
@@ -155,7 +164,7 @@ We split data into 70:30
 
 Test accuracy = 0.5987224157955865
 
-2. SVM
+2. __SVM__
 
 Best parameters:
 ```python
@@ -182,7 +191,7 @@ SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
 
 Test Accuracy = 0.591753774680604
 
-3. Random Forest
+3. __Random Forest__
 
 Current parameters:
 ```python
@@ -211,7 +220,7 @@ RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
 
 Test accuracy = 0.5894308943089431
 
-4. Gradient Boosting tree
+4. __Gradient Boosting tree__
 
 Best parameters:
 ```python
@@ -242,7 +251,7 @@ GradientBoostingClassifier(criterion='friedman_mse', init=None,
 
 Test accuracy = 0.5958188153310104
 
-5. ADA boost tree
+5. __ADA boost tree__
 
 Best parameters:
 ```python
@@ -273,7 +282,7 @@ AdaBoostClassifier(algorithm='SAMME',
 
 Test accuracy = 0.6027874564459931
 
-6. Neural Net
+6. __Neural Net__
 
 Best parameters:
 ```python
@@ -309,11 +318,13 @@ Test accuracy = 0.60801393728223
 8. [Validation curves](http://scikit-learn.org/stable/modules/learning_curve.html)
 # Task List
 __Ongoing__
+- [ ] Explore more about result "draw"
+- [ ] Explore more about weak team > strong team
+- [ ] Add graph of validation / training curve for hyper-parameters tuning.
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
 - [ ] Migrate code of pre-processing plot function to python file with Spyder
-- [ ] Build a data without player rating and squad value
 - [ ] Build a web crawler for Ranking over time
 - [ ] A table of title won for each team
 - [ ] Integrate player rating and squad value to data
@@ -327,3 +338,4 @@ __Complete__
 - [x] Add evaluation metrics and plot
   - [x] Add accuracy, precision, recall, F1
   - [x] Add ROC curves
+- [x] Build a data without player rating and squad value
