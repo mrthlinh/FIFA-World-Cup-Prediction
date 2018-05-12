@@ -316,11 +316,24 @@ Test accuracy = 0.60801393728223
 6. [Model evaluation](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics)
 7. [Tuning the hyper-parameters of an estimator](http://scikit-learn.org/stable/modules/grid_search.html)
 8. [Validation curves](http://scikit-learn.org/stable/modules/learning_curve.html)
+
+# Challenge / Question
+1. If "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose", will adding these data make model better? (You actually did it in EDA)
+2. According to "draw" and "win" in average odd? These two labels seem to be different, why performance of "draw" is bad?
+
 # Task List
 __Ongoing__
-- [ ] Explore more about result "draw"
-- [ ] Explore more about weak team > strong team
+- [ ] Replace "test error" with "10-fold cross validation error"
+- [ ] Delete "Model.ipynb"
+- [ ] Divide model into smaller functions corresponding to each model
+- [ ] Add more t-test with label "draw"
+- [ ] Generate data and preform prediction for EURO 2016, ok now my story is more interesting
+- [ ] Group all model results into one graph and draw a preliminary conclusion, set up a baseline
+- [ ] Explore more about result "draw", generate some insight, how to predict these cases?
+- [ ] Explore more about weak team > strong team, generate some insight, how to predict these cases?
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
+- [ ] Create more data, "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose"
+- [ ] Add TensorFlow and Keras model for Deep Learning
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
