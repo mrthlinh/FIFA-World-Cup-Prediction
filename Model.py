@@ -59,7 +59,13 @@ data = data_test.copy()
 # Split data training and testing
 x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
 
+# Save filte train and test
+x_train.to_csv('data/train_x.csv',index = False)
+x_test.to_csv('data/test_x.csv',index = False)
+y_train.to_csv('data/train_y.csv',index = False)
+y_test.to_csv('data/test_y.csv',index = False)
 
+#x_train_ = pd.read_csv("data/train_x.csv", encoding='utf-8')
 #==========================================================
 # Fit a simple LR
 model_LR = LogisticRegression(multi_class='ovr',penalty='l1', C=0.1).fit(x_train,y_train)
@@ -286,10 +292,20 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Naive Bayes Confusi
 #                    learning_rate_init=.1).fit(x_train,y_train)
 
 # Standard Scale
-data_test = data.iloc[:,4:].copy()
+# Add Home Team
+data = orig_data.copy()
+orig_data = data.copy()
+same_ht = data.team_1 == data.home_team
+data.loc[same_ht,'home_team'] = 1
+data.loc[-same_ht,'home_team'] = 0
+
+col = list(range(4,18))
+col.insert(0,2)
+data_test = data.iloc[:,col].copy()
+
+#data_test = data.iloc[:,4:].copy()
 #data_test[data_test.columns[:-1]] = MinMaxScaler().fit_transform(data_test[data_test.columns[:-1]])
 data = data_test.copy()
-
 
 # Split data training and testing
 x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
@@ -297,10 +313,13 @@ x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:
 # Scale
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
-scaler.fit(x_train)
+scaler.fit(x_train.iloc[:,1:])
 
-x_train = scaler.transform(x_train)
-x_test = scaler.transform(x_test)
+x_train.iloc[:,1:] = scaler.transform(x_train.iloc[:,1:])
+x_test.iloc[:,1:]= scaler.transform(x_test.iloc[:,1:])
+#
+#x_train = scaler.transform(x_train)
+#x_test = scaler.transform(x_test)
 
 from sklearn.preprocessing import LabelBinarizer
 lb = LabelBinarizer().fit(y_train)
@@ -314,8 +333,11 @@ y_train_draw = y_train_lb[:,0]
 y_test_draw = y_test_lb[:,0]
 
 # only train on Draw
-model_NN = MLPClassifier(hidden_layer_sizes = (500,250,100), max_iter = 1000, alpha=1e-4, 
-                         learning_rate = 'adaptive', activation = 'tanh' ,
+#layer = (1000,500,250,100)
+layer = (500,250,100,50,25)
+alpha = 0.1
+model_NN = MLPClassifier(hidden_layer_sizes = layer, max_iter = 1000, alpha=alpha, 
+                         learning_rate = 'adaptive', activation = 'tanh',early_stopping =False,
                         solver='adam', verbose=True, tol=1e-6, random_state=1,
                         learning_rate_init=.001).fit(x_train,y_train)
 
@@ -326,8 +348,22 @@ accuracy_score(y_test, y_pred_NN)
 print("Training set score: %f" % model_NN.score(x_train, y_train))
 print("Test set score: %f" % model_NN.score(x_test, y_test))
 
+# k-fold Cross validation error => better estimation of error
+from sklearn.model_selection import cross_val_score
+data_x = data.iloc[:,:-1]
+data_y = data.iloc[:,-1].squeeze()
 
+layer = (1000,500)
+alpha = 0.1
+model_NN = MLPClassifier(hidden_layer_sizes = layer, max_iter = 1000, alpha=alpha, 
+                         learning_rate = 'adaptive', activation = 'tanh',early_stopping =True,
+                        solver='adam', verbose=True, tol=1e-6, random_state=1,
+                        learning_rate_init=.001)
 
+scores = cross_val_score(model_NN, data_x, data_y, cv=10)
+print(scores)
+print(np.mean(scores))
+#========================
 model_NN = MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
                     solver='adam', verbose=True, tol=1e-10, random_state=1,
                     learning_rate_init=.1).fit(x_train,y_train)
@@ -355,14 +391,17 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,normalize = True,title='No
 #==========================================================
 #Fit with xgboost
 
-model_xgb = XGBClassifier(n_estimators = 1000,max_depth=7,silent = False)
+model_xgb = XGBClassifier(n_estimators = 100,max_depth=6,silent = False)
 model_xgb.fit(x_train, y_train)
 # make predictions for test data
 y_pred = model_xgb.predict(x_test)
-predictions = [round(value) for value in y_pred]
+#predictions = [round(value) for value in y_pred]
 # evaluate predictions
-accuracy = accuracy_score(y_test, predictions)
-print("Accuracy: %.2f%%" % (accuracy * 100.0))
+#accuracy = accuracy_score(y_test, predictions)
+#print("Accuracy: %.2f%%" % (accuracy * 100.0))
+
+print("Training set score: %f" % model_xgb.score(x_train, y_train))
+print("Test set score: %f" % model_xgb.score(x_test, y_test))
 
 #Compare many classifiers
 #http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html#sphx-glr-auto-examples-classification-plot-classifier-comparison-py
@@ -371,7 +410,14 @@ print("Accuracy: %.2f%%" % (accuracy * 100.0))
 #fit KNN
 from sklearn.neighbors import KNeighborsClassifier
 neigh = KNeighborsClassifier(n_neighbors=3)
-neigh.fit(x_train,y_train_draw)
+neigh.fit(x_train,y_train)
 y_pred_KNN = neigh.predict(x_test)
-print(classification_report(y_test_draw, y_pred_KNN))
-accuracy_score(y_test_draw, y_pred_NN)
+print(classification_report(y_test, y_pred_KNN))
+accuracy_score(y_test, y_pred_NN)
+
+# Plot Confusion Matrix
+class_names = le_result.classes_
+cnf_matrix = confusion_matrix(y_test, y_pred_KNN)
+#plt.figure()
+plot_confusion_matrix(cnf_matrix, classes=class_names,title='KNN Confusion matrix, without normalization')
+
