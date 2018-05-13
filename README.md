@@ -108,6 +108,10 @@ There are few questions in order to understand data better
     ```
 
     We can say that we can reply on bet odd to predict the match results.
+5. How results cluster?
+  For this question, we use PCA to pick two first principal components which best explained data. Then we plot data in new dimension
+
+   ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/2pc.png)
 
 # Model Training and Evaluation
 ### Train-Test ratio

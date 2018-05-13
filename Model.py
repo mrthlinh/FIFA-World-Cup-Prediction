@@ -29,6 +29,8 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 from xgboost import XGBClassifier
 
+import pickle
+
 # User Define Class
 from LE import saveLabelEncoder,loadLabelEncoder
 from result_plot import plot_confusion_matrix,plot_ROC_curve

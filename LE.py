@@ -17,3 +17,4 @@ def saveLabelEncoder(x,file):
 def loadLabelEncoder(file):
     encoder = LabelEncoder()
     encoder.classes_ = np.load(file)
+    return encoder
