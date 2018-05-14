@@ -310,6 +310,65 @@ MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
 
 Test accuracy = 0.60801393728223
 
+### EURO 2016
+
+We apply the model Gradient Boosted Tree to predict the result for EURO 2016 (not in the dataset)
+
+|      team_1      |      team_2      | result | prediction |
+|:----------------:|:----------------:|:------:|:----------:|
+|      France      |      Romania     |   win  |     win    |
+|      Albania     |    Switzerland   |  lose  |    lose    |
+|      England     |      Russia      |  draw  |     win    |
+|     Slovakia     |       Wales      |  lose  |    lose    |
+|      Germany     |      Ukraine     |   win  |     win    |
+| Northern Ireland |      Poland      |  lose  |    draw    |
+|      Croatia     |      Turkey      |   win  |     win    |
+|      Belgium     |       Italy      |  lose  |    lose    |
+|      Ireland     |      Sweden      |  draw  |    lose    |
+|  Czech Republic  |       Spain      |  lose  |    lose    |
+|      Austria     |      Hungary     |  lose  |     win    |
+|      Iceland     |     Portugal     |  draw  |    lose    |
+|      Albania     |      France      |  lose  |    lose    |
+|      Romania     |    Switzerland   |  draw  |     win    |
+|      Russia      |     Slovakia     |  lose  |    lose    |
+|      England     |       Wales      |   win  |     win    |
+|      Germany     |      Poland      |  draw  |     win    |
+| Northern Ireland |      Ukraine     |   win  |    draw    |
+|      Croatia     |  Czech Republic  |  draw  |     win    |
+|       Italy      |      Sweden      |   win  |     win    |
+|       Spain      |      Turkey      |   win  |     win    |
+|      Belgium     |      Ireland     |   win  |    draw    |
+|      Hungary     |      Iceland     |  draw  |    lose    |
+|      Austria     |     Portugal     |  draw  |    lose    |
+|      Albania     |      Romania     |   win  |    lose    |
+|      France      |    Switzerland   |  draw  |     win    |
+|      Russia      |       Wales      |  lose  |    lose    |
+|      England     |     Slovakia     |  draw  |     win    |
+|      Croatia     |       Spain      |   win  |    lose    |
+|  Czech Republic  |      Turkey      |  lose  |    lose    |
+|      Germany     | Northern Ireland |   win  |     win    |
+|      Poland      |      Ukraine     |   win  |     win    |
+|      Hungary     |     Portugal     |  draw  |    lose    |
+|      Austria     |      Iceland     |  lose  |     win    |
+|      Ireland     |       Italy      |   win  |    lose    |
+|      Belgium     |      Sweden      |   win  |    draw    |
+|      Croatia     |     Portugal     |  lose  |    lose    |
+|      Poland      |    Switzerland   |  draw  |    lose    |
+| Northern Ireland |       Wales      |  lose  |    lose    |
+|      France      |      Ireland     |   win  |     win    |
+|      Germany     |     Slovakia     |   win  |     win    |
+|      Belgium     |      Hungary     |   win  |     win    |
+|      England     |      Iceland     |  lose  |     win    |
+|       Italy      |       Spain      |   win  |    lose    |
+|      Poland      |     Portugal     |  draw  |    lose    |
+|      Belgium     |       Wales      |  lose  |    lose    |
+|      Germany     |       Italy      |  draw  |     win    |
+|      France      |      Iceland     |   win  |     win    |
+|     Portugal     |       Wales      |   win  |     win    |
+|      France      |      Germany     |   win  |    lose    |
+|      France      |     Portugal     |  lose  |    draw    |
+
+
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
@@ -320,7 +379,8 @@ Test accuracy = 0.60801393728223
 6. [Model evaluation](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics)
 7. [Tuning the hyper-parameters of an estimator](http://scikit-learn.org/stable/modules/grid_search.html)
 8. [Validation curves](http://scikit-learn.org/stable/modules/learning_curve.html)
-
+9. [Understand Bet odd format](https://www.pinnacle.com/en/betting-articles/educational/odds-formats-available-at-pinnacle-sports/ZWSJD9PPX69V3YXZ)
+10. [EURO 2016 bet odd](http://www.oddsportal.com/soccer/europe/euro-2016/results/#/)
 # Challenge / Question
 1. If "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose", will adding these data make model better? (You actually did it in EDA)
 2. According to "draw" and "win" in average odd? These two labels seem to be different, why performance of "draw" is bad?
