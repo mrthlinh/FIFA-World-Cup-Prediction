@@ -28,6 +28,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, confusion_matrix
 from sklearn.model_selection import cross_val_score
 from xgboost import XGBClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 import pickle
 
@@ -64,9 +65,9 @@ data['team_2'] = le_country.transform(data['team_2'])
 data['home_team'] = le_country.transform(data['home_team'])
 
 # Standard Scale
-data_test = data.iloc[:,4:].copy()
-data_test[data_test.columns[:-1]] = MinMaxScaler().fit_transform(data_test[data_test.columns[:-1]])
-data = data_test.copy()
+#data_test = data.iloc[:,4:].copy()
+#data_test[data_test.columns[:-1]] = MinMaxScaler().fit_transform(data_test[data_test.columns[:-1]])
+#data = data_test.copy()
 
 
 #scaler = StandardScaler()
@@ -75,11 +76,30 @@ data = data_test.copy()
 #x_train.iloc[:,1:] = scaler.transform(x_train.iloc[:,1:])
 #x_test.iloc[:,1:]= scaler.transform(x_test.iloc[:,1:])
 
+# Add HOME team
+same_ht = data.team_1 == data.home_team
+data.loc[same_ht,'home_team'] = 1
+data.loc[-same_ht,'home_team'] = 0
+
+col = list(range(4,18))
+col.insert(0,2)
+data = data.iloc[:,col]
+
+scaler = StandardScaler()
+data.iloc[:,1:14] = scaler.fit_transform(data.iloc[:,1:14])
 
 # Split data training and testing
 x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
 data_x = data.iloc[:,:-1]
 data_y = data.iloc[:,-1].squeeze()
+
+# Scale
+#scaler = StandardScaler()
+#scaler.fit(x_train.iloc[:,1:])
+#
+#x_train.iloc[:,1:] = scaler.transform(x_train.iloc[:,1:])
+#x_test.iloc[:,1:]= scaler.transform(x_test.iloc[:,1:])
+
 
 # Save filte train and test
 x_train.to_csv('data/train_x.csv',index = False)
@@ -110,8 +130,10 @@ plot_ROC_curve(y_test,y_score,title='Logistic Regression ROC curve',class_names 
 LR = LogisticRegression(multi_class='multinomial',penalty='l2',solver='lbfgs')
 grid_LR = [{'C': np.logspace(-6, 0, 10)}]
 #grid_LR = [{'C': np.logspace(-6, 0, 10), 'penalty' : ['l1','l2']}]
+#clf_LR = GridSearchCV(estimator = LR,param_grid = grid_LR,scoring='f1_micro',
+#                   cv = 5,n_jobs=-1,verbose = True)
 clf_LR = GridSearchCV(estimator = LR,param_grid = grid_LR,scoring='f1_micro',
-                   cv = 5,n_jobs=-1,verbose = True)
+                   cv = 5,verbose = True)
 clf_LR.fit(x_train,y_train)
 clf_LR.best_score_                                
 modelCV_LR = clf_LR.best_estimator_           
@@ -230,8 +252,8 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Random Forest Confu
 #==========================================================
 # Fit Random Forest with GridSearch CV:
 RF = RandomForestClassifier(random_state=0)
-grid_RF= [{'n_estimators': [10]}] 
-clf_RF = GridSearchCV(estimator = RF,param_grid = grid_RF,scoring='f1_micro',cv = 3,n_jobs=-1,verbose = True)
+grid_RF= [{'n_estimators': [5,10,15]}] 
+clf_RF = GridSearchCV(estimator = RF,param_grid = grid_RF,scoring='f1_micro',cv = 3,n_jobs=1,verbose = True)
 clf_RF.fit(x_train,y_train)
 
 clf_RF.best_score_                                 
@@ -264,7 +286,7 @@ pickle.dump(model_RF, open(filename, 'wb'))
 GBT = GradientBoostingClassifier(random_state=0, verbose = True)
 grid_GBT = [{'max_depth': [3,5,7], 'n_estimators': [100,1000,2000]}]
 clf_GBT = GridSearchCV(estimator=GBT,param_grid = grid_GBT,scoring='f1_micro',
-                   cv = 3,n_jobs=-1,verbose=True)
+                   cv = 3,n_jobs=1,verbose=True)
 
 clf_GBT.fit(x_train,y_train)
 clf_GBT.best_score_                                 
@@ -303,7 +325,7 @@ DT_5 = DecisionTreeClassifier(max_depth=5)
 grid_ADA = [{'base_estimator': [DT_3,DT_5], 'n_estimators': [100,1000,2000,3000]}]
  
 clf_ADA= GridSearchCV(estimator=ADAboost,param_grid = grid_ADA,scoring='accuracy',
-                   cv = 3,n_jobs=-1,verbose=True)
+                   cv = 3,n_jobs=1,verbose=True)
 clf_ADA.fit(x_train,y_train)
 
 clf_ADA.best_score_                                 
@@ -351,44 +373,45 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Naive Bayes Confusi
 
 # Standard Scale
 # Add Home Team
-data = orig_data.copy()
-orig_data = data.copy()
-same_ht = data.team_1 == data.home_team
-data.loc[same_ht,'home_team'] = 1
-data.loc[-same_ht,'home_team'] = 0
 
-col = list(range(4,18))
-col.insert(0,2)
-data_test = data.iloc[:,col].copy()
+#data = orig_data.copy()
+#orig_data = data.copy()
+#same_ht = data.team_1 == data.home_team
+#data.loc[same_ht,'home_team'] = 1
+#data.loc[-same_ht,'home_team'] = 0
+#
+#col = list(range(4,18))
+#col.insert(0,2)
+#data_test = data.iloc[:,col].copy()
 
 #data_test = data.iloc[:,4:].copy()
 #data_test[data_test.columns[:-1]] = MinMaxScaler().fit_transform(data_test[data_test.columns[:-1]])
-data = data_test.copy()
+#data = data_test.copy()
 
 # Split data training and testing
-x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
+#x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
 
 # Scale
-from sklearn.preprocessing import StandardScaler
-scaler = StandardScaler()
-scaler.fit(x_train.iloc[:,1:])
-
-x_train.iloc[:,1:] = scaler.transform(x_train.iloc[:,1:])
-x_test.iloc[:,1:]= scaler.transform(x_test.iloc[:,1:])
+#from sklearn.preprocessing import StandardScaler
+#scaler = StandardScaler()
+#scaler.fit(x_train.iloc[:,1:])
+#
+#x_train.iloc[:,1:] = scaler.transform(x_train.iloc[:,1:])
+#x_test.iloc[:,1:]= scaler.transform(x_test.iloc[:,1:])
 #
 #x_train = scaler.transform(x_train)
 #x_test = scaler.transform(x_test)
 
-from sklearn.preprocessing import LabelBinarizer
-lb = LabelBinarizer().fit(y_train)
-lb.classes_
-lb.transform([0,1,2])
-
-y_train_lb = lb.transform(y_train)
-y_test_lb = lb.transform(y_test)
-
-y_train_draw = y_train_lb[:,0]
-y_test_draw = y_test_lb[:,0]
+#from sklearn.preprocessing import LabelBinarizer
+#lb = LabelBinarizer().fit(y_train)
+#lb.classes_
+#lb.transform([0,1,2])
+#
+#y_train_lb = lb.transform(y_train)
+#y_test_lb = lb.transform(y_test)
+#
+#y_train_draw = y_train_lb[:,0]
+#y_test_draw = y_test_lb[:,0]
 
 # only train on Draw
 #layer = (1000,500,250,100)
@@ -407,7 +430,7 @@ print("Training set score: %f" % model_NN.score(x_train, y_train))
 print("Test set score: %f" % model_NN.score(x_test, y_test))
 
 # k-fold Cross validation error => better estimation of error
-from sklearn.model_selection import cross_val_score
+
 data_x = data.iloc[:,:-1]
 data_y = data.iloc[:,-1].squeeze()
 
@@ -466,12 +489,16 @@ print("Test set score: %f" % model_xgb.score(x_test, y_test))
 
 #==================================================
 #fit KNN
-from sklearn.neighbors import KNeighborsClassifier
-neigh = KNeighborsClassifier(n_neighbors=3)
-neigh.fit(x_train,y_train)
-y_pred_KNN = neigh.predict(x_test)
+filename = 'save_model/PCA.sav'
+pca_loaded_model = pickle.load(open(filename, 'rb'))
+x_train_pc = pca_loaded_model.transform(x_train)
+x_test_pc = pca_loaded_model.transform(x_test)
+
+neigh = KNeighborsClassifier(n_neighbors=9)
+neigh.fit(x_train_pc,y_train)
+y_pred_KNN = neigh.predict(x_test_pc)
 print(classification_report(y_test, y_pred_KNN))
-accuracy_score(y_test, y_pred_NN)
+accuracy_score(y_test, y_pred_KNN)
 
 # Plot Confusion Matrix
 class_names = le_result.classes_
