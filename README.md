@@ -81,8 +81,7 @@ There are few questions in order to understand data better
     ```python
     Ttest_indResult(statistic=35.432781367462361, pvalue=5.3865361955241691e-266)
     ```
-    Very small of p-value means we can reject the hypothesis. Therefore, we can say __history of head-to-head matches of two
-    teams contribute significantly to the result__
+    Very small of p-value means we can reject the hypothesis. Therefore, we can say __history of head-to-head matches of two teams contribute significantly to the result__
 
 3. Is there any difference between "form" of winning team and lose team?
     We compare the difference between goals / goals conceded / number of wins / number of draws of winner, loser or draw-er.
@@ -108,10 +107,13 @@ There are few questions in order to understand data better
     ```
 
     We can say that we can reply on bet odd to predict the match results.
-5. How results cluster?
+5. How labels distribute in reduced dimension?
+
   For this question, we use PCA to pick two first principal components which best explained data. Then we plot data in new dimension
 
    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/2pc.png)
+
+   While "Win" and "Lose" are while separate, "Draw" seems to be mixed between other labels.
 
 # Model Training and Evaluation
 ### Train-Test ratio
@@ -308,7 +310,7 @@ MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
 | avg / total |   0.46   |   0.61  |    0.52  |
 
 
-Test accuracy = 0.60801393728223
+0-fold CV Test accuracy = 0.60801393728223
 
 ### EURO 2016
 
@@ -368,7 +370,7 @@ We apply the model Gradient Boosted Tree to predict the result for EURO 2016 (no
 |      France      |      Germany     |   win  |    lose    |
 |      France      |     Portugal     |  lose  |    draw    |
 
-
+Accuracy = 0.48
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
