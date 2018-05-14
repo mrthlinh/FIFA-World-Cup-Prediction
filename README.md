@@ -285,6 +285,7 @@ AdaBoostClassifier(algorithm='SAMME',
 | avg / total |   0.53  |    0.57  |    0.54    |
 
 10-fold CV Test accuracy = 0.5901621943365096
+
 6. __Neural Net__
 
 Best parameters:
