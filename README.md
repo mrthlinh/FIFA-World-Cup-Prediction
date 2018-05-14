@@ -166,7 +166,7 @@ Each criteria is carried out for each label "win", "lose" and "draw"
 | Lose  |   0.61    |   0.74 |   0.66   |
 | avg / total |   0.51  |    0.60   |   0.52   |
 
-Test accuracy = 0.5987224157955865
+10-fold CV Test accuracy = 0.5905079026832715
 
 2. __SVM__
 
@@ -222,7 +222,7 @@ RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
 | Lose  |   0.61    |  0.71  |    0.66    |
 | avg / total |    0.55  |    0.59  |    0.54    |
 
-Test accuracy = 0.5894308943089431
+10-fold CV Test accuracy = 0.5422216762135833
 
 4. __Gradient Boosting tree__
 
@@ -253,7 +253,7 @@ GradientBoostingClassifier(criterion='friedman_mse', init=None,
 | Lose  |  0.61     | 0.71   |   0.66    |
 | avg / total |   0.56   |   0.60  |    0.55   |
 
-Test accuracy = 0.5958188153310104
+10-fold CV Test accuracy = 0.5798773361822063
 
 5. __ADA boost tree__
 
@@ -284,8 +284,7 @@ AdaBoostClassifier(algorithm='SAMME',
 | Lose  |   0.60    |  0.66  |    0.63    |
 | avg / total |   0.53  |    0.57  |    0.54    |
 
-Test accuracy = 0.6027874564459931
-
+10-fold CV Test accuracy = 0.5901621943365096
 6. __Neural Net__
 
 Best parameters:
