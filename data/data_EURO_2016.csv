@@ -1,0 +1,52 @@
+﻿,id,date,team_1,team_2,home_team,tournament,h_win_diff,h_draw,f_goalF_1,f_goalF_2,f_goalA_1,f_goalA_2,f_win_1,f_win_2,f_draw_1,f_draw_2,avg_odds_t1_win,avg_odds_draw,avg_odds_t2_win,result
+37400,37400,6/10/2016,France,Romania,France,UEFA Euro,5,5,21,8,11,11,8,2,0,7,1.36,4.88,11.19,win
+37401,37401,6/11/2016,Albania,Switzerland,Albania,UEFA Euro,-5,1,10,19,14,13,4,5,3,0,5.13,3.25,1.909,lose
+37403,37403,6/11/2016,England,Russia,England,UEFA Euro,2,4,15,15,16,16,8,6,0,0,1.769,3.57,5.5,draw
+37407,37407,6/11/2016,Slovakia,Wales,Wales,UEFA Euro,0,0,16,9,14,8,5,4,3,3,2.7,2.96,3.13,lose
+37412,37412,6/12/2016,Germany,Ukraine,Germany,UEFA Euro,2,3,18,14,21,9,5,7,0,2,1.521,4.34,7.35,win
+37415,37415,6/12/2016,Northern Ireland,Poland,Poland,UEFA Euro,1,2,13,29,8,10,5,6,5,2,5.74,3.42,1.781,lose
+37416,37416,6/12/2016,Croatia,Turkey,Turkey,UEFA Euro,2,4,15,12,6,9,6,7,3,2,2.04,3.35,4.18,win
+37417,37417,6/13/2016,Belgium,Italy,Belgium,UEFA Euro,-9,4,18,16,16,10,7,5,1,2,2.72,3,3.04,lose
+37418,37418,6/13/2016,Ireland,Sweden,Ireland,UEFA Euro,-2,2,12,14,10,12,5,4,4,4,3.77,3.04,2.29,draw
+37421,37421,6/13/2016,Czech Republic,Spain,Spain,UEFA Euro,-3,1,21,16,13,8,6,8,1,2,8.89,4.53,1.441,lose
+37426,37426,6/14/2016,Austria,Hungary,Austria,UEFA Euro,-25,29,14,14,15,9,7,5,1,4,1.68,3.68,6.25,lose
+37429,37429,6/14/2016,Iceland,Portugal,Portugal,UEFA Euro,-2,0,22,9,15,8,2,6,1,0,8.98,4.55,1.429,draw
+37430,37430,6/15/2016,Albania,France,France,UEFA Euro,-3,1,10,23,17,11,3,9,3,0,15.5,6.01,1.26,lose
+37431,37431,6/15/2016,Romania,Switzerland,Romania,UEFA Euro,1,3,13,20,12,12,3,5,6,0,3.52,3.06,2.39,draw
+37432,37432,6/15/2016,Russia,Slovakia,Russia,UEFA Euro,1,3,16,14,16,14,6,5,1,4,2.43,3.15,3.36,lose
+37436,37436,6/16/2016,England,Wales,England,UEFA Euro,53,21,16,12,10,8,8,4,0,2,1.68,3.76,6.09,win
+37437,37437,6/16/2016,Germany,Poland,Germany,UEFA Euro,12,6,19,29,19,10,6,6,0,2,1.621,4.05,6.19,draw
+37439,37439,6/16/2016,Northern Ireland,Ukraine,Ukraine,UEFA Euro,-2,2,12,12,7,12,5,7,5,2,6.04,3.41,1.769,win
+37441,37441,6/17/2016,Croatia,Czech Republic,Czech Republic,UEFA Euro,1,1,21,20,6,14,6,5,3,1,2.06,3.12,4.5,draw
+37442,37442,6/17/2016,Italy,Sweden,Italy,UEFA Euro,3,6,18,16,9,8,6,5,2,4,2.04,3.06,4.75,win
+37444,37444,6/17/2016,Spain,Turkey,Spain,UEFA Euro,3,4,16,11,8,9,7,8,2,1,1.49,4.15,8.99,win
+37446,37446,6/18/2016,Belgium,Ireland,Belgium,UEFA Euro,1,5,18,12,14,11,7,5,1,3,1.893,3.37,4.98,win
+37447,37447,6/18/2016,Hungary,Iceland,Iceland,UEFA Euro,4,0,12,24,9,13,4,3,4,0,3.15,3,2.66,draw
+37450,37450,6/18/2016,Austria,Portugal,Portugal,UEFA Euro,1,5,13,16,16,7,7,7,0,0,5.37,3.68,1.758,draw
+37454,37454,6/19/2016,Albania,Romania,Romania,UEFA Euro,-9,3,10,15,18,13,3,3,2,5,3.87,3.5,2.06,win
+37455,37455,6/19/2016,France,Switzerland,Switzerland,UEFA Euro,4,9,25,17,11,11,9,5,0,0,1.952,2.92,5.87,draw
+37457,37457,6/20/2016,Russia,Wales,Russia,UEFA Euro,4,3,16,14,17,6,5,4,2,2,2.63,3.06,3.12,lose
+37458,37458,6/20/2016,England,Slovakia,Slovakia,UEFA Euro,3,0,15,16,11,15,7,5,1,3,1.84,3.2,5.8,draw
+37459,37459,6/21/2016,Croatia,Spain,Croatia,UEFA Euro,-2,1,20,15,6,8,7,7,2,2,5.38,3.06,1.943,win
+37460,37460,6/21/2016,Czech Republic,Turkey,Czech Republic,UEFA Euro,2,1,20,8,12,10,4,7,1,1,2.37,3.6,3.06,lose
+37463,37463,6/21/2016,Germany,Northern Ireland,Northern Ireland,UEFA Euro,6,4,21,13,12,7,6,5,0,4,1.34,4.79,13.68,win
+37464,37464,6/21/2016,Poland,Ukraine,Ukraine,UEFA Euro,-1,2,27,11,9,11,7,6,2,2,2.02,3.22,4.51,win
+37468,37468,6/22/2016,Hungary,Portugal,Hungary,UEFA Euro,-7,3,12,17,10,7,4,6,4,1,9.36,4.01,1.49,draw
+37469,37469,6/22/2016,Austria,Iceland,Iceland,UEFA Euro,1,2,13,24,17,14,6,3,0,1,2.29,3.17,3.67,lose
+37470,37470,6/22/2016,Ireland,Italy,Italy,UEFA Euro,-6,3,13,17,8,11,4,6,4,2,3.69,3.12,2.29,win
+37473,37473,6/22/2016,Belgium,Sweden,Sweden,UEFA Euro,3,2,17,17,16,7,7,4,1,5,1.909,3.35,4.94,win
+37475,37475,6/25/2016,Croatia,Portugal,Croatia,UEFA Euro,-3,0,22,16,8,7,7,5,2,2,2.84,3,2.93,lose
+37478,37478,6/25/2016,Poland,Switzerland,Switzerland,UEFA Euro,3,4,19,16,8,12,6,5,3,1,2.88,2.89,3,draw
+37480,37480,6/25/2016,Northern Ireland,Wales,Wales,UEFA Euro,-18,23,12,15,6,7,5,3,4,2,5.01,2.97,2.04,lose
+37483,37483,6/26/2016,France,Ireland,France,UEFA Euro,2,5,25,15,10,8,9,3,0,4,1.541,3.8,9.01,win
+37484,37484,6/26/2016,Germany,Slovakia,Germany,UEFA Euro,4,0,18,17,11,16,5,6,1,3,1.429,4.3,9.01,win
+37485,37485,6/26/2016,Belgium,Hungary,Hungary,UEFA Euro,6,2,17,13,15,11,7,4,1,4,1.641,3.64,7.11,win
+37486,37486,6/27/2016,England,Iceland,England,UEFA Euro,1,1,15,21,12,13,7,3,1,2,1.469,4.22,9.16,lose
+37487,37487,6/27/2016,Italy,Spain,Italy,UEFA Euro,-1,13,17,18,11,7,6,7,2,2,4.54,2.93,2.14,win
+37489,37489,6/30/2016,Poland,Portugal,Poland,UEFA Euro,-1,3,17,18,7,8,7,4,2,3,3.72,2.93,2.4,draw
+37490,37490,7/1/2016,Belgium,Wales,Wales,UEFA Euro,1,3,17,15,15,9,7,3,1,2,1.901,3.39,4.87,lose
+37491,37491,7/2/2016,Germany,Italy,Germany,UEFA Euro,-7,10,16,16,9,9,5,5,1,2,2.27,3.06,3.85,draw
+37494,37494,7/3/2016,France,Iceland,France,UEFA Euro,8,3,21,20,10,13,8,4,1,2,1.42,4.93,8.5,win
+37496,37496,7/6/2016,Portugal,Wales,Portugal,UEFA Euro,1,0,17,16,9,9,5,4,3,1,2.17,3.11,4.12,win
+37497,37497,7/7/2016,France,Germany,Germany,UEFA Euro,3,6,22,18,9,9,8,6,1,1,2.81,3,2.98,win
+37498,37498,7/10/2016,France,Portugal,Portugal,UEFA Euro,11,1,25,18,11,8,8,4,1,4,2.17,3.08,4.21,lose
