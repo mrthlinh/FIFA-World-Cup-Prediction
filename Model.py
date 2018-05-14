@@ -26,7 +26,7 @@ from sklearn import tree
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, confusion_matrix
-
+from sklearn.model_selection import cross_val_score
 from xgboost import XGBClassifier
 
 import pickle
@@ -39,18 +39,29 @@ from result_plot import plot_confusion_matrix,plot_ROC_curve
 data_ = pd.read_csv("data/data_odd_2005.csv", encoding='utf-8')
 data = data_.iloc[:,2:].copy()
 
-# Label Encoder
-le = preprocessing.LabelEncoder()
-le_tour = saveLabelEncoder(data['tournament'],'LE/tournament.npy')
+# Label Encoder (only do 1 time)
+#le = preprocessing.LabelEncoder()
+#le_tour = saveLabelEncoder(data['tournament'],'LE/tournament.npy')
+#data['tournament'] = le_tour.transform(data['tournament'])
+#le_result = saveLabelEncoder(data['result'],'LE/result.npy')
+#data['result'] = le_result.transform(data['result'])
+#x = np.concatenate((data['team_1'],data['team_2']), axis=0)
+#le_country = saveLabelEncoder(x,'LE/country.npy')
+#data['team_1'] = le_country.transform(data['team_1'])
+#data['team_2'] = le_country.transform(data['team_2'])
+#data['home_team'] = le_country.transform(data['home_team'])
+
+# Load Label Encoder
+le_result = loadLabelEncoder('LE/result.npy')
+data['result'] = le_result.transform(data_['result'])
+
+le_tour = loadLabelEncoder('LE/tournament.npy')
 data['tournament'] = le_tour.transform(data['tournament'])
-le_result = saveLabelEncoder(data['result'],'LE/result.npy')
-data['result'] = le_result.transform(data['result'])
-x = np.concatenate((data['team_1'],data['team_2']), axis=0)
-le_country = saveLabelEncoder(x,'LE/country.npy')
+
+le_country = loadLabelEncoder('LE/country.npy')
 data['team_1'] = le_country.transform(data['team_1'])
 data['team_2'] = le_country.transform(data['team_2'])
 data['home_team'] = le_country.transform(data['home_team'])
-
 
 # Standard Scale
 data_test = data.iloc[:,4:].copy()
@@ -58,8 +69,17 @@ data_test[data_test.columns[:-1]] = MinMaxScaler().fit_transform(data_test[data_
 data = data_test.copy()
 
 
+#scaler = StandardScaler()
+#scaler.fit(x_train.iloc[:,1:])
+#
+#x_train.iloc[:,1:] = scaler.transform(x_train.iloc[:,1:])
+#x_test.iloc[:,1:]= scaler.transform(x_test.iloc[:,1:])
+
+
 # Split data training and testing
 x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],data.iloc[:,-1:].squeeze(),test_size=0.3, random_state=85)
+data_x = data.iloc[:,:-1]
+data_y = data.iloc[:,-1].squeeze()
 
 # Save filte train and test
 x_train.to_csv('data/train_x.csv',index = False)
@@ -114,6 +134,19 @@ plot_ROC_curve(y_test,y_score,title='Logistic Regression ROC curve',class_names 
 for params, mean_score, scores in clf_LR.grid_scores_:
     print("%0.3f (+/-%0.03f) for %r" % (mean_score, scores.std() / 2, params))
 
+# 10-fold-test error
+scores = cross_val_score(modelCV_LR, data_x, data_y, cv=10)
+print(scores)
+print(np.mean(scores))
+
+# Save the best model
+filename = 'save_model/LR.sav'
+pickle.dump(modelCV_LR, open(filename, 'wb'))
+    
+# load the model from disk
+loaded_model = pickle.load(open(filename, 'rb'))
+result = loaded_model.score(x_test, y_test)
+print(result)
 #==========================================================
 # Fit a simple SVM 
 #SVM_ = SVC(C=0.001,kernel = 'linear')
@@ -195,10 +228,10 @@ cnf_matrix = confusion_matrix(y_test, y_pred_RF)
 plot_confusion_matrix(cnf_matrix, classes=class_names,title='Random Forest Confusion matrix, without normalization')
 
 #==========================================================
-# Fit Random Forest with GridSearch CV: Sth wrong
-RF = RandomForestClassifier(random_state=0, verbose = True)
+# Fit Random Forest with GridSearch CV:
+RF = RandomForestClassifier(random_state=0)
 grid_RF= [{'n_estimators': [10]}] 
-clf_RF = GridSearchCV(estimator = RF,param_grid = grid_RF,scoring='f1_micro',cv = 3,n_jobs=-1)
+clf_RF = GridSearchCV(estimator = RF,param_grid = grid_RF,scoring='f1_micro',cv = 3,n_jobs=-1,verbose = True)
 clf_RF.fit(x_train,y_train)
 
 clf_RF.best_score_                                 
@@ -217,6 +250,14 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Random Forest Confu
 
 plot_confusion_matrix(cnf_matrix, classes=class_names,normalize = True,title='Normalized Confusion matrix')
 
+# 10-fold-test error
+scores = cross_val_score(model_RF, data_x, data_y, cv=10)
+print(scores)
+print(np.mean(scores))
+
+# Save the best model
+filename = 'save_model/RF.sav'
+pickle.dump(model_RF, open(filename, 'wb'))
 
 #==========================================================
 # GradientBoostingClassifier: need CV herer
@@ -244,6 +285,15 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='Gradient Boosting D
 y_score = model_GBT.decision_function(x_test)
 plot_ROC_curve(y_test,y_score,title='Gradient Boosting DT ROC curve',class_names = class_names)
 
+# 10-fold-test error
+scores = cross_val_score(model_GBT, data_x, data_y, cv=10)
+print(scores)
+print(np.mean(scores))
+
+# Save the best model
+filename = 'save_model/GBT.sav'
+pickle.dump(model_GBT, open(filename, 'wb'))
+
 #==========================================================
 # Fit a ADAboost Tree: seem promising, need CV here
 ADAboost = AdaBoostClassifier(algorithm="SAMME",learning_rate=1)
@@ -259,7 +309,6 @@ clf_ADA.fit(x_train,y_train)
 clf_ADA.best_score_                                 
 model_ADA = clf_ADA.best_estimator_       
 
-
 y_pred_ADA  = model_ADA.predict(x_test)
 print(classification_report(y_test, y_pred_ADA))
 accuracy_score(y_test, y_pred_ADA)
@@ -273,7 +322,14 @@ plot_confusion_matrix(cnf_matrix, classes=class_names,title='ADAboost DT Confusi
 y_score = model_ADA.decision_function(x_test)
 plot_ROC_curve(y_test,y_score,title='AdaBoost DT ROC curve',class_names = class_names)
 
+# 10-fold-test error
+scores = cross_val_score(model_ADA, data_x, data_y, cv=10)
+print(scores)
+print(np.mean(scores))
 
+# Save the best model
+filename = 'save_model/ADA.sav'
+pickle.dump(model_ADA, open(filename, 'wb'))
 #==========================================================
 from sklearn.naive_bayes import MultinomialNB
 model_NB = MultinomialNB().fit(x_train, y_train)
