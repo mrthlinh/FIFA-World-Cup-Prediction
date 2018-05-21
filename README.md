@@ -389,11 +389,8 @@ Accuracy = 0.48
 
 # Task List
 __Ongoing__
-- [ ] Replace "test error" with "10-fold cross validation error"
-- [ ] Delete "Model.ipynb"
-- [ ] Divide model into smaller functions corresponding to each model
+- [ ] How about classification -> regression
 - [ ] Add more t-test with label "draw"
-- [ ] Generate data and preform prediction for EURO 2016, ok now my story is more interesting
 - [ ] Group all model results into one graph and draw a preliminary conclusion, set up a baseline
 - [ ] Explore more about result "draw", generate some insight, how to predict these cases?
 - [ ] Explore more about weak team > strong team, generate some insight, how to predict these cases?
@@ -403,7 +400,6 @@ __Ongoing__
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
-- [ ] Migrate code of pre-processing plot function to python file with Spyder
 - [ ] Build a web crawler for Ranking over time
 - [ ] A table of title won for each team
 - [ ] Integrate player rating and squad value to data
@@ -418,3 +414,4 @@ __Complete__
   - [x] Add accuracy, precision, recall, F1
   - [x] Add ROC curves
 - [x] Build a data without player rating and squad value
+- [x] Generate data and preform prediction for EURO 2016, ok now my story is more interesting
