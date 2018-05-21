@@ -47,8 +47,8 @@ data_y = data.iloc[:,-1]
 # load the model from disk
 #filename = 'save_model/LR.sav'
 #filename = 'save_model/RF.sav'
-filename = 'save_model/GBT.sav'
-#filename = 'save_model/ADA.sav'
+#filename = 'save_model/GBT.sav'
+filename = 'save_model/ADA.sav'
 loaded_model = pickle.load(open(filename, 'rb'))
 
 y_pred = loaded_model.predict(data_x)
