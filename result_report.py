@@ -13,6 +13,42 @@ from itertools import cycle
 from sklearn.metrics import roc_curve, auc
 from sklearn.preprocessing import label_binarize
 from scipy import interp
+
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import classification_report,confusion_matrix
+
+from LE import loadLabelEncoder
+
+def MyReport(model,model_Name,list_data,tune = True):
+    data_x, data_y, x_train, x_test, y_train, y_test = list_data
+    # Training
+    model.fit(x_train,y_train)
+    
+    modelCV = model
+    if tune:                             
+        modelCV = model.best_estimator_
+
+    # General Report          
+    y_predCV = modelCV.predict(x_test)
+    print(classification_report(y_test, y_predCV))
+     
+    # Plot Confusion Matrix
+    le_result = loadLabelEncoder('LE/result.npy')
+    class_names = le_result.classes_
+    cnf_matrix = confusion_matrix(y_test, y_predCV)
+    plot_confusion_matrix(cnf_matrix, classes=class_names,title=model_Name+' Confusion matrix, without normalization')
+    
+    # ROC curve
+    try:
+        y_score = modelCV.decision_function(x_test)
+        plot_ROC_curve(y_test,y_score,title=model_Name+' ROC curve',class_names = class_names)
+    except:
+        print("ROC curve is not available because model does not have decision_function method")
+    # 10-fold-test error
+    scores = cross_val_score(modelCV, data_x, data_y, cv=10)
+    print("10-fold cross validation mean square error: ",np.mean(scores))
+    return modelCV
+
 def plot_confusion_matrix(cm, classes,
                           normalize=False,
                           title='Confusion matrix',
