@@ -19,7 +19,7 @@ __Lifecycle__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
 
 __Report__:
-
+Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
 
 # Data
 ### Data Source
