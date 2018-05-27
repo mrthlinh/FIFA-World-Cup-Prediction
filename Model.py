@@ -37,7 +37,9 @@ from LE import saveLabelEncoder,loadLabelEncoder
 from result_plot import plot_confusion_matrix,plot_ROC_curve
 
 # Load Data
-data_ = pd.read_csv("data/data_odd_2005.csv", encoding='utf-8')
+#data_ = pd.read_csv("data/data_odd_2005.csv", encoding='utf-8')
+data_ = pd.read_csv("data/data_odd_2005_regression_syn.csv", encoding='utf-8')
+
 data = data_.iloc[:,2:].copy()
 
 # Label Encoder (only do 1 time)
