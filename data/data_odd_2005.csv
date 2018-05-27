@@ -1906,12 +1906,10 @@ id,date,team_1,team_2,home_team,tournament,h_win_diff,h_draw,f_goalF_1,f_goalF_2
 30828,5/23/2009,Haiti,Jamaica,Jamaica,Friendly,2,3,12,18,11,4,1,8,4,1,5.5,4.2,1.45,draw
 30829,5/26/2009,Qatar,Saudi Arabia,Qatar,Friendly,-10,12,13,11,7,8,3,5,2,4,2.81,3.1815,2.3046,win
 30831,5/27/2009,Chile,Japan,Japan,Kirin Cup,0,1,14,16,9,14,5,5,0,3,3.4,3.1841,2.0336,lose
-30831,5/27/2009,Chile,Japan,Japan,Kirin Cup,0,1,14,16,9,14,5,5,0,3,3.3932,3.1755,2.0377,lose
 30833,5/28/2009,Sudan,Tunisia,Tunisia,Friendly,-2,0,15,13,8,9,4,4,2,4,8.1295,4.434,1.322,lose
 30834,5/29/2009,Belgium,Chile,Belgium,Kirin Cup,0,1,18,14,15,9,3,5,2,0,2.6827,3.2523,2.4223,draw
 30835,5/29/2009,China,Germany,China,Friendly,-1,0,14,16,9,16,3,6,1,1,10.8732,5.4395,1.2218,draw
 30836,5/29/2009,Ireland,Nigeria,Ireland,Friendly,-2,0,10,14,10,6,4,7,4,1,2.3587,3.1809,2.8596,draw
-30834,5/29/2009,Belgium,Chile,Belgium,Kirin Cup,0,1,18,14,15,9,3,5,2,0,2.7113,3.2539,2.403,draw
 30840,5/30/2009,Egypt,Oman,Oman,Friendly,0,0,19,8,6,7,7,6,0,3,1.941,3.29,3.515,win
 30838,5/30/2009,Canada,Cyprus,Cyprus,Friendly,0,0,21,17,11,11,2,3,3,2,3.8018,3.3091,1.8705,win
 30843,5/31/2009,Belgium,Japan,Japan,Kirin Cup,0,2,19,16,12,11,3,6,2,3,5.841,3.672,1.537,lose
