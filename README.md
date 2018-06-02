@@ -152,8 +152,8 @@ Accuracy = 0.48
 
 # Task List
 __Ongoing__
+- [ ] Add a simple classification based on "bet odd".
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
-- [ ] Create more data, "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose"
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
@@ -172,3 +172,4 @@ __Complete__
   - [x] Add ROC curves
 - [x] Build a data without player rating and squad value
 - [x] Generate data and preform prediction for EURO 2016, ok now my story is more interesting
+- [x] Create more data, "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose"
