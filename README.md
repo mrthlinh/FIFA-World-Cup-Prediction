@@ -77,6 +77,7 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 |ADA boost tree           |59.01|
 |Neural Net               |60.80|
 
+Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
 
 ### EURO 2016
 
@@ -137,6 +138,10 @@ We apply the model Gradient Boosted Tree to predict the result for EURO 2016 (no
 |      France      |     Portugal     |  lose  |    draw    |
 
 Accuracy = 0.48
+So far, the results are not so good but it is still better than a random guess of "win, lose and draw". One interesting thing is that our model predicts a "Draw" result in Final Match of EURO 2016, which is correct at 90th minute.
+
+### World Cup 2018 (Coming soon)
+
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
@@ -152,7 +157,6 @@ Accuracy = 0.48
 
 # Task List
 __Ongoing__
-- [ ] Add a simple classification based on "bet odd".
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
@@ -162,6 +166,7 @@ __Ongoing__
 - [ ] Integrate player rating and squad value to data
 
 __Complete__
+- [x] Add a simple classification based on "bet odd".
 - [x] Add features group 2
 - [x] Add features group 3
 - [x] Simple EDA and a small story
