@@ -77,6 +77,8 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 |ADA boost tree           |59.01|
 |Neural Net               |60.80|
 
+## Feature Importance: (coming soon)
+
 Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
 
 ### EURO 2016
@@ -157,15 +159,16 @@ So far, the results are not so good but it is still better than a random guess o
 
 # Task List
 __Ongoing__
+- [ ] Add feature Importance
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
 - [ ] Add feature group 1
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
-- [ ] Build a web crawler for Ranking over time
 - [ ] A table of title won for each team
 - [ ] Integrate player rating and squad value to data
 
 __Complete__
+- [x] Build a web crawler for FIFA game player
 - [x] Add a simple classification based on "bet odd".
 - [x] Add features group 2
 - [x] Add features group 3
