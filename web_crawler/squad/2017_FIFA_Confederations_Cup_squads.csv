@@ -1,0 +1,185 @@
+Country,Coach,player_pos,player_name,player_cap
+Mexico,Juan Carlos Osorio,GK,Rodolfo Cota,1
+Mexico,Juan Carlos Osorio,DF,Nestor Araujo,15
+Mexico,Juan Carlos Osorio,DF,Carlos Salcedo,11
+Mexico,Juan Carlos Osorio,DF,Rafael Marquez,139
+Mexico,Juan Carlos Osorio,DF,Diego Reyes,45
+Mexico,Juan Carlos Osorio,MF,Jonathan dos Santos,24
+Mexico,Juan Carlos Osorio,MF,Miguel Layun,51
+Mexico,Juan Carlos Osorio,FW,Marco Fabian,35
+Mexico,Juan Carlos Osorio,FW,Raul Jimenez,52
+Mexico,Juan Carlos Osorio,MF,Giovani dos Santos,96
+Mexico,Juan Carlos Osorio,MF,Carlos Vela,55
+Mexico,Juan Carlos Osorio,GK,Alfredo Talavera,26
+Mexico,Juan Carlos Osorio,GK,Guillermo Ochoa,80
+Mexico,Juan Carlos Osorio,FW,Javier Hernandez,92
+Mexico,Juan Carlos Osorio,DF,Hector Moreno,79
+Mexico,Juan Carlos Osorio,MF,Hector Herrera,54
+Mexico,Juan Carlos Osorio,MF,Jurgen Damm,6
+Mexico,Juan Carlos Osorio,MF,Andres Guardado,136
+Mexico,Juan Carlos Osorio,FW,Oribe Peralta,56
+Mexico,Juan Carlos Osorio,MF,Javier Aquino,43
+Mexico,Juan Carlos Osorio,DF,Luis Reyes,4
+Mexico,Juan Carlos Osorio,FW,Hirving Lozano,16
+Mexico,Juan Carlos Osorio,MF,Oswaldo Alanis,16
+New Zealand,Anthony Hudson,GK,Stefan Marinovic,16
+New Zealand,Anthony Hudson,DF,Sam Brotherton,7
+New Zealand,Anthony Hudson,DF,Deklan Wynne,9
+New Zealand,Anthony Hudson,DF,Themistoklis Tzimopoulos,11
+New Zealand,Anthony Hudson,DF,Michael Boxall,24
+New Zealand,Anthony Hudson,MF,Bill Tuiloma,18
+New Zealand,Anthony Hudson,FW,Kosta Barbarouses,39
+New Zealand,Anthony Hudson,MF,Michael McGlinchey,44
+New Zealand,Anthony Hudson,FW,Chris Wood,49
+New Zealand,Anthony Hudson,FW,Shane Smeltz,55
+New Zealand,Anthony Hudson,FW,Marco Rojas,34
+New Zealand,Anthony Hudson,GK,Glen Moss,29
+New Zealand,Anthony Hudson,FW,Monty Patterson,11
+New Zealand,Anthony Hudson,MF,Ryan Thomas,11
+New Zealand,Anthony Hudson,MF,Clayton Lewis,9
+New Zealand,Anthony Hudson,DF,Dane Ingham,2
+New Zealand,Anthony Hudson,DF,Tom Doyle,5
+New Zealand,Anthony Hudson,DF,Kip Colvey,10
+New Zealand,Anthony Hudson,FW,Alex Rufer,3
+New Zealand,Anthony Hudson,DF,Tommy Smith,32
+New Zealand,Anthony Hudson,DF,Storm Roux,7
+New Zealand,Anthony Hudson,DF,Andrew Durante,17
+New Zealand,Anthony Hudson,GK,Tamati Williams,1
+Portugal,Fernando Santos,GK,Rui Patricio,59
+Portugal,Fernando Santos,DF,Bruno Alves,90
+Portugal,Fernando Santos,DF,Pepe,82
+Portugal,Fernando Santos,DF,Luis Neto,13
+Portugal,Fernando Santos,DF,Raphael Guerreiro,18
+Portugal,Fernando Santos,DF,Jose Fonte,23
+Portugal,Fernando Santos,FW,Cristiano Ronaldo,139
+Portugal,Fernando Santos,MF,Joao Moutinho,98
+Portugal,Fernando Santos,FW,Andre Silva,8
+Portugal,Fernando Santos,MF,Bernardo Silva,12
+Portugal,Fernando Santos,DF,Nelson Semedo,4
+Portugal,Fernando Santos,GK,Jose Sa,0
+Portugal,Fernando Santos,MF,Danilo Pereira,19
+Portugal,Fernando Santos,MF,William Carvalho,33
+Portugal,Fernando Santos,MF,Andre Gomes,21
+Portugal,Fernando Santos,MF,Pizzi,7
+Portugal,Fernando Santos,FW,Nani,108
+Portugal,Fernando Santos,FW,Gelson Martins,6
+Portugal,Fernando Santos,DF,Eliseu,21
+Portugal,Fernando Santos,FW,Ricardo Quaresma,65
+Portugal,Fernando Santos,DF,Cedric,19
+Portugal,Fernando Santos,GK,Beto,11
+Portugal,Fernando Santos,MF,Adrien Silva,16
+Russia,Stanislav Cherchesov,GK,Igor Akinfeev,98
+Russia,Stanislav Cherchesov,DF,Igor Smolnikov,20
+Russia,Stanislav Cherchesov,DF,Roman Shishkin,15
+Russia,Stanislav Cherchesov,MF,Yury Gazinsky,5
+Russia,Stanislav Cherchesov,DF,Viktor Vasin,6
+Russia,Stanislav Cherchesov,DF,Georgi Dzhikiya,1
+Russia,Stanislav Cherchesov,FW,Dmitry Poloz,10
+Russia,Stanislav Cherchesov,MF,Denis Glushakov,51
+Russia,Stanislav Cherchesov,FW,Fyodor Smolov,21
+Russia,Stanislav Cherchesov,MF,Ruslan Kambolov,2
+Russia,Stanislav Cherchesov,FW,Aleksandr Bukharov,6
+Russia,Stanislav Cherchesov,GK,Vladimir Gabulov,10
+Russia,Stanislav Cherchesov,DF,Fyodor Kudryashov,8
+Russia,Stanislav Cherchesov,DF,Ilya Kutepov,4
+Russia,Stanislav Cherchesov,MF,Aleksei Miranchuk,9
+Russia,Stanislav Cherchesov,GK,Guilherme,2
+Russia,Stanislav Cherchesov,MF,Aleksandr Golovin,12
+Russia,Stanislav Cherchesov,MF,Yuri Zhirkov,75
+Russia,Stanislav Cherchesov,MF,Aleksandr Samedov,39
+Russia,Stanislav Cherchesov,FW,Maksim Kanunnikov,10
+Russia,Stanislav Cherchesov,MF,Aleksandr Yerokhin,8
+Russia,Stanislav Cherchesov,MF,Dmitri Tarasov,5
+Russia,Stanislav Cherchesov,DF,Dmitri Kombarov,44
+Australia,Ange Postecoglou,GK,Mathew Ryan,32
+Australia,Ange Postecoglou,DF,Milos Degenek,9
+Australia,Ange Postecoglou,DF,Alex Gersbach,2
+Australia,Ange Postecoglou,FW,Tim Cahill,97
+Australia,Ange Postecoglou,MF,Mark Milligan,56
+Australia,Ange Postecoglou,DF,Dylan McGowan,1
+Australia,Ange Postecoglou,FW,Mathew Leckie,41
+Australia,Ange Postecoglou,DF,Bailey Wright,15
+Australia,Ange Postecoglou,FW,Tomi Juric,23
+Australia,Ange Postecoglou,FW,Robbie Kruse,52
+Australia,Ange Postecoglou,FW,Jamie Maclaren,3
+Australia,Ange Postecoglou,GK,Mitchell Langerak,8
+Australia,Ange Postecoglou,MF,Aaron Mooy,24
+Australia,Ange Postecoglou,FW,James Troisi,29
+Australia,Ange Postecoglou,MF,James Jeggo,0
+Australia,Ange Postecoglou,DF,Aziz Behich,13
+Australia,Ange Postecoglou,MF,Ajdin Hrustic,1
+Australia,Ange Postecoglou,GK,Danny Vukovic,0
+Australia,Ange Postecoglou,DF,Ryan McGowan,19
+Australia,Ange Postecoglou,DF,Trent Sainsbury,24
+Australia,Ange Postecoglou,MF,Massimo Luongo,26
+Australia,Ange Postecoglou,MF,Jackson Irvine,11
+Australia,Ange Postecoglou,FW,Tom Rogic,25
+Cameroon,Hugo Broos,GK,Fabrice Ondoa,32
+Cameroon,Hugo Broos,DF,Ernest Mabouka,6
+Cameroon,Hugo Broos,MF,Andre-Frank Zambo Anguissa,4
+Cameroon,Hugo Broos,DF,Adolphe Teikeu,15
+Cameroon,Hugo Broos,DF,Michael Ngadeu-Ngadjui,15
+Cameroon,Hugo Broos,DF,Ambroise Oyongo,32
+Cameroon,Hugo Broos,FW,Moumi Ngamaleu,9
+Cameroon,Hugo Broos,FW,Benjamin Moukandjo,52
+Cameroon,Hugo Broos,FW,Jacques Zoua,23
+Cameroon,Hugo Broos,FW,Vincent Aboubakar,57
+Cameroon,Hugo Broos,FW,Olivier Boumal,2
+Cameroon,Hugo Broos,DF,Jerome Guihoata,3
+Cameroon,Hugo Broos,FW,Christian Bassogog,12
+Cameroon,Hugo Broos,MF,Georges Mandjeck,40
+Cameroon,Hugo Broos,MF,Sebastien Siani,19
+Cameroon,Hugo Broos,GK,Andre Onana,2
+Cameroon,Hugo Broos,MF,Arnaud Djoum,12
+Cameroon,Hugo Broos,FW,Robert Ndip Tambe,10
+Cameroon,Hugo Broos,DF,Collins Fai,12
+Cameroon,Hugo Broos,FW,Karl Toko Ekambi,15
+Cameroon,Hugo Broos,DF,Lucien Owona,1
+Cameroon,Hugo Broos,DF,Jonathan Ngwem,10
+Cameroon,Hugo Broos,GK,Georges Bokwe,0
+Chile,Juan Antonio Pizzi,GK,Claudio Bravo,112
+Chile,Juan Antonio Pizzi,DF,Eugenio Mena,51
+Chile,Juan Antonio Pizzi,DF,Enzo Roco,17
+Chile,Juan Antonio Pizzi,DF,Mauricio Isla,90
+Chile,Juan Antonio Pizzi,MF,Francisco Silva,33
+Chile,Juan Antonio Pizzi,MF,Jose Pedro Fuenzalida,44
+Chile,Juan Antonio Pizzi,FW,Alexis Sanchez,110
+Chile,Juan Antonio Pizzi,MF,Arturo Vidal,90
+Chile,Juan Antonio Pizzi,FW,Angelo Sagal,5
+Chile,Juan Antonio Pizzi,MF,Pablo Hernandez,14
+Chile,Juan Antonio Pizzi,FW,Eduardo Vargas,72
+Chile,Juan Antonio Pizzi,GK,Cristopher Toselli,9
+Chile,Juan Antonio Pizzi,DF,Paulo Diaz,6
+Chile,Juan Antonio Pizzi,MF,Felipe Gutierrez,34
+Chile,Juan Antonio Pizzi,DF,Jean Beausejour,91
+Chile,Juan Antonio Pizzi,FW,Martin Rodriguez,4
+Chile,Juan Antonio Pizzi,DF,Gary Medel,101
+Chile,Juan Antonio Pizzi,DF,Gonzalo Jara,102
+Chile,Juan Antonio Pizzi,FW,Leonardo Valencia,6
+Chile,Juan Antonio Pizzi,MF,Charles Aranguiz,58
+Chile,Juan Antonio Pizzi,MF,Marcelo Diaz,54
+Chile,Juan Antonio Pizzi,FW,Edson Puch,17
+Chile,Juan Antonio Pizzi,GK,Johnny Herrera,19
+Germany,Joachim Low,GK,Kevin Trapp,1
+Germany,Joachim Low,DF,Shkodran Mustafi,16
+Germany,Joachim Low,DF,Jonas Hector,29
+Germany,Joachim Low,DF,Matthias Ginter,10
+Germany,Joachim Low,DF,Marvin Plattenhardt,2
+Germany,Joachim Low,DF,Benjamin Henrichs,1
+Germany,Joachim Low,MF,Julian Draxler,30
+Germany,Joachim Low,MF,Leon Goretzka,5
+Germany,Joachim Low,FW,Sandro Wagner,2
+Germany,Joachim Low,MF,Kerem Demirbay,1
+Germany,Joachim Low,FW,Timo Werner,2
+Germany,Joachim Low,GK,Bernd Leno,4
+Germany,Joachim Low,FW,Lars Stindl,2
+Germany,Joachim Low,MF,Emre Can,10
+Germany,Joachim Low,MF,Amin Younes,2
+Germany,Joachim Low,DF,Antonio Rudiger,13
+Germany,Joachim Low,DF,Niklas Sule,2
+Germany,Joachim Low,DF,Joshua Kimmich,15
+Germany,Joachim Low,MF,Leroy Sane,6
+Germany,Joachim Low,MF,Julian Brandt,7
+Germany,Joachim Low,MF,Sebastian Rudy,15
+Germany,Joachim Low,GK,Marc-Andre ter Stegen,10
+Germany,Joachim Low,MF,Diego Demme,1
