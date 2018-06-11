@@ -11,3 +11,7 @@ __pycache__/test_LE.cpython-35.pyc
 *.pyc
 .ipynb_checkpoints/EDA-Demo-checkpoint.ipynb
 .ipynb_checkpoints/Untitled-checkpoint.ipynb
+data/raw/*.csv
+web_crawler/delete/*
+web_crawler/player/data pre_clean/*.csv
+web_crawler/player/fragment data/*.csv
