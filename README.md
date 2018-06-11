@@ -1,6 +1,6 @@
 # Project Description
 __Objective__:
-- Prediction of the winner of an international matches Prediction results are  Win / Lose / Draw
+- Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw"
 - Apply the model to predict the result of FIFA world cup 2018.
 
 __Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games.
@@ -165,9 +165,9 @@ __Ongoing__
     - [x] Add h_win_diff, h_draw
     - [ ] Add rank_diff, title_diff
 - [ ] A table of title won for each team
-- [ ] Integrate player rating and squad value to data
 
 __Complete__
+- [x] Build a web crawler for Squad each team
 - [x] Build a web crawler for FIFA game player
 - [x] Add a simple classification based on "bet odd".
 - [x] Add features group 2
