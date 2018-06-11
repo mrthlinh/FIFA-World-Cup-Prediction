@@ -1,0 +1,369 @@
+player_cap,player_pos,Country,player_name,Coach
+64,GK,Colombia,David Ospina,Jose Pekerman
+40,DF,Colombia,Cristian Zapata,Jose Pekerman
+2,DF,Colombia,Yerry Mina,Jose Pekerman
+21,DF,Colombia,Santiago Arias,Jose Pekerman
+1,MF,Colombia,Guillermo Celis,Jose Pekerman
+62,MF,Colombia,Carlos Sanchez,Jose Pekerman
+27,FW,Colombia,Carlos Bacca,Jose Pekerman
+14,MF,Colombia,Edwin Cardona,Jose Pekerman
+0,FW,Colombia,Roger Martinez,Jose Pekerman
+42,MF,Colombia,James Rodriguez,Jose Pekerman
+49,MF,Colombia,Juan Guillermo Cuadrado,Jose Pekerman
+3,GK,Colombia,Robinson Zapata,Jose Pekerman
+2,MF,Colombia,Sebastian Perez,Jose Pekerman
+0,DF,Colombia,Felipe Aguilar,Jose Pekerman
+4,DF,Colombia,Stefan Medina,Jose Pekerman
+4,MF,Colombia,Daniel Torres,Jose Pekerman
+27,FW,Colombia,Dayro Moreno,Jose Pekerman
+5,DF,Colombia,Frank Fabra,Jose Pekerman
+2,DF,Colombia,Farid Diaz,Jose Pekerman
+1,MF,Colombia,Andres Felipe Roa,Jose Pekerman
+2,FW,Colombia,Marlos Moreno,Jose Pekerman
+16,DF,Colombia,Jeison Murillo,Jose Pekerman
+0,GK,Colombia,Cristian Bonilla,Jose Pekerman
+0,GK,Costa Rica,Danny Carvajal,Oscar Ramirez
+40,DF,Costa Rica,Johnny Acosta,Oscar Ramirez
+11,DF,Costa Rica,Francisco Calvo,Oscar Ramirez
+92,DF,Costa Rica,Michael Umana,Oscar Ramirez
+88,MF,Costa Rica,Celso Borges,Oscar Ramirez
+28,DF,Costa Rica,Oscar Duarte,Oscar Ramirez
+57,MF,Costa Rica,Christian Bolanos,Oscar Ramirez
+28,DF,Costa Rica,Bryan Oviedo,Oscar Ramirez
+107,FW,Costa Rica,Alvaro Saborio,Oscar Ramirez
+87,FW,Costa Rica,Bryan Ruiz,Oscar Ramirez
+21,MF,Costa Rica,Johan Venegas,Oscar Ramirez
+58,FW,Costa Rica,Joel Campbell,Oscar Ramirez
+14,MF,Costa Rica,Oscar Granados,Oscar Ramirez
+38,MF,Costa Rica,Randall Azofeifa,Oscar Ramirez
+26,DF,Costa Rica,Jose Salvatierra,Oscar Ramirez
+47,DF,Costa Rica,Cristian Gamboa,Oscar Ramirez
+34,MF,Costa Rica,Yeltsin Tejeda,Oscar Ramirez
+27,GK,Costa Rica,Patrick Pemberton,Oscar Ramirez
+7,DF,Costa Rica,Kendall Waston,Oscar Ramirez
+0,FW,Costa Rica,Johnny Woodly,Oscar Ramirez
+40,FW,Costa Rica,Marco Urena,Oscar Ramirez
+8,DF,Costa Rica,Ronald Matarrita,Oscar Ramirez
+5,GK,Costa Rica,Leonel Moreira,Oscar Ramirez
+114,GK,Paraguay,Justo Villar,Ramon Diaz
+3,DF,Paraguay,Fabian Balbuena,Ramon Diaz
+13,DF,Paraguay,Gustavo Gomez,Ramon Diaz
+24,DF,Paraguay,Ivan Piris,Ramon Diaz
+10,DF,Paraguay,Bruno Valdez,Ramon Diaz
+33,DF,Paraguay,Miguel Samudio,Ramon Diaz
+5,FW,Paraguay,Jorge Benitez,Ramon Diaz
+6,MF,Paraguay,Juan Rodrigo Rojas,Ramon Diaz
+5,FW,Paraguay,Antonio Sanabria,Ramon Diaz
+20,FW,Paraguay,Derlis Gonzalez,Ramon Diaz
+52,FW,Paraguay,Edgar Benitez,Ramon Diaz
+14,GK,Paraguay,Antony Silva,Ramon Diaz
+0,MF,Paraguay,Blas Riveros,Ramon Diaz
+133,DF,Paraguay,Paulo da Silva,Ramon Diaz
+1,FW,Paraguay,Juan Iturbe,Ramon Diaz
+8,MF,Paraguay,Celso Ortiz,Ramon Diaz
+1,FW,Paraguay,Miguel Almiron,Ramon Diaz
+74,FW,Paraguay,Nelson Haedo Valdez,Ramon Diaz
+5,FW,Paraguay,Dario Lezcano,Ramon Diaz
+17,DF,Paraguay,Victor Ayala,Ramon Diaz
+17,MF,Paraguay,Oscar Romero,Ramon Diaz
+13,GK,Paraguay,Diego Barreto,Ramon Diaz
+0,MF,Paraguay,Robert Piris Da Motta,Ramon Diaz
+42,GK,United States,Brad Guzan,Jurgen Klinsmann
+31,DF,United States,DeAndre Yedlin,Jurgen Klinsmann
+4,DF,United States,Steve Birnbaum,Jurgen Klinsmann
+113,MF,United States,Michael Bradley,Jurgen Klinsmann
+31,DF,United States,Matt Besler,Jurgen Klinsmann
+18,DF,United States,John Brooks,Jurgen Klinsmann
+16,FW,United States,Bobby Wood,Jurgen Klinsmann
+122,FW,United States,Clint Dempsey,Jurgen Klinsmann
+23,FW,United States,Gyasi Zardes,Jurgen Klinsmann
+5,MF,United States,Darlington Nagbe,Jurgen Klinsmann
+45,MF,United States,Alejandro Bedoya,Jurgen Klinsmann
+107,GK,United States,Tim Howard,Jurgen Klinsmann
+58,MF,United States,Jermaine Jones,Jurgen Klinsmann
+22,DF,United States,Michael Orozco,Jurgen Klinsmann
+52,MF,United States,Kyle Beckerman,Jurgen Klinsmann
+3,MF,United States,Perry Kitchen,Jurgen Klinsmann
+1,FW,United States,Christian Pulisic,Jurgen Klinsmann
+31,FW,United States,Chris Wondolowski,Jurgen Klinsmann
+33,MF,United States,Graham Zusi,Jurgen Klinsmann
+39,DF,United States,Geoff Cameron,Jurgen Klinsmann
+18,DF,United States,Edgar Castillo,Jurgen Klinsmann
+0,GK,United States,Ethan Horvath,Jurgen Klinsmann
+42,DF,United States,Fabian Johnson,Jurgen Klinsmann
+5,GK,Brazil,Alisson,Dunga
+89,DF,Brazil,Dani Alves,Dunga
+29,DF,Brazil,Miranda,Dunga
+6,DF,Brazil,Gil,Dunga
+9,MF,Brazil,Casemiro,Dunga
+23,DF,Brazil,Filipe Luis,Dunga
+8,MF,Brazil,Ganso,Dunga
+31,MF,Brazil,Elias,Dunga
+9,FW,Brazil,Jonas,Dunga
+9,MF,Brazil,Lucas Lima,Dunga
+1,FW,Brazil,Gabriel,Dunga
+8,GK,Brazil,Diego Alves,Dunga
+9,DF,Brazil,Marquinhos,Dunga
+1,DF,Brazil,Rodrigo Caio,Dunga
+3,DF,Brazil,Fabinho,Dunga
+1,DF,Brazil,Douglas Santos,Dunga
+0,MF,Brazil,Walace,Dunga
+7,MF,Brazil,Renato Augusto,Dunga
+34,MF,Brazil,Willian,Dunga
+33,MF,Brazil,Lucas Moura,Dunga
+46,FW,Brazil,Hulk,Dunga
+13,MF,Brazil,Philippe Coutinho,Dunga
+2,GK,Brazil,Marcelo Grohe,Dunga
+27,GK,Ecuador,Maximo Banguera,Gustavo Quinteros
+7,DF,Ecuador,Arturo Mina,Gustavo Quinteros
+57,DF,Ecuador,Frickson Erazo,Gustavo Quinteros
+58,DF,Ecuador,Juan Carlos Paredes,Gustavo Quinteros
+4,DF,Ecuador,Cristian Ramirez,Gustavo Quinteros
+63,MF,Ecuador,Christian Noboa,Gustavo Quinteros
+55,MF,Ecuador,Jefferson Montero,Gustavo Quinteros
+4,MF,Ecuador,Fernando Gaibor,Gustavo Quinteros
+23,MF,Ecuador,Fidel Martinez,Gustavo Quinteros
+111,DF,Ecuador,Walter Ayovi,Gustavo Quinteros
+26,MF,Ecuador,Michael Arroyo,Gustavo Quinteros
+1,GK,Ecuador,Esteban Dreer,Gustavo Quinteros
+24,FW,Ecuador,Enner Valencia,Gustavo Quinteros
+6,MF,Ecuador,Angel Mena,Gustavo Quinteros
+0,MF,Ecuador,Pedro Larrea,Gustavo Quinteros
+80,MF,Ecuador,Antonio Valencia,Gustavo Quinteros
+34,FW,Ecuador,Jaime Ayovi,Gustavo Quinteros
+10,MF,Ecuador,Carlos Gruezo,Gustavo Quinteros
+12,MF,Ecuador,Juan Cazares,Gustavo Quinteros
+0,DF,Ecuador,Robert Arboleda,Gustavo Quinteros
+36,DF,Ecuador,Gabriel Achilier,Gustavo Quinteros
+36,GK,Ecuador,Alexander Dominguez,Gustavo Quinteros
+12,FW,Ecuador,Miller Bolanos,Gustavo Quinteros
+27,GK,Haiti,Johny Placide,Patrice Neveu
+64,DF,Haiti,Jean Sony Alcenat,Patrice Neveu
+52,DF,Haiti,Mechack Jerome,Patrice Neveu
+19,DF,Haiti,Kim Jaggy,Patrice Neveu
+4,DF,Haiti,Romain Genevois,Patrice Neveu
+4,DF,Haiti,Stephane Lambese,Patrice Neveu
+36,FW,Haiti,Wilde-Donald Guerrier,Patrice Neveu
+21,DF,Haiti,Reginal Goreux,Patrice Neveu
+27,FW,Haiti,Kervens Belfort,Patrice Neveu
+26,FW,Haiti,Jeff Louis,Patrice Neveu
+31,MF,Haiti,Pascal Millien,Patrice Neveu
+8,GK,Haiti,Steward Ceus,Patrice Neveu
+21,MF,Haiti,Kevin Lafrance,Patrice Neveu
+29,MF,Haiti,James Marcelin,Patrice Neveu
+25,MF,Haiti,Sony Norde,Patrice Neveu
+38,MF,Haiti,Jean Alexandre,Patrice Neveu
+11,MF,Haiti,Soni Mustivar,Patrice Neveu
+46,DF,Haiti,Judelin Aveska,Patrice Neveu
+7,MF,Haiti,Max Hilaire,Patrice Neveu
+13,FW,Haiti,Duckens Nazon,Patrice Neveu
+30,FW,Haiti,Jean-Eudes Maurice,Patrice Neveu
+5,DF,Haiti,Alex Junior Christian,Patrice Neveu
+0,GK,Haiti,Luis Valendi Odelus,Patrice Neveu
+19,GK,Peru,Pedro Gallese,Ricardo Gareca
+52,DF,Peru,Alberto Rodriguez,Ricardo Gareca
+8,DF,Peru,Aldo Corzo,Ricardo Gareca
+18,DF,Peru,Renzo Revoredo,Ricardo Gareca
+12,MF,Peru,Adan Balbin,Ricardo Gareca
+2,DF,Peru,Miguel Trauco,Ricardo Gareca
+0,MF,Peru,Luiz da Silva,Ricardo Gareca
+1,MF,Peru,Andy Polo,Ricardo Gareca
+67,FW,Peru,Paolo Guerrero,Ricardo Gareca
+21,FW,Peru,Christian Cueva,Ricardo Gareca
+13,FW,Peru,Raul Ruidiaz,Ricardo Gareca
+15,GK,Peru,Diego Penny,Ricardo Gareca
+8,MF,Peru,Renato Tapia,Ricardo Gareca
+0,MF,Peru,Armando Alfageme,Ricardo Gareca
+43,DF,Peru,Christian Ramos,Ricardo Gareca
+1,MF,Peru,Oscar Vilchez,Ricardo Gareca
+0,DF,Peru,Luis Abram,Ricardo Gareca
+9,MF,Peru,Cristian Benavente,Ricardo Gareca
+52,MF,Peru,Yoshimar Yotun,Ricardo Gareca
+4,FW,Peru,Edison Flores,Ricardo Gareca
+0,MF,Peru,Alejandro Hohberg,Ricardo Gareca
+7,DF,Peru,Jair Cespedes,Ricardo Gareca
+0,GK,Peru,Carlos Caceda,Ricardo Gareca
+15,GK,Jamaica,Andre Blake,Winfried Schafer
+0,DF,Jamaica,Damano Solomon,Winfried Schafer
+13,DF,Jamaica,Michael Hector,Winfried Schafer
+25,DF,Jamaica,Wes Morgan,Winfried Schafer
+1,DF,Jamaica,Rosario Harriott,Winfried Schafer
+5,FW,Jamaica,Dever Orgill,Winfried Schafer
+0,MF,Jamaica,Chevone Marsh,Winfried Schafer
+4,FW,Jamaica,Clayton Donaldson,Winfried Schafer
+14,FW,Jamaica,Giles Barnes,Winfried Schafer
+26,MF,Jamaica,Jobi McAnuff,Winfried Schafer
+3,MF,Jamaica,Andrew Vanzie,Winfried Schafer
+0,MF,Jamaica,Michael Binns,Winfried Schafer
+14,GK,Jamaica,Duwayne Kerr,Winfried Schafer
+5,FW,Jamaica,Allan Ottey,Winfried Schafer
+54,MF,Jamaica,Je-Vaughn Watson,Winfried Schafer
+4,MF,Jamaica,Lee Williamson,Winfried Schafer
+84,MF,Jamaica,Rodolph Austin,Winfried Schafer
+13,MF,Jamaica,Joel Grant,Winfried Schafer
+37,DF,Jamaica,Adrian Mariappa,Winfried Schafer
+31,DF,Jamaica,Kemar Lawrence,Winfried Schafer
+85,DF,Jamaica,Jermaine Taylor,Winfried Schafer
+19,MF,Jamaica,Garath McCleary,Winfried Schafer
+7,GK,Jamaica,Ryan Thompson,Winfried Schafer
+42,GK,Mexico,Jose de Jesus Corona,Juan Carlos Osorio
+5,DF,Mexico,Nestor Araujo,Juan Carlos Osorio
+4,DF,Mexico,Yasser Corona,Juan Carlos Osorio
+129,DF,Mexico,Rafael Marquez,Juan Carlos Osorio
+32,DF,Mexico,Diego Reyes,Juan Carlos Osorio
+45,DF,Mexico,Jorge Torres Nilo,Juan Carlos Osorio
+38,DF,Mexico,Miguel Layun,Juan Carlos Osorio
+2,FW,Mexico,Hirving Lozano,Juan Carlos Osorio
+42,FW,Mexico,Raul Jimenez,Juan Carlos Osorio
+20,FW,Mexico,Jesus Manuel Corona,Juan Carlos Osorio
+35,MF,Mexico,Javier Aquino,Juan Carlos Osorio
+20,GK,Mexico,Alfredo Talavera,Juan Carlos Osorio
+74,GK,Mexico,Guillermo Ochoa,Juan Carlos Osorio
+80,FW,Mexico,Javier Hernandez,Juan Carlos Osorio
+66,DF,Mexico,Hector Moreno,Juan Carlos Osorio
+39,MF,Mexico,Hector Herrera,Juan Carlos Osorio
+1,MF,Mexico,Candido Ramirez,Juan Carlos Osorio
+124,MF,Mexico,Andres Guardado,Juan Carlos Osorio
+46,FW,Mexico,Oribe Peralta,Juan Carlos Osorio
+6,MF,Mexico,Jesus Duenas,Juan Carlos Osorio
+16,MF,Mexico,Carlos Pena,Juan Carlos Osorio
+50,DF,Mexico,Paul Aguilar,Juan Carlos Osorio
+11,MF,Mexico,Jesus Molina,Juan Carlos Osorio
+79,GK,Uruguay,Fernando Muslera,Oscar Tabarez
+25,DF,Uruguay,Jose Gimenez,Oscar Tabarez
+97,DF,Uruguay,Diego Godin,Oscar Tabarez
+46,DF,Uruguay,Jorge Fucile,Oscar Tabarez
+16,MF,Uruguay,Carlos Sanchez,Oscar Tabarez
+78,DF,Uruguay,Alvaro Pereira,Oscar Tabarez
+0,MF,Uruguay,Diego Laxalt,Oscar Tabarez
+25,FW,Uruguay,Abel Hernandez,Oscar Tabarez
+84,FW,Uruguay,Luis Suarez,Oscar Tabarez
+34,MF,Uruguay,Gaston Ramirez,Oscar Tabarez
+27,FW,Uruguay,Cristhian Stuani,Oscar Tabarez
+0,GK,Uruguay,Martin Campana,Oscar Tabarez
+23,DF,Uruguay,Mauricio Victorino,Oscar Tabarez
+44,MF,Uruguay,Nicolas Lodeiro,Oscar Tabarez
+2,MF,Uruguay,Matias Vecino,Oscar Tabarez
+110,DF,Uruguay,Maxi Pereira,Oscar Tabarez
+77,MF,Uruguay,Egidio Arevalo Rios,Oscar Tabarez
+12,DF,Uruguay,Mathias Corujo,Oscar Tabarez
+2,DF,Uruguay,Gaston Silva,Oscar Tabarez
+62,MF,Uruguay,Alvaro Gonzalez,Oscar Tabarez
+80,FW,Uruguay,Edinson Cavani,Oscar Tabarez
+18,FW,Uruguay,Diego Rolan,Oscar Tabarez
+7,GK,Uruguay,Martin Silva,Oscar Tabarez
+2,GK,Venezuela,Jose Contreras,Rafael Dudamel
+4,DF,Venezuela,Wilker Angel,Rafael Dudamel
+2,DF,Venezuela,Mikel Villanueva,Rafael Dudamel
+71,DF,Venezuela,Oswaldo Vizcarrondo,Rafael Dudamel
+8,MF,Venezuela,Arquimedes Figuera,Rafael Dudamel
+15,DF,Venezuela,Jose Manuel Velazquez,Rafael Dudamel
+10,FW,Venezuela,Yonathan Del Valle,Rafael Dudamel
+69,MF,Venezuela,Tomas Rincon,Rafael Dudamel
+49,FW,Venezuela,Salomon Rondon,Rafael Dudamel
+11,MF,Venezuela,Romulo Otero,Rafael Dudamel
+3,MF,Venezuela,Juanpi,Rafael Dudamel
+20,GK,Venezuela,Dani Hernandez,Rafael Dudamel
+62,MF,Venezuela,Luis Manuel Seijas,Rafael Dudamel
+0,MF,Venezuela,Carlos Suarez,Rafael Dudamel
+52,MF,Venezuela,Alejandro Guerra,Rafael Dudamel
+63,DF,Venezuela,Roberto Rosales,Rafael Dudamel
+24,FW,Venezuela,Josef Martinez,Rafael Dudamel
+2,MF,Venezuela,Adalberto Penaranda,Rafael Dudamel
+4,FW,Venezuela,Christian Santos,Rafael Dudamel
+5,DF,Venezuela,Rolf Feltscher,Rafael Dudamel
+30,DF,Venezuela,Alexander Gonzalez,Rafael Dudamel
+0,MF,Venezuela,Yangel Herrera,Rafael Dudamel
+0,GK,Venezuela,Wuilker Farinez,Rafael Dudamel
+72,GK,Argentina,Sergio Romero,Gerardo Martino
+2,DF,Argentina,Jonathan Maidana,Gerardo Martino
+10,DF,Argentina,Facundo Roncaglia,Gerardo Martino
+4,DF,Argentina,Gabriel Mercado,Gerardo Martino
+4,MF,Argentina,Matias Kranevitter,Gerardo Martino
+37,MF,Argentina,Lucas Biglia,Gerardo Martino
+72,MF,Argentina,Angel Di Maria,Gerardo Martino
+11,MF,Argentina,Augusto Fernandez,Gerardo Martino
+56,FW,Argentina,Gonzalo Higuain,Gerardo Martino
+112,FW,Argentina,Lionel Messi,Gerardo Martino
+71,FW,Argentina,Sergio Aguero,Gerardo Martino
+6,GK,Argentina,Nahuel Guzman,Gerardo Martino
+6,DF,Argentina,Ramiro Funes Mori,Gerardo Martino
+123,MF,Argentina,Javier Mascherano,Gerardo Martino
+0,DF,Argentina,Victor Cuesta,Gerardo Martino
+43,DF,Argentina,Marcos Rojo,Gerardo Martino
+31,DF,Argentina,Nicolas Otamendi,Gerardo Martino
+15,MF,Argentina,Erik Lamela,Gerardo Martino
+40,MF,Argentina,Ever Banega,Gerardo Martino
+12,MF,Argentina,Nicolas Gaitan,Gerardo Martino
+27,MF,Argentina,Javier Pastore,Gerardo Martino
+49,FW,Argentina,Ezequiel Lavezzi,Gerardo Martino
+11,GK,Argentina,Mariano Andujar,Gerardo Martino
+4,GK,Bolivia,Carlos Lampe,Julio Cesar Baldivieso
+3,DF,Bolivia,Erwin Saavedra,Julio Cesar Baldivieso
+31,DF,Bolivia,Luis Alberto Gutierrez,Julio Cesar Baldivieso
+11,DF,Bolivia,Diego Bejarano,Julio Cesar Baldivieso
+0,DF,Bolivia,Nelson Cabrera,Julio Cesar Baldivieso
+17,MF,Bolivia,Walter Veizaga,Julio Cesar Baldivieso
+49,FW,Bolivia,Juan Carlos Arce,Julio Cesar Baldivieso
+8,MF,Bolivia,Martin Smedberg-Dalence,Julio Cesar Baldivieso
+6,FW,Bolivia,Yasmani Duk,Julio Cesar Baldivieso
+33,MF,Bolivia,Jhasmani Campos,Julio Cesar Baldivieso
+4,FW,Bolivia,Gilbert Alvarez,Julio Cesar Baldivieso
+13,GK,Bolivia,Romel Quinonez,Julio Cesar Baldivieso
+10,MF,Bolivia,Alejandro Melean,Julio Cesar Baldivieso
+0,MF,Bolivia,Raul Castro,Julio Cesar Baldivieso
+9,MF,Bolivia,Pedro Azogue,Julio Cesar Baldivieso
+0,MF,Bolivia,Cristhian Machado,Julio Cesar Baldivieso
+26,DF,Bolivia,Marvin Bejarano,Julio Cesar Baldivieso
+8,FW,Bolivia,Rodrigo Ramallo,Julio Cesar Baldivieso
+1,MF,Bolivia,Carmelo Algaranaz,Julio Cesar Baldivieso
+1,MF,Bolivia,Fernando Saucedo,Julio Cesar Baldivieso
+15,DF,Bolivia,Ronald Eguino,Julio Cesar Baldivieso
+25,DF,Bolivia,Edward Zenteno,Julio Cesar Baldivieso
+0,GK,Bolivia,Guillermo Vizcarra,Julio Cesar Baldivieso
+100,GK,Chile,Claudio Bravo,Juan Antonio Pizzi
+44,DF,Chile,Eugenio Mena,Juan Antonio Pizzi
+6,DF,Chile,Enzo Roco,Juan Antonio Pizzi
+73,DF,Chile,Mauricio Isla,Juan Antonio Pizzi
+23,MF,Chile,Francisco Silva,Juan Antonio Pizzi
+26,FW,Chile,Jose Pedro Fuenzalida,Juan Antonio Pizzi
+93,FW,Chile,Alexis Sanchez,Juan Antonio Pizzi
+74,MF,Chile,Arturo Vidal,Juan Antonio Pizzi
+39,FW,Chile,Mauricio Pinilla,Juan Antonio Pizzi
+4,MF,Chile,Pablo Hernandez,Juan Antonio Pizzi
+52,FW,Chile,Eduardo Vargas,Juan Antonio Pizzi
+4,GK,Chile,Cristopher Toselli,Juan Antonio Pizzi
+2,MF,Chile,Erick Pulgar,Juan Antonio Pizzi
+54,FW,Chile,Mark Gonzalez,Juan Antonio Pizzi
+75,DF,Chile,Jean Beausejour,Juan Antonio Pizzi
+2,FW,Chile,Nicolas Castillo,Juan Antonio Pizzi
+87,DF,Chile,Gary Medel,Juan Antonio Pizzi
+87,DF,Chile,Gonzalo Jara,Juan Antonio Pizzi
+35,FW,Chile,Fabian Orellana,Juan Antonio Pizzi
+40,MF,Chile,Charles Aranguiz,Juan Antonio Pizzi
+43,MF,Chile,Marcelo Diaz,Juan Antonio Pizzi
+6,FW,Chile,Edson Puch,Juan Antonio Pizzi
+14,GK,Chile,Johnny Herrera,Juan Antonio Pizzi
+114,GK,Panama,Jaime Penedo,Hernan Dario Gomez
+10,MF,Panama,Miguel Camargo,Hernan Dario Gomez
+41,DF,Panama,Harold Cummings,Hernan Dario Gomez
+4,DF,Panama,Fidel Escobar,Hernan Dario Gomez
+15,DF,Panama,Roderick Miller,Hernan Dario Gomez
+121,MF,Panama,Gabriel Gomez,Hernan Dario Gomez
+105,FW,Panama,Blas Perez,Hernan Dario Gomez
+53,FW,Panama,Gabriel Torres,Hernan Dario Gomez
+15,FW,Panama,Roberto Nurse,Hernan Dario Gomez
+91,FW,Panama,Luis Tejada,Hernan Dario Gomez
+67,MF,Panama,Armando Cooper,Hernan Dario Gomez
+3,GK,Panama,Alex Rodriguez,Hernan Dario Gomez
+62,DF,Panama,Adolfo Machado,Hernan Dario Gomez
+16,MF,Panama,Valentin Pimentel,Hernan Dario Gomez
+8,DF,Panama,Martin Gomez,Hernan Dario Gomez
+13,FW,Panama,Abdiel Arroyo,Hernan Dario Gomez
+87,DF,Panama,Luis Henriquez,Hernan Dario Gomez
+18,MF,Panama,Ricardo Buitrago,Hernan Dario Gomez
+67,MF,Panama,Alberto Quintero,Hernan Dario Gomez
+55,MF,Panama,Anibal Godoy,Hernan Dario Gomez
+69,MF,Panama,Amilcar Henriquez,Hernan Dario Gomez
+13,GK,Panama,Jose Calderon,Hernan Dario Gomez
+92,DF,Panama,Felipe Baloy,Hernan Dario Gomez
