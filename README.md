@@ -6,10 +6,11 @@ __Objective__:
 __Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games.
 
 __Feature Engineering__: To determine who will more likely to win a match, based on my knowledge, I come up with 4 main groups of features as follows:
-1. head-to-head match history
+1. head-to-head match history between 2 teams
 2. recent performance of each team (10 recent matches), aka "form"
 3. bet-ratio before matches
-4. squad value or how many players are in top 200 (from video game)
+4. squad strength (from FIFA video game)
+
 Feature list reflects those factors.
 
 __Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/)
@@ -23,47 +24,60 @@ Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/bl
 
 # Data
 ### Data Source
-The dataset are from all international matches from 2000 - 2017, results, bet odds, ranking, title won.
+The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths
 1. [FIFA World Cup 2018](https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data)
-2. [International match 1872 - 2017](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
-3. [Ranking through Time](http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html)
+2. [International match 1872 - 2018](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
+3. [FIFA Ranking through Time](https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html)
 4. [Bet Odd](https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data)
-5. [Player Rating Through time](https://www.futhead.com/10/players/?page=2)
-6. [Squad for each tournament](https://github.com/openfootball/world-cup)
-7. [FIFA player with time](https://www.fifaindex.com/players/fifa10_6/?nationality=1)
+5. [Bet Odd 2](http://www.oddsportal.com)
+6. [Squad Strength - Sofia](https://sofifa.com/players/top)
+7. [Squad Strength - FIFA index](https://www.fifaindex.com/)
+
+
 
 [1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
-[2]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
-[3]: http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html
+[2]: https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data
+[3]: https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html
 [4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
-[5]: https://www.futhead.com/10/players/?page=2
-[6]: https://github.com/openfootball/world-cup
+[5]: http://www.oddsportal.com
+[6]: https://sofifa.com/players/top
+[7]: https://www.fifaindex.com/
 
 ### Feature List
+- _*difference: team1 - team2_
+- _*form: performance in 10 recent matches_
 
-| Feature Name  | Group | Description              | Source | Status |
-|:-------------:|:-----:|:------------------------:|:------:|:------:|
-| team_1        |   N/A |Nation Code (e.g US, NZ)      |   2    |Done|
-| team_2        |   N/A |Nation Code  (e.g US, NZ)     |   2    |Done|
-| date          |   N/A |Date of match yyyy - mm - dd  |   2    |Done|
-| home_team     |   N/A |Who is the home team          |   2    |Done|
-| tournament    |   N/A |Friendly,EURO, AFC, FIFA WC   |   2    |Done|
-| h_win_diff    |   1   |#Win T1 - T2         |   2    |Done|
-| h_draw        |   1   |#Draw                |   2    |Done|
-| rank_diff     |   1   |#Rank T1 - T2                 |   3    ||
-| title_diff    |   1   |#Title won T1 - T2            |   3    ||
-| f_goalF_1     |   2   |#Goal of T1 in 10 recent matches    |2|Done|
-| f_goalF_2     |   2   |#Goal of T2 in 10 recent matches    |2|Done|
-| f_goalA_1     |   2   |#Goal conceded of T1 in 10 recent matches    |2|Done|
-| f_goalA_2     |   2   |#Goal conceded of T2 in 10 recent matches    |2|Done|
-| f_win_1       |   2   |#Win of T1 in 10 recent matches     |2|Done|
-| f_win_2       |   2   |#Win of T2 in 10 recent matches     |2|Done|
-| f_draw_1      |   2   |#Draw of T1 in 10 recent matches     |2|Done|
-| f_draw_2      |   2   |#Draw of T2 in 10 recent matches     |2|Done|
-|avg_odds_win_1 |   3   |average of bet odd for team 1        |4|Done|
-|avg_odds_win_2 |   3   |average of bet odd for team 2        |4|Done|
-|avg_odds_draw  |   3   |average of bet odd of draw           |4|Done|
-|top_200        |   4   |number of players in top 200         |5||
+| Feature Name  | Description              | Source |
+|:-------------:|:------------------------:|:------:|
+| team_1        | Nation Code (e.g US, NZ)      | [1] & [2] |
+| team_2        | Nation Code  (e.g US, NZ)     | [1] & [2] |
+| date          | Date of match yyyy - mm - dd  | [1] & [2] |
+| tournament    | Friendly,EURO, AFC, FIFA WC   | [1] & [2] |
+| h_win_diff    | Head2Head: win difference      |   [2]   |
+| h_draw        | Head2Head: number of draw      |   [2]    |
+| form_diff_goalF | Form: difference in "Goal For" |   [2]   |
+| form_diff_goalA | Form: difference in "Goal Against" |   [2]    |
+| form_diff_win   | Form: difference in number of win  |   [2]    |
+| form_diff_draw  | Form: difference in number of draw |   [2]    |
+| odd_diff_win    | Betting Odd: difference bet rate for win  | [4] & [5] |
+| odd_draw        | Betting Odd: bet rate for draw            | [4] & [5] |
+| game_diff_rank  | Squad Strength: difference in FIFA Rank   | [3] |
+| game_diff_ovr   | Squad Strength: difference in Overall Strength  | [6] |
+|game_diff_attk   | Squad Strength: difference in Attack Strength   | [6] |
+|game_diff_mid    | Squad Strength: difference in Midfield Strength | [6] |
+|game_diff_def    | Squad Strength: difference in Defense Strength  | [6] |
+|game_diff_prestige | Squad Strength: difference in prestige        | [6] |
+|game_diff_age11    | Squad Strength: difference in age of 11 starting players  | [6] |
+|game_diff_ageAll   | Squad Strength: difference in age of all players          | [6] |
+|game_diff_bup_speed| Squad Strength: difference in Build Up Play Speed         | [6] |
+|game_diff_bup_pass | Squad Strength: difference in Build Up Play Passing       | [6] |
+|game_diff_cc_pass  | Squad Strength: difference in Chance Creation Passing     | [6] |
+|game_diff_cc_cross | Squad Strength: difference in Chance Creation Crossing    | [6] |
+|game_diff_cc_shoot | Squad Strength: difference in Chance Creation Shooting    | [6] |
+|game_diff_def_press| Squad Strength: difference in Defense Pressure            | [6] |
+|game_diff_def_aggr | Squad Strength: difference in Defense Aggression          | [6] |
+|game_diff_def_teamwidth  | Squad Strength: difference in Defense Team Width    | [6] |
+
 
 
 # Preliminary Result
@@ -81,69 +95,23 @@ The dataset are from all international matches from 2000 - 2017, results, bet od
 
 Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
 
-### EURO 2016
 
-We apply the model Gradient Boosted Tree to predict the result for EURO 2016 (not in the dataset)
+### World Cup 2018
+Now the model is applying for World Cup 2018 in Russia with simulation time = 100 000. While the model didn't perform so well in train/test phase, it has shown stunning results so far, 7 correct results out of 11 matches including matches such as Portugal - Spain (3-3), Brazil - Switzerland (1-1). Here is the result of my model for all matches in Match Day 1 of Group Stage
 
-|      team_1      |      team_2      | result | prediction |
-|:----------------:|:----------------:|:------:|:----------:|
-|      France      |      Romania     |   win  |     win    |
-|      Albania     |    Switzerland   |  lose  |    lose    |
-|      England     |      Russia      |  draw  |     win    |
-|     Slovakia     |       Wales      |  lose  |    lose    |
-|      Germany     |      Ukraine     |   win  |     win    |
-| Northern Ireland |      Poland      |  lose  |    draw    |
-|      Croatia     |      Turkey      |   win  |     win    |
-|      Belgium     |       Italy      |  lose  |    lose    |
-|      Ireland     |      Sweden      |  draw  |    lose    |
-|  Czech Republic  |       Spain      |  lose  |    lose    |
-|      Austria     |      Hungary     |  lose  |     win    |
-|      Iceland     |     Portugal     |  draw  |    lose    |
-|      Albania     |      France      |  lose  |    lose    |
-|      Romania     |    Switzerland   |  draw  |     win    |
-|      Russia      |     Slovakia     |  lose  |    lose    |
-|      England     |       Wales      |   win  |     win    |
-|      Germany     |      Poland      |  draw  |     win    |
-| Northern Ireland |      Ukraine     |   win  |    draw    |
-|      Croatia     |  Czech Republic  |  draw  |     win    |
-|       Italy      |      Sweden      |   win  |     win    |
-|       Spain      |      Turkey      |   win  |     win    |
-|      Belgium     |      Ireland     |   win  |    draw    |
-|      Hungary     |      Iceland     |  draw  |    lose    |
-|      Austria     |     Portugal     |  draw  |    lose    |
-|      Albania     |      Romania     |   win  |    lose    |
-|      France      |    Switzerland   |  draw  |     win    |
-|      Russia      |       Wales      |  lose  |    lose    |
-|      England     |     Slovakia     |  draw  |     win    |
-|      Croatia     |       Spain      |   win  |    lose    |
-|  Czech Republic  |      Turkey      |  lose  |    lose    |
-|      Germany     | Northern Ireland |   win  |     win    |
-|      Poland      |      Ukraine     |   win  |     win    |
-|      Hungary     |     Portugal     |  draw  |    lose    |
-|      Austria     |      Iceland     |  lose  |     win    |
-|      Ireland     |       Italy      |   win  |    lose    |
-|      Belgium     |      Sweden      |   win  |    draw    |
-|      Croatia     |     Portugal     |  lose  |    lose    |
-|      Poland      |    Switzerland   |  draw  |    lose    |
-| Northern Ireland |       Wales      |  lose  |    lose    |
-|      France      |      Ireland     |   win  |     win    |
-|      Germany     |     Slovakia     |   win  |     win    |
-|      Belgium     |      Hungary     |   win  |     win    |
-|      England     |      Iceland     |  lose  |     win    |
-|       Italy      |       Spain      |   win  |    lose    |
-|      Poland      |     Portugal     |  draw  |    lose    |
-|      Belgium     |       Wales      |  lose  |    lose    |
-|      Germany     |       Italy      |  draw  |     win    |
-|      France      |      Iceland     |   win  |     win    |
-|     Portugal     |       Wales      |   win  |     win    |
-|      France      |      Germany     |   win  |    lose    |
-|      France      |     Portugal     |  lose  |    draw    |
+__Result Explanation:__
 
-Accuracy = 0.48
-So far, the results are not so good but it is still better than a random guess of "win, lose and draw". One interesting thing is that our model predicts a "Draw" result in Final Match of EURO 2016, which is correct at 90th minute.
+Team A vs Team B
 
-### World Cup 2018 (Coming soon)
+- "win_1": A wins with 1 goal differences
+- "win_2": A wins with 2 goal differences
+- "win_3": A wins with 3 or more goal differences
+- "lose_1": B wins with 1 goal differences
+- "lose_2": B wins with 2 goal differences
+- "lose_3": A wins with 3 or more goal differences
+- "draw_0": Draw
 
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
@@ -161,15 +129,15 @@ So far, the results are not so good but it is still better than a random guess o
 __Ongoing__
 - [ ] Add feature Importance
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
-- [ ] Add feature group 1
-    - [x] Add h_win_diff, h_draw
-    - [ ] Add rank_diff, title_diff
-- [ ] A table of title won for each team
 
 __Complete__
+- [x] Add feature of squad and player info
 - [x] Build a web crawler for Squad each team
 - [x] Build a web crawler for FIFA game player
 - [x] Add a simple classification based on "bet odd".
+- [x] Add feature group 1
+    - [x] Add h_win_diff, h_draw
+    - [x] Add rank_diff, title_diff
 - [x] Add features group 2
 - [x] Add features group 3
 - [x] Simple EDA and a small story
