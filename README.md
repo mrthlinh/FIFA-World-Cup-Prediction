@@ -78,9 +78,9 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 |game_diff_def_aggr | Squad Strength: difference in Defense Aggression          | [6] |
 |game_diff_def_teamwidth  | Squad Strength: difference in Defense Team Width    | [6] |
 
-## Feature Importance: (coming soon)
+## Feature Importance:
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/feature_importance.png)
 
-Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
 
 # Preliminary Result
 
