@@ -1,0 +1,22 @@
+Nation,Rank,Overall,Attack,Midfield,Defence,HomeStadium,RivalTeam,InternationalPrestige,Starting11AverageAge,WholeTeamAverageAge,Captain,ShortFreeKick,LongFreeKick,Penalties,LeftCorner,RightCorner,BuildUpPlay_Speed,BuildUpPlay_Dribbling,BuildUpPlay_Passing,BuildUpPlay_Positioning,ChanceCreation_Passing,ChanceCreation_Crossing,ChanceCreation_Shooting,ChanceCreation_Positioning,Defence_Pressure,Defence_Aggression,Defence_TeamWidth,Defence_DefenderLine
+France,9,82,80,82,81,ParcdesPrinces,Italy,19,25.27,26.1,P.Mexès,Y.Gourcuff,Y.Gourcuff,F.Ribéry,Y.Gourcuff,F.Malouda,54,(Little),45,Organised,67,50,38,Organised,50,53,41,Cover
+Mexico,17,77,74,75,73,EstadioAzteca,UnitedStates,15,25,25.7,R.Márquez,A.Guardado,R.Márquez,R.Márquez,A.Guardado,G.dosSantos,39,(Little),43,Organised,37,68,40,Organised,47,47,53,Cover
+South Africa,83,72,69,72,66,StadioComunale(OlimpicoGenerico),Cameroon,8,25.73,26.73,A.Mokoena,T.Modise,S.Pienaar,K.Mphela,S.Tshabalala,S.Tshabalala,41,(Little),24,Organised,55,59,43,Organised,39,44,64,Cover
+Uruguay,16,78,79,74,74,ElMonumento(EstadioLatino),Argentina,11,26.09,26.2,D.Lugano,D.Forlán,D.Forlán,D.Forlán,D.Forlán,D.Forlán,51,(Little),41,Organised,65,54,57,Organised,30,58,45,Cover
+Argentina,7,83,84,80,79,ElMonumento(EstadioLatino),Brazil,18,25.82,26.5,J.Mascherano,L.Messi,L.Messi,L.Messi,L.Messi,L.Messi,57,(Little),32,Organised,70,41,69,Free Form,41,43,56,Cover
+Greece,13,75,74,72,73,StadeMunicipal,Turkey,13,26.27,25.87,G.Karagounis,G.Karagounis,G.Karagounis,G.Karagounis,G.Karagounis,G.Karagounis,22,(Little),39,Organised,30,70,40,Organised,20,70,44,Cover
+South Korea,47,70,70,68,66,StadionHanguk,ChinaPR,12,26.55,25.73,J.Park,ParkChuYoung,LeeJungSoo,ParkChuYoung,S.Ki,S.Ki,72,(Little),54,Organised,53,28,55,Organised,44,50,38,Cover
+England,8,83,81,81,82,WembleyStadium,Germany,17,26.82,26.8,R.Ferdinand,S.Gerrard,F.Lampard,F.Lampard,F.Lampard,F.Lampard,39,(Little),57,Organised,62,48,62,Organised,47,49,55,Cover
+Slovenia,25,71,70,68,67,TownPark,Croatia,5,26.27,25.67,R.Koren,V.Birsa,M.Novakovič,M.Novakovič,V.Birsa,R.Koren,67,(Little),57,Organised,56,62,61,Organised,49,62,47,Cover
+United States,14,75,72,73,72,EstadiodelasArtes(GenericStadiumNG),Mexico,12,26.91,26.47,C.Bocanegra,L.Donovan,L.Donovan,L.Donovan,L.Donovan,L.Donovan,44,(Little),50,Organised,31,45,39,Organised,48,45,54,Cover
+Australia,20,73,71,71,69,StadionHanguk,NewZealand,11,29.55,27,L.Neill,B.Emerton,B.Emerton,H.Kewell,B.Emerton,B.Emerton,38,(Little),57,Organised,26,71,38,Organised,34,60,52,Cover
+Germany,6,82,81,80,79,Olympiastadion,England,19,24.82,24.87,P.Lahm,M.Özil,B.Schweinsteiger,L.Podolski,M.Özil,B.Schweinsteiger,73,(Little),42,Organised,57,53,55,Organised,48,58,52,Cover
+Cameroon,19,77,72,73,71,StadeKokoto(GenericAfrica2),SouthAfrica,13,25.82,24.7,S.Eto'o,S.Eto'o,S.Eto'o,S.Eto'o,J.Makoun,Gérémi,53,(Little),43,Organised,63,44,68,Organised,58,48,65,Cover
+Denmark,36,75,73,72,72,EastpointArena(FootballGround),Sweden,12,26.27,27.27,D.Agger,J.Poulsen,D.Agger,N.Bendtner,D.Rommedahl,D.Rommedahl,66,(Little),42,Organised,68,71,38,Organised,50,57,63,Cover
+Netherlands,4,81,80,81,76,StadionHanguk,Germany,17,26.45,25.85,M.vanBommel,W.Sneijder,W.Sneijder,R.vanPersie,W.Sneijder,A.Robben,35,(Little),35,Organised,70,35,66,Free Form,45,60,35,Cover
+Italy,6,82,81,80,78,StadioOlimpico,France,19,26.55,26.43,G.Buffon,A.Pirlo,A.Pirlo,A.Pirlo,A.Pirlo,A.Pirlo,50,(Little),39,Free Form,65,66,50,Organised,34,55,50,Offside Trap
+New Zealand,78,64,62,57,60,ForestParkStadium(SquareGround),Australia,6,28.27,26.7,R.Nelsen,S.Elliott,S.Elliott,S.Smeltz,L.Bertos,L.Bertos,30,(Little),73,Organised,48,38,34,Organised,30,70,42,Cover
+Brazil,1,83,80,80,81,ODromo,Argentina,20,26.18,24.97,Lúcio,Kaká,Ganso,Kaká,AndréSantos,Maicon,53,(Little),30,Free Form,54,45,58,Free Form,60,43,55,Cover
+Portugal,3,81,79,78,79,EastpointArena(FootballGround),Spain,16,27.27,26.73,CristianoRonaldo,CristianoRonaldo,CristianoRonaldo,CristianoRonaldo,Quaresma,RaúlMeireles,65,(Little),30,Organised,69,70,54,Free Form,35,42,61,Cover
+Spain,2,85,82,83,83,Mestalla,Portugal,19,27.18,25.63,Casillas,DavidVilla,Xavi,DavidVilla,Xavi,Xavi,77,(Little),23,Free Form,50,37,56,Free Form,61,46,67,Cover
+Switzerland,24,76,74,72,73,StadionEuropa(GenericEurope2),Germany,11,26.73,25.1,A.Frei,A.Frei,G.Inler,A.Frei,R.Ziegler,A.Frei,50,(Little),53,Organised,41,55,55,Organised,47,51,53,Cover

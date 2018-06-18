@@ -1,0 +1,24 @@
+Nation,Rank,Overall,Attack,Midfield,Defence,HomeStadium,RivalTeam,InternationalPrestige,Starting11AverageAge,WholeTeamAverageAge,Captain,ShortFreeKick,LongFreeKick,Penalties,LeftCorner,RightCorner,BuildUpPlay_Speed,BuildUpPlay_Dribbling,BuildUpPlay_Passing,BuildUpPlay_Positioning,ChanceCreation_Passing,ChanceCreation_Crossing,ChanceCreation_Shooting,ChanceCreation_Positioning,Defence_Pressure,Defence_Aggression,Defence_TeamWidth,Defence_DefenderLine
+Brazil,4,83,82,81,84,ODromo,Argentina,20,26.18,26.83,ThiagoSilva,Neymar,Oscar,Oscar,Oscar,DaniAlves,62,70,48,Organised,57,42,54,Organised,61,37,42,Cover
+Cameroon,50,76,75,75,76,StadeKokoto(GenericAfrica2),Côted'Ivoire,12,27.82,26.52,S.Eto'o,S.Eto'o,A.Song,S.Eto'o,B.Moukandjo,J.Makoun,40,53,44,Organised,52,68,50,Organised,58,48,53,Cover
+Mexico,19,75,79,73,75,EstadioAzteca,UnitedStates,15,26.55,26.26,R.Márquez,R.Márquez,A.Guardado,O.Peralta,L.Montes,A.Guardado,53,50,54,Organised,68,58,40,Organised,46,58,58,Cover
+Australia,59,69,75,69,67,StadionHanguk,NewZealand,11,24.45,25.61,M.Jedinák,M.Jedinák,M.Jedinák,M.Jedinák,T.Oar,T.Oar,39,60,59,Organised,22,78,30,Organised,34,39,51,Cover
+Chile,13,76,76,75,73,StadioComunale(OlimpicoGenerico),Peru,10,26.55,27.09,C.Bravo,A.Sánchez,J.Valdivia,A.Vidal,J.Valdivia,J.Valdivia,62,60,42,Organised,65,50,54,Organised,35,44,50,Cover
+Netherlands,15,79,84,77,74,AmsterdamArenA,Germany,17,25.18,25.13,R.vanPersie,W.Sneijder,W.Sneijder,R.vanPersie,W.Sneijder,A.Robben,57,38,34,Organised,55,62,39,Organised,57,55,52,Cover
+Spain,1,85,86,86,83,SantiagoBernabéu,Portugal,20,27.09,26.78,Casillas,Xavi,Xavi,Xavi,Xavi,Xavi,37,37,40,Organised,41,37,56,Free Form,37,50,60,Cover
+Colombia,5,78,80,78,75,ODromo,Argentina,6,27.45,27.26,M.Yepes,J.Rodríguez,J.Rodríguez,J.Rodríguez,J.Rodríguez,J.Rodríguez,50,70,35,Organised,50,50,65,Organised,45,55,50,Cover
+Greece,10,74,74,72,75,StadeMunicipal,Turkey,13,27.55,27.13,K.Katsouranis,G.Samaras,J.Holebas,K.Mitroglou,J.Holebas,J.Holebas,52,47,56,Organised,51,60,52,Organised,24,37,34,Cover
+Ivory Coast,21,77,79,77,76,StadeKokoto(GenericAfrica2),Cameroon,11,29.09,26.48,D.Drogba,D.Drogba,D.Drogba,D.Drogba,Y.Touré,Y.Touré,66,51,49,Organised,59,73,53,Organised,51,51,46,Cover
+England,11,80,83,79,79,WembleyStadium,Germany,17,25.91,25.13,S.Gerrard,S.Gerrard,S.Gerrard,D.Sturridge,S.Gerrard,S.Gerrard,54,36,56,Organised,56,67,51,Organised,43,47,51,Cover
+Italy,9,82,82,82,80,StadioOlimpico,France,19,29,26.65,G.Buffon,A.Pirlo,M.Balotelli,M.Balotelli,A.Pirlo,A.Pirlo,45,38,49,Organised,66,70,53,Organised,46,59,40,Cover
+Uruguay,6,78,83,76,76,ElMonumento(EstadioLatino),Argentina,12,28.09,28.26,D.Lugano,L.Suárez,L.Suárez,L.Suárez,C.Rodríguez,C.Rodríguez,75,65,55,Organised,50,32,67,Organised,31,46,38,Cover
+Ecuador,28,72,72,74,67,StadioComunale(OlimpicoGenerico),Peru,7,27.09,26.74,W.Ayoví,W.Ayoví,W.Ayoví,A.Valencia,A.Valencia,A.Valencia,50,69,50,Organised,65,50,50,Organised,35,55,35,Cover
+France,16,82,84,80,80,ParcdesPrinces,Italy,18,25.82,25.65,H.Lloris,F.Ribéry,M.Valbuena,K.Benzema,M.Valbuena,M.Valbuena,48,60,36,Organised,49,52,52,Organised,36,46,52,Cover
+Switzerland,8,77,74,77,76,Waldstadion(Fussballstadion),Austria,11,24.73,24.65,G.Inler,X.Shaqiri,V.Stocker,X.Shaqiri,X.Shaqiri,G.Inler,48,51,52,Organised,48,51,43,Organised,47,45,52,Cover
+Argentina,7,82,86,81,79,ElMonumento(EstadioLatino),Brazil,18,25.64,27.39,L.Messi,L.Messi,A.DiMaría,L.Messi,A.DiMaría,A.DiMaría,32,70,39,Organised,41,36,68,Free Form,60,55,50,Cover
+Germany,2,84,82,85,81,Olympiastadion,England,19,26.45,25.39,P.Lahm,M.Reus,M.Reus,B.Schweinsteiger,M.Reus,M.Reus,63,29,40,Organised,48,48,63,Organised,44,57,51,Cover
+Portugal,3,80,82,79,80,StadionHanguk,Spain,16,27.91,27.17,CristianoRonaldo,CristianoRonaldo,JoãoMoutinho,CristianoRonaldo,JoãoMoutinho,RaúlMeireles,55,55,31,Organised,30,52,48,Free Form,47,47,63,Cover
+United States,14,74,74,74,69,EstadiodelasArtes(GenericStadiumNG),Mexico,12,26.09,26.35,C.Dempsey,C.Dempsey,M.Bradley,C.Dempsey,C.Dempsey,C.Dempsey,41,42,58,Organised,66,50,35,Organised,35,35,50,Cover
+Belgium,12,81,80,80,79,ODromo,Netherlands,10,23.91,24.3,V.Kompany,K.DeBruyne,K.DeBruyne,E.Hazard,K.DeBruyne,K.DeBruyne,30,41,36,Organised,56,37,33,Organised,48,42,48,Cover
+Russia,18,77,78,77,75,StadionOlympik,Slovenia,12,28.09,26.39,R.Shirokov,R.Shirokov,S.Ignashevich,R.Shirokov,Y.Zhirkov,A.Samedov,45,47,45,Organised,70,74,49,Organised,47,47,38,Cover
+South Korea,55,71,70,71,69,EstadiodelasArtes(GenericStadiumNG),Australia,12,24.18,24.74,J.Koo,J.Park,S.Ki,J.Park,S.Ki,S.Ki,66,50,57,Organised,78,50,45,Organised,61,48,51,Cover
