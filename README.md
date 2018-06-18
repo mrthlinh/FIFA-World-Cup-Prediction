@@ -78,7 +78,9 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 |game_diff_def_aggr | Squad Strength: difference in Defense Aggression          | [6] |
 |game_diff_def_teamwidth  | Squad Strength: difference in Defense Team Width    | [6] |
 
+## Feature Importance: (coming soon)
 
+Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
 
 # Preliminary Result
 
@@ -91,13 +93,8 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 |ADA boost tree           |59.01|
 |Neural Net               |60.80|
 
-## Feature Importance: (coming soon)
-
-Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
-
-
 ### World Cup 2018
-Now the model is applying for World Cup 2018 in Russia with simulation time = 100 000. While the model didn't perform so well in train/test phase, it has shown stunning results so far, 7 correct results out of 11 matches including matches such as Portugal - Spain (3-3), Brazil - Switzerland (1-1). Here is the result of my model for all matches in Match Day 1 of Group Stage
+Now the model is applying for World Cup 2018 in Russia with __simulation time = 100 000__. While the model didn't perform so well in train/test phase, it has shown stunning results so far, 7 correct results out of 11 matches including matches such as __Portugal - Spain (3-3)__, __Brazil - Switzerland (1-1)__. Here is the result of my model for all matches in Match Day 1 of Group Stage
 
 __Result Explanation:__
 
