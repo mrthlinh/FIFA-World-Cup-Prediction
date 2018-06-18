@@ -7,17 +7,17 @@ from unidecode import unidecode
 
 #url = "https://en.wikipedia.org/wiki/UEFA_Euro_2008_squads"
 #url = "https://en.wikipedia.org/wiki/UEFA_Euro_2012_squads"
-
+url =  "https://en.wikipedia.org/wiki/UEFA_Euro_2016_squads"
 #url = "https://en.wikipedia.org/wiki/2017_FIFA_Confederations_Cup_squads"
 #url = "https://en.wikipedia.org/wiki/2013_FIFA_Confederations_Cup_squads"
 #url = "https://en.wikipedia.org/wiki/2009_FIFA_Confederations_Cup_squads"
 
 #url = "https://en.wikipedia.org/wiki/Copa_Am%C3%A9rica_Centenario_squads"
-url = "https://en.wikipedia.org/wiki/2015_Copa_Am%C3%A9rica_squads"
+# url = "https://en.wikipedia.org/wiki/2015_Copa_Am%C3%A9rica_squads"
 #url = "https://en.wikipedia.org/wiki/2011_Copa_Am%C3%A9rica_squads"
 #url = "https://en.wikipedia.org/wiki/2007_Copa_Am%C3%A9rica_squads"
 
-
+#url = "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads"
 #url = "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads"
 #url = "https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_squads"
 #url = "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_squads"
@@ -31,7 +31,7 @@ soup = BeautifulSoup(html_doc,"lxml")
 nations = soup.findAll('h3')
 # EURO: 16
 # WC: 32
-num_nations = 12
+num_nations = 24
 
 arg_len = len(sys.argv)
 if (arg_len > 1):
@@ -67,17 +67,17 @@ for nation in nations[0:num_nations]:
         player_name = unidecode(player_name)
         # player_name = unidecode(player_names[i].encode("utf-8"))
         player_cap = _[3].get_text()
-        
+
         player_info = {}
         player_info['Country'] = country
         player_info['Coach'] = coach_name
         player_info['player_pos'] = player_pos
         player_info['player_name'] = player_name
         player_info['player_cap'] = player_cap
-        
+
         new_idx = len(squad_info)
         squad_info[new_idx] = player_info
-        
+
         # player_goal= _[4].get_text()
         # print("{} - {}".format(player_pos,player_cap))
         print("{} - {} - {}".format(player_pos,player_name,player_cap))
