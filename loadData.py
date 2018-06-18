@@ -33,4 +33,5 @@ def loadData(data, scaler = True, home_team = True,test_size=0.3):
     x_train, x_test, y_train, y_test = train_test_split(x,y.squeeze(),test_size=test_size, random_state=85)
     
     return [x,y,x_train, x_test, y_train, y_test]
-    
+
+   
