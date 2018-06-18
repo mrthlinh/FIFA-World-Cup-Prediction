@@ -1,0 +1,185 @@
+Country,Coach,player_pos,player_name,player_cap
+Iraq,Bora Milutinovic,GK,Noor Sabri,63
+Iraq,Bora Milutinovic,DF,Mohammed Ali Karim,6
+Iraq,Bora Milutinovic,DF,Bassim Abbas,60
+Iraq,Bora Milutinovic,MF,Fareed Majeed,5
+Iraq,Bora Milutinovic,MF,Nashat Akram,75
+Iraq,Bora Milutinovic,MF,Salih Sadir,47
+Iraq,Bora Milutinovic,FW,Emad Mohammed,76
+Iraq,Bora Milutinovic,FW,Luay Salah,17
+Iraq,Bora Milutinovic,MF,Abdul-Wahab Abu Al-Hail,67
+Iraq,Bora Milutinovic,FW,Younis Mahmoud,70
+Iraq,Bora Milutinovic,MF,Hawar Mulla Mohammed,72
+Iraq,Bora Milutinovic,GK,Mohammed Gassid,11
+Iraq,Bora Milutinovic,MF,Karrar Jassim,22
+Iraq,Bora Milutinovic,DF,Salam Shakir,11
+Iraq,Bora Milutinovic,DF,Ali Rehema,45
+Iraq,Bora Milutinovic,DF,Dara Mohammed,1
+Iraq,Bora Milutinovic,FW,Alaa Abdul-Zahra,10
+Iraq,Bora Milutinovic,MF,Mahdi Karim,64
+Iraq,Bora Milutinovic,DF,Essam Yassin,1
+Iraq,Bora Milutinovic,MF,Samer Saeed,7
+Iraq,Bora Milutinovic,GK,Uday Taleb,5
+Iraq,Bora Milutinovic,DF,Muayad Khalid,3
+Iraq,Bora Milutinovic,MF,Halgurd Mulla Mohammed,5
+New Zealand,Ricki Herbert,GK,Mark Paston,17
+New Zealand,Ricki Herbert,DF,Aaron Scott,2
+New Zealand,Ricki Herbert,DF,Tony Lochhead,20
+New Zealand,Ricki Herbert,MF,Duncan Oughton,24
+New Zealand,Ricki Herbert,DF,Ben Sigmund,8
+New Zealand,Ricki Herbert,DF,Ivan Vicelich,59
+New Zealand,Ricki Herbert,MF,Simon Elliott,54
+New Zealand,Ricki Herbert,MF,Tim Brown,17
+New Zealand,Ricki Herbert,FW,Shane Smeltz,20
+New Zealand,Ricki Herbert,FW,Chris Killen,24
+New Zealand,Ricki Herbert,MF,Leo Bertos,24
+New Zealand,Ricki Herbert,GK,Glen Moss,11
+New Zealand,Ricki Herbert,MF,Andrew Barron,8
+New Zealand,Ricki Herbert,MF,Jeremy Christie,17
+New Zealand,Ricki Herbert,FW,Jeremy Brockie,13
+New Zealand,Ricki Herbert,MF,Chris James,10
+New Zealand,Ricki Herbert,DF,David Mulligan,21
+New Zealand,Ricki Herbert,DF,Andrew Boyens,8
+New Zealand,Ricki Herbert,DF,Steven Old,17
+New Zealand,Ricki Herbert,FW,Chris Wood,2
+New Zealand,Ricki Herbert,FW,Kris Bright,3
+New Zealand,Ricki Herbert,FW,Jarrod Smith,12
+New Zealand,Ricki Herbert,GK,James Bannatyne,3
+South Africa,Joel Santana,GK,Rowen Fernandez,19
+South Africa,Joel Santana,DF,Siboniso Gaxa,20
+South Africa,Joel Santana,DF,Tsepo Masilela,18
+South Africa,Joel Santana,MF,Aaron Mokoena,85
+South Africa,Joel Santana,DF,Benson Mhlongo,27
+South Africa,Joel Santana,MF,MacBeth Sibaya,48
+South Africa,Joel Santana,MF,Lance Davids,16
+South Africa,Joel Santana,DF,Siphiwe Tshabalala,28
+South Africa,Joel Santana,FW,Katlego Mphela,11
+South Africa,Joel Santana,MF,Steven Pienaar,39
+South Africa,Joel Santana,FW,Elrio van Heerden,27
+South Africa,Joel Santana,FW,Teko Modise,33
+South Africa,Joel Santana,MF,Kagiso Dikgacoi,19
+South Africa,Joel Santana,DF,Matthew Booth,20
+South Africa,Joel Santana,DF,Innocent Mdledle,5
+South Africa,Joel Santana,GK,Itumeleng Khune,14
+South Africa,Joel Santana,MF,Bernard Parker,13
+South Africa,Joel Santana,FW,Thembinkosi Fanteni,17
+South Africa,Joel Santana,MF,Bryce Moon,15
+South Africa,Joel Santana,DF,Bongani Khumalo,5
+South Africa,Joel Santana,FW,Katlego Mashego,9
+South Africa,Joel Santana,GK,Brian Baloyi,24
+South Africa,Joel Santana,DF,Morgan Gould,2
+Spain,Vicente del Bosque,GK,Iker Casillas,92
+Spain,Vicente del Bosque,DF,Raul Albiol,13
+Spain,Vicente del Bosque,DF,Gerard Pique,3
+Spain,Vicente del Bosque,DF,Carlos Marchena,51
+Spain,Vicente del Bosque,DF,Carles Puyol,73
+Spain,Vicente del Bosque,MF,Pablo Hernandez,0
+Spain,Vicente del Bosque,FW,David Villa,44
+Spain,Vicente del Bosque,MF,Xavi,72
+Spain,Vicente del Bosque,FW,Fernando Torres,62
+Spain,Vicente del Bosque,MF,Cesc Fabregas,38
+Spain,Vicente del Bosque,DF,Joan Capdevila,33
+Spain,Vicente del Bosque,MF,Sergio Busquets,2
+Spain,Vicente del Bosque,GK,Diego Lopez,0
+Spain,Vicente del Bosque,MF,Xabi Alonso,57
+Spain,Vicente del Bosque,DF,Sergio Ramos,49
+Spain,Vicente del Bosque,FW,Fernando Llorente,3
+Spain,Vicente del Bosque,FW,Daniel Guiza,15
+Spain,Vicente del Bosque,MF,Albert Riera,9
+Spain,Vicente del Bosque,DF,Alvaro Arbeloa,6
+Spain,Vicente del Bosque,MF,Santi Cazorla,16
+Spain,Vicente del Bosque,MF,David Silva,23
+Spain,Vicente del Bosque,MF,Juan Mata,1
+Spain,Vicente del Bosque,GK,Pepe Reina,14
+Brazil,Dunga,GK,Julio Cesar,34
+Brazil,Dunga,DF,Maicon,44
+Brazil,Dunga,DF,Lucio,79
+Brazil,Dunga,DF,Juan,70
+Brazil,Dunga,MF,Felipe Melo,5
+Brazil,Dunga,DF,Kleber,18
+Brazil,Dunga,MF,Elano,32
+Brazil,Dunga,MF,Gilberto Silva,74
+Brazil,Dunga,FW,Luis Fabiano,26
+Brazil,Dunga,MF,Kaka,65
+Brazil,Dunga,FW,Robinho,65
+Brazil,Dunga,GK,Victor,0
+Brazil,Dunga,DF,Dani Alves,23
+Brazil,Dunga,DF,Luisao,30
+Brazil,Dunga,DF,Miranda,1
+Brazil,Dunga,DF,Andre Santos,0
+Brazil,Dunga,MF,Josue,24
+Brazil,Dunga,MF,Ramires,2
+Brazil,Dunga,MF,Julio Baptista,40
+Brazil,Dunga,MF,Kleberson,28
+Brazil,Dunga,FW,Alexandre Pato,7
+Brazil,Dunga,FW,Nilmar,7
+Brazil,Dunga,GK,Heurelho Gomes,9
+Egypt,Hassan Shehata,GK,Essam El-Hadary,88
+Egypt,Hassan Shehata,DF,Mahmoud Fathallah,20
+Egypt,Hassan Shehata,MF,Ahmed Al-Muhammadi,23
+Egypt,Hassan Shehata,DF,Ahmed Said,2
+Egypt,Hassan Shehata,DF,Ahmed Khairy,1
+Egypt,Hassan Shehata,DF,Hani Said,59
+Egypt,Hassan Shehata,DF,Ahmed Fathy,53
+Egypt,Hassan Shehata,MF,Hosny Abd Rabo,56
+Egypt,Hassan Shehata,FW,Mohamed Zidan,21
+Egypt,Hassan Shehata,MF,Ahmed Eid Abdel Malek,21
+Egypt,Hassan Shehata,MF,Mohamed Shawky,56
+Egypt,Hassan Shehata,MF,Homos,15
+Egypt,Hassan Shehata,MF,Abdelaziz Tawfik,2
+Egypt,Hassan Shehata,DF,Sayed Moawad,35
+Egypt,Hassan Shehata,MF,Ahmed Samir Farag,6
+Egypt,Hassan Shehata,GK,Abdelwahed El-Sayed,26
+Egypt,Hassan Shehata,MF,Ahmed Hassan,153
+Egypt,Hassan Shehata,FW,Ahmed Abdel-Ghani,4
+Egypt,Hassan Shehata,FW,Mohamed Abougrisha,6
+Egypt,Hassan Shehata,DF,Wael Gomaa,74
+Egypt,Hassan Shehata,FW,Ahmed Raouf,3
+Egypt,Hassan Shehata,MF,Mohamed Aboutrika,56
+Egypt,Hassan Shehata,GK,Mohamed Sobhy,0
+Italy,Marcello Lippi,GK,Gianluigi Buffon,92
+Italy,Marcello Lippi,DF,Davide Santon,2
+Italy,Marcello Lippi,MF,Fabio Grosso,42
+Italy,Marcello Lippi,DF,Giorgio Chiellini,18
+Italy,Marcello Lippi,DF,Fabio Cannavaro,124
+Italy,Marcello Lippi,DF,Nicola Legrottaglie,13
+Italy,Marcello Lippi,MF,Simone Pepe,7
+Italy,Marcello Lippi,MF,Gennaro Gattuso,67
+Italy,Marcello Lippi,FW,Luca Toni,44
+Italy,Marcello Lippi,MF,Daniele De Rossi,45
+Italy,Marcello Lippi,FW,Alberto Gilardino,32
+Italy,Marcello Lippi,GK,Morgan De Sanctis,3
+Italy,Marcello Lippi,DF,Alessandro Gamberini,6
+Italy,Marcello Lippi,GK,Marco Amelia,9
+Italy,Marcello Lippi,FW,Vincenzo Iaquinta,28
+Italy,Marcello Lippi,MF,Mauro Camoranesi,44
+Italy,Marcello Lippi,FW,Giuseppe Rossi,5
+Italy,Marcello Lippi,MF,Angelo Palombo,10
+Italy,Marcello Lippi,DF,Gianluca Zambrotta,84
+Italy,Marcello Lippi,MF,Riccardo Montolivo,6
+Italy,Marcello Lippi,MF,Andrea Pirlo,56
+Italy,Marcello Lippi,DF,Andrea Dossena,9
+Italy,Marcello Lippi,FW,Fabio Quagliarella,13
+United States,Bob Bradley,GK,Tim Howard,39
+United States,Bob Bradley,MF,Jonathan Bornstein,15
+United States,Bob Bradley,DF,Carlos Bocanegra,67
+United States,Bob Bradley,FW,Conor Casey,10
+United States,Bob Bradley,DF,Oguchi Onyewu,42
+United States,Bob Bradley,DF,Heath Pearce,23
+United States,Bob Bradley,MF,DaMarcus Beasley,87
+United States,Bob Bradley,FW,Clint Dempsey,51
+United States,Bob Bradley,FW,Charlie Davies,6
+United States,Bob Bradley,MF,Landon Donovan,110
+United States,Bob Bradley,DF,Marvell Wynne,3
+United States,Bob Bradley,MF,Michael Bradley,29
+United States,Bob Bradley,MF,Ricardo Clark,19
+United States,Bob Bradley,DF,Danny Califf,23
+United States,Bob Bradley,DF,Jay DeMerit,10
+United States,Bob Bradley,MF,Sacha Kljestan,17
+United States,Bob Bradley,FW,Jozy Altidore,11
+United States,Bob Bradley,GK,Brad Guzan,12
+United States,Bob Bradley,FW,Freddy Adu,13
+United States,Bob Bradley,MF,Jose Francisco Torres,5
+United States,Bob Bradley,DF,Jonathan Spector,13
+United States,Bob Bradley,MF,Benny Feilhaber,17
+United States,Bob Bradley,GK,Luis Robles,0

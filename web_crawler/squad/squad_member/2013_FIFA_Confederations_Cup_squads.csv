@@ -1,0 +1,185 @@
+Country,Coach,player_pos,player_name,player_cap
+Brazil,Luiz Felipe Scolari,GK,Jefferson,7
+Brazil,Luiz Felipe Scolari,DF,Dani Alves,64
+Brazil,Luiz Felipe Scolari,DF,Thiago Silva,34
+Brazil,Luiz Felipe Scolari,DF,David Luiz,23
+Brazil,Luiz Felipe Scolari,MF,Fernando,6
+Brazil,Luiz Felipe Scolari,DF,Marcelo,20
+Brazil,Luiz Felipe Scolari,MF,Lucas,25
+Brazil,Luiz Felipe Scolari,MF,Hernanes,12
+Brazil,Luiz Felipe Scolari,FW,Fred,24
+Brazil,Luiz Felipe Scolari,FW,Neymar,34
+Brazil,Luiz Felipe Scolari,MF,Oscar,17
+Brazil,Luiz Felipe Scolari,GK,Julio Cesar,69
+Brazil,Luiz Felipe Scolari,DF,Dante,3
+Brazil,Luiz Felipe Scolari,DF,Filipe Luis,4
+Brazil,Luiz Felipe Scolari,MF,Jean,5
+Brazil,Luiz Felipe Scolari,DF,Rever,8
+Brazil,Luiz Felipe Scolari,MF,Luiz Gustavo,5
+Brazil,Luiz Felipe Scolari,MF,Paulinho,13
+Brazil,Luiz Felipe Scolari,FW,Hulk,22
+Brazil,Luiz Felipe Scolari,MF,Bernard,3
+Brazil,Luiz Felipe Scolari,FW,Jo,4
+Brazil,Luiz Felipe Scolari,GK,Diego Cavalieri,2
+Brazil,Luiz Felipe Scolari,MF,Jadson,7
+Japan,Alberto Zaccheroni,GK,Eiji Kawashima,45
+Japan,Alberto Zaccheroni,DF,Masahiko Inoha,19
+Japan,Alberto Zaccheroni,DF,Gotoku Sakai,5
+Japan,Alberto Zaccheroni,MF,Keisuke Honda,42
+Japan,Alberto Zaccheroni,DF,Yuto Nagatomo,58
+Japan,Alberto Zaccheroni,DF,Atsuto Uchida,57
+Japan,Alberto Zaccheroni,MF,Yasuhito Endo,130
+Japan,Alberto Zaccheroni,FW,Hiroshi Kiyotake,17
+Japan,Alberto Zaccheroni,FW,Shinji Okazaki,63
+Japan,Alberto Zaccheroni,FW,Shinji Kagawa,43
+Japan,Alberto Zaccheroni,FW,Mike Havenaar,14
+Japan,Alberto Zaccheroni,GK,Shusaku Nishikawa,8
+Japan,Alberto Zaccheroni,MF,Hajime Hosogai,21
+Japan,Alberto Zaccheroni,MF,Kengo Nakamura,66
+Japan,Alberto Zaccheroni,DF,Yasuyuki Konno,68
+Japan,Alberto Zaccheroni,DF,Yuzo Kurihara,16
+Japan,Alberto Zaccheroni,MF,Makoto Hasebe,68
+Japan,Alberto Zaccheroni,FW,Ryoichi Maeda,30
+Japan,Alberto Zaccheroni,FW,Takashi Inui,10
+Japan,Alberto Zaccheroni,MF,Hideto Takahashi,5
+Japan,Alberto Zaccheroni,DF,Hiroki Sakai,10
+Japan,Alberto Zaccheroni,DF,Maya Yoshida,27
+Japan,Alberto Zaccheroni,GK,Shuichi Gonda,1
+Mexico,Jose Manuel de la Torre,GK,Guillermo Ochoa,52
+Mexico,Jose Manuel de la Torre,DF,Francisco Rodriguez,80
+Mexico,Jose Manuel de la Torre,DF,Carlos Salcido,113
+Mexico,Jose Manuel de la Torre,DF,Diego Reyes,5
+Mexico,Jose Manuel de la Torre,MF,Jesus Molina,7
+Mexico,Jose Manuel de la Torre,MF,Gerardo Torrado,139
+Mexico,Jose Manuel de la Torre,MF,Pablo Barrera,53
+Mexico,Jose Manuel de la Torre,MF,Angel Reyna,21
+Mexico,Jose Manuel de la Torre,FW,Aldo de Nigris,22
+Mexico,Jose Manuel de la Torre,FW,Giovani dos Santos,62
+Mexico,Jose Manuel de la Torre,MF,Javier Aquino,15
+Mexico,Jose Manuel de la Torre,GK,Jesus Corona,23
+Mexico,Jose Manuel de la Torre,DF,Severo Meza,12
+Mexico,Jose Manuel de la Torre,FW,Javier Hernandez,47
+Mexico,Jose Manuel de la Torre,DF,Hector Moreno,41
+Mexico,Jose Manuel de la Torre,MF,Hector Herrera,6
+Mexico,Jose Manuel de la Torre,MF,Jesus Zavala,19
+Mexico,Jose Manuel de la Torre,MF,Andres Guardado,91
+Mexico,Jose Manuel de la Torre,FW,Raul Jimenez,5
+Mexico,Jose Manuel de la Torre,DF,Jorge Torres Nilo,32
+Mexico,Jose Manuel de la Torre,DF,Hiram Mier,5
+Mexico,Jose Manuel de la Torre,DF,Gerardo Flores,5
+Mexico,Jose Manuel de la Torre,GK,Alfredo Talavera,11
+Italy,Cesare Prandelli,GK,Gianluigi Buffon,128
+Italy,Cesare Prandelli,DF,Christian Maggio,24
+Italy,Cesare Prandelli,DF,Giorgio Chiellini,57
+Italy,Cesare Prandelli,DF,Davide Astori,3
+Italy,Cesare Prandelli,DF,Mattia De Sciglio,3
+Italy,Cesare Prandelli,MF,Antonio Candreva,7
+Italy,Cesare Prandelli,MF,Alberto Aquilani,23
+Italy,Cesare Prandelli,MF,Claudio Marchisio,32
+Italy,Cesare Prandelli,FW,Mario Balotelli,20
+Italy,Cesare Prandelli,FW,Sebastian Giovinco,14
+Italy,Cesare Prandelli,FW,Alberto Gilardino,51
+Italy,Cesare Prandelli,GK,Salvatore Sirigu,5
+Italy,Cesare Prandelli,GK,Federico Marchetti,8
+Italy,Cesare Prandelli,FW,Stephan El Shaarawy,6
+Italy,Cesare Prandelli,DF,Andrea Barzagli,41
+Italy,Cesare Prandelli,MF,Daniele De Rossi,84
+Italy,Cesare Prandelli,FW,Alessio Cerci,3
+Italy,Cesare Prandelli,MF,Riccardo Montolivo,43
+Italy,Cesare Prandelli,DF,Leonardo Bonucci,26
+Italy,Cesare Prandelli,DF,Ignazio Abate,10
+Italy,Cesare Prandelli,MF,Andrea Pirlo,98
+Italy,Cesare Prandelli,MF,Emanuele Giaccherini,8
+Italy,Cesare Prandelli,MF,Alessandro Diamanti,11
+Spain,Vicente del Bosque,GK,Iker Casillas,145
+Spain,Vicente del Bosque,DF,Raul Albiol,39
+Spain,Vicente del Bosque,DF,Gerard Pique,51
+Spain,Vicente del Bosque,MF,Javi Martinez,9
+Spain,Vicente del Bosque,DF,Cesar Azpilicueta,2
+Spain,Vicente del Bosque,MF,Andres Iniesta,80
+Spain,Vicente del Bosque,FW,David Villa,88
+Spain,Vicente del Bosque,MF,Xavi,120
+Spain,Vicente del Bosque,FW,Fernando Torres,101
+Spain,Vicente del Bosque,MF,Cesc Fabregas,79
+Spain,Vicente del Bosque,FW,Pedro,26
+Spain,Vicente del Bosque,GK,Victor Valdes,13
+Spain,Vicente del Bosque,MF,Juan Mata,25
+Spain,Vicente del Bosque,FW,Roberto Soldado,8
+Spain,Vicente del Bosque,DF,Sergio Ramos,102
+Spain,Vicente del Bosque,MF,Sergio Busquets,54
+Spain,Vicente del Bosque,DF,Alvaro Arbeloa,47
+Spain,Vicente del Bosque,DF,Jordi Alba,17
+Spain,Vicente del Bosque,DF,Nacho Monreal,12
+Spain,Vicente del Bosque,MF,Santi Cazorla,53
+Spain,Vicente del Bosque,MF,David Silva,70
+Spain,Vicente del Bosque,MF,Jesus Navas,23
+Spain,Vicente del Bosque,GK,Pepe Reina,26
+Uruguay,Oscar Tabarez,GK,Fernando Muslera,44
+Uruguay,Oscar Tabarez,DF,Diego Lugano,79
+Uruguay,Oscar Tabarez,DF,Diego Godin,64
+Uruguay,Oscar Tabarez,DF,Sebastian Coates,9
+Uruguay,Oscar Tabarez,MF,Walter Gargano,50
+Uruguay,Oscar Tabarez,MF,Alvaro Pereira,47
+Uruguay,Oscar Tabarez,MF,Cristian Rodriguez,57
+Uruguay,Oscar Tabarez,MF,Sebastian Eguren,50
+Uruguay,Oscar Tabarez,FW,Luis Suarez,63
+Uruguay,Oscar Tabarez,FW,Diego Forlan,96
+Uruguay,Oscar Tabarez,FW,Abel Hernandez,8
+Uruguay,Oscar Tabarez,GK,Juan Castillo,13
+Uruguay,Oscar Tabarez,DF,Matias Aguirregaray,3
+Uruguay,Oscar Tabarez,MF,Nicolas Lodeiro,17
+Uruguay,Oscar Tabarez,MF,Diego Perez,82
+Uruguay,Oscar Tabarez,DF,Maxi Pereira,74
+Uruguay,Oscar Tabarez,MF,Egidio Arevalo Rios,42
+Uruguay,Oscar Tabarez,FW,Gaston Ramirez,16
+Uruguay,Oscar Tabarez,DF,Andres Scotti,37
+Uruguay,Oscar Tabarez,MF,Alvaro Gonzalez,33
+Uruguay,Oscar Tabarez,FW,Edinson Cavani,48
+Uruguay,Oscar Tabarez,DF,Martin Caceres,45
+Uruguay,Oscar Tabarez,GK,Martin Silva,1
+Tahiti,Eddy Etaeta,GK,Mickael Roche,6
+Tahiti,Eddy Etaeta,MF,Alvin Tehau,16
+Tahiti,Eddy Etaeta,FW,Marama Vahirua,0
+Tahiti,Eddy Etaeta,DF,Teheivarii Ludivion,15
+Tahiti,Eddy Etaeta,DF,Tamatoa Wagemann,6
+Tahiti,Eddy Etaeta,MF,Henri Caroine,6
+Tahiti,Eddy Etaeta,MF,Heimano Bourebare,12
+Tahiti,Eddy Etaeta,DF,Stephane Faatiarau,11
+Tahiti,Eddy Etaeta,FW,Teaonui Tehau,16
+Tahiti,Eddy Etaeta,DF,Nicolas Vallar,12
+Tahiti,Eddy Etaeta,FW,Stanley Atani,15
+Tahiti,Eddy Etaeta,DF,Edson Lemaire,3
+Tahiti,Eddy Etaeta,FW,Steevy Chong Hue,22
+Tahiti,Eddy Etaeta,MF,Rainui Aroita,1
+Tahiti,Eddy Etaeta,MF,Lorenzo Tehau,18
+Tahiti,Eddy Etaeta,FW,Ricky Aitamai,1
+Tahiti,Eddy Etaeta,MF,Jonathan Tehau,22
+Tahiti,Eddy Etaeta,MF,Yohann Tihoni,1
+Tahiti,Eddy Etaeta,DF,Vincent Simon,21
+Tahiti,Eddy Etaeta,DF,Yannick Vero,5
+Tahiti,Eddy Etaeta,FW,Samuel Hnanyine,1
+Tahiti,Eddy Etaeta,GK,Gilbert Meriel,3
+Tahiti,Eddy Etaeta,GK,Xavier Samin,28
+Nigeria,Stephen Keshi,GK,Vincent Enyeama,78
+Nigeria,Stephen Keshi,DF,Godfrey Oboabona,19
+Nigeria,Stephen Keshi,DF,Elderson Echiejile,27
+Nigeria,Stephen Keshi,MF,John Ugochukwu,2
+Nigeria,Stephen Keshi,DF,Efe Ambrose,22
+Nigeria,Stephen Keshi,DF,Azubuike Egwuekwe,12
+Nigeria,Stephen Keshi,FW,Ahmed Musa,26
+Nigeria,Stephen Keshi,FW,Brown Ideye,14
+Nigeria,Stephen Keshi,FW,Joseph Akpala,5
+Nigeria,Stephen Keshi,MF,John Obi Mikel,46
+Nigeria,Stephen Keshi,FW,Mohammed Gambo,0
+Nigeria,Stephen Keshi,DF,Solomon Kwambe,3
+Nigeria,Stephen Keshi,MF,Fegor Ogude,11
+Nigeria,Stephen Keshi,FW,Anthony Ujah,1
+Nigeria,Stephen Keshi,MF,Michel Babatunde,1
+Nigeria,Stephen Keshi,GK,Austin Ejide,24
+Nigeria,Stephen Keshi,MF,Ogenyi Onazi,9
+Nigeria,Stephen Keshi,MF,Emeka Eze,1
+Nigeria,Stephen Keshi,MF,Sunday Mba,11
+Nigeria,Stephen Keshi,FW,Nnamdi Oduamadi,3
+Nigeria,Stephen Keshi,DF,Francis Benjamin,1
+Nigeria,Stephen Keshi,DF,Kenneth Omeruo,8
+Nigeria,Stephen Keshi,GK,Chigozie Agbim,5
