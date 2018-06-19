@@ -1,6 +1,6 @@
 # Project Description
 __Objective__:
-- Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw"
+- Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw" or "goal difference"
 - Apply the model to predict the result of FIFA world cup 2018.
 
 __Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games.
@@ -108,7 +108,12 @@ Team A vs Team B
 - "lose_3": A wins with 3 or more goal differences
 - "draw_0": Draw
 
+__Match Day 1__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
+
+__Match Day 2__ (coming soon)
+
+__Match Day 3__ (coming soon)
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
@@ -124,10 +129,11 @@ Team A vs Team B
 
 # Task List
 __Ongoing__
-- [ ] Add feature Importance
+- [ ] Add prediction for Matchday 2
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
 
 __Complete__
+- [x] Add feature Importance
 - [x] Add feature of squad and player info
 - [x] Build a web crawler for Squad each team
 - [x] Build a web crawler for FIFA game player
