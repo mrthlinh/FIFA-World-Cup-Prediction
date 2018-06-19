@@ -133,8 +133,7 @@ __Match Day 3__ (coming soon)
 # Task List
 __Ongoing__
 - [ ] Add prediction for Matchday 2
-- [ ] Add pie chart for Matchday 1
-- [ ]
+- [ ] Add summary result for Matchday 1
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
 
 __Complete__
