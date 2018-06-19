@@ -112,9 +112,12 @@ Team A vs Team B
 __Match Day 1__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
 
-Accuracy = 8 / 14
+Accuracy = 8 / 15
 
 __Match Day 2__ (coming soon)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
+
+Accuracy = 8 / 15
 
 __Match Day 3__ (coming soon)
 
@@ -132,11 +135,12 @@ __Match Day 3__ (coming soon)
 
 # Task List
 __Ongoing__
-- [ ] Add prediction for Matchday 2
+- [ ] Add prediction for Matchday 3
 - [ ] Add summary result for Matchday 1
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
 
 __Complete__
+- [x] Add prediction for Matchday 2
 - [x] Add feature Importance
 - [x] Add feature of squad and player info
 - [x] Build a web crawler for Squad each team
