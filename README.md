@@ -81,6 +81,7 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 ## Feature Importance:
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/feature_importance.png)
 
+From the graph, we can see that among 4 feature groups "head2head","form", "bet odd" and "squad strength", "bet odd" group plays more important role to predict the match results than other feature groups. In "squad strength" feature, "defense aggression", "build up play passing" and "chance creation Shooting" help us determine goal difference better than other features.
 
 # Preliminary Result
 
@@ -94,7 +95,7 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 |Neural Net               |60.80|
 
 ### World Cup 2018
-Now the model is applying for World Cup 2018 in Russia with __simulation time = 100 000__. While the model didn't perform so well in train/test phase, it has shown stunning results so far, 7 correct results out of 11 matches including matches such as __Portugal - Spain (3-3)__, __Brazil - Switzerland (1-1)__. Here is the result of my model for all matches in Match Day 1 of Group Stage
+Now the model is applying for World Cup 2018 in Russia with __simulation time = 100 000__. While the model didn't perform so well in train/test phase, it has shown stunning results so far, 8 correct results out of 14 matches including matches such as __Portugal - Spain (3-3)__, __Brazil - Switzerland (1-1)__. Here is the result of my model for all matches in Match Day 1 of Group Stage
 
 __Result Explanation:__
 
@@ -110,6 +111,8 @@ Team A vs Team B
 
 __Match Day 1__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
+
+Accuracy = 8 / 14
 
 __Match Day 2__ (coming soon)
 
@@ -130,6 +133,8 @@ __Match Day 3__ (coming soon)
 # Task List
 __Ongoing__
 - [ ] Add prediction for Matchday 2
+- [ ] Add pie chart for Matchday 1
+- [ ]
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
 
 __Complete__
