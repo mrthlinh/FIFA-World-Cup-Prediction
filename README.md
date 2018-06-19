@@ -114,10 +114,10 @@ __Match Day 1__
 
 Accuracy = 8 / 15
 
-__Match Day 2__ (coming soon)
+__Match Day 2__ 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
 
-Accuracy = 
+Accuracy =
 
 __Match Day 3__ (coming soon)
 
