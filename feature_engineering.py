@@ -13,11 +13,15 @@ import datetime as dt
 # Read data full 2005 - 2015
 data_2005 = pd.read_csv("data/data_odd_2005_regression.csv", encoding='utf-8')
 data_2016 = pd.read_csv("data/data_EURO_2016.csv", encoding='utf-8')
-data_2018 = pd.read_csv("data/data_WC_2018.csv", encoding='utf-8')
+#data_2018 = pd.read_csv("data/data_WC_2018.csv", encoding='utf-8')
+data_2018 = pd.read_csv("data/data_WC_2018_round2.csv", encoding='utf-8')
 # Convert date to Datetime object
 data_2005['date'] = pd.to_datetime(data_2005['date'])
 data_2016['date'] = pd.to_datetime(data_2016['date'])
 
+original_col = list(data_2005.columns)
+result_col = original_col[-2:]
+new_col = original_col[0:8]
 
 # Read data squad strength
 ss_wc_10 = pd.read_csv("web_crawler/squad/squad_strength/2010_FIFA_World_Cup_squads_strength__.csv", encoding='utf-8')
@@ -43,7 +47,10 @@ old_features = ['f_goalF_','f_goalA_',
                 'f_win_','f_draw_',
                 'avg_odds_win_','avg_odds_draw']
 
-def addFeature_diff(new_features,old_features,df,drop=True):    
+new_col = new_col+new_features
+
+def addFeature_diff(new_features,old_features,my_df,drop=True):  
+    df = my_df.copy()
     for i in range(len(new_features)-1):
         new_feature = new_features[i]
         old_feature_1 = old_features[i] + "1"
@@ -52,8 +59,8 @@ def addFeature_diff(new_features,old_features,df,drop=True):
         df[new_feature] = df.apply(lambda row: (row[old_feature_1] - row[old_feature_2]),axis=1)
         if (drop):
             df = df.drop([old_feature_1,old_feature_2],axis=1)
-        
-    df[new_features[-1]] = data_2005[old_features[-1]]
+#    'avg_odds_draw' -> no need to take difference
+    df[new_features[-1]] = my_df[old_features[-1]]
     if (drop):
         df = df.drop([old_features[-1]],axis=1)
     return df
@@ -115,6 +122,8 @@ squad_features = ['Rank','Overall',
                  'ChanceCreation_Shooting', 'Defence_Pressure', 
                  'Defence_Aggression', 'Defence_TeamWidth']
 
+new_col = new_col + new_features_game + result_col
+
 def diff_feature(row,df):
     team1= row.team_1
     team2= row.team_2
@@ -134,14 +143,24 @@ _=addFeature_game(new_features_game,squad_features,data_WC_2010,ss_wc_10)
 _=addFeature_game(new_features_game,squad_features,data_WC_2014,ss_wc_14)
 _=addFeature_game(new_features_game,squad_features,data_EUR_2012,ss_eu_12)
 _=addFeature_game(new_features_game,squad_features,data_EUR_2016,ss_eu_16)        
-_=addFeature_game(new_features_game,squad_features,data_WC_2018,ss_wc_18)   
+_=addFeature_game(new_features_game,squad_features,data_WC_2018,ss_wc_18)  
+
+ 
+
+data_WC_2010 = data_WC_2010[new_col]
+data_WC_2014 = data_WC_2014[new_col]
+data_EUR_2012 = data_EUR_2012[new_col]
+data_EUR_2016 = data_EUR_2016[new_col]
 
 data_WC_2010.to_csv('data/data_full_feature/data_WC_2010.csv',index=False)
 data_WC_2014.to_csv('data/data_full_feature/data_WC_2014.csv',index=False)
-data_WC_2018.to_csv('data/data_full_feature/data_WC_2018.csv',index=False)
+
 
 data_EUR_2012.to_csv('data/data_full_feature/data_EUR_2012.csv',index=False)
 data_EUR_2016.to_csv('data/data_full_feature/data_EUR_2016.csv',index=False)
+
+# Round 2
+data_WC_2018.to_csv('data/data_full_feature/data_WC_2018_round2.csv',index=False)
 #
 #squad_features = ['f_goalF_',
 #                  'f_goalA_',
