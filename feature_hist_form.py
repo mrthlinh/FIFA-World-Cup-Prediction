@@ -30,9 +30,10 @@ def correct_Korea(st):
         return st
     
 def hist_feature(row):        
-    team1= correct_Korea(row.team_1)
-    team2= correct_Korea(row.team_2)
-    
+#    team1= correct_Korea(row.team_1)
+#    team2= correct_Korea(row.team_2)
+    team1= row.team_1
+    team2= row.team_2  
     df_1 = all_match.loc[(all_match['home_team'] == team1) & (all_match['away_team'] == team2),'home_score':'away_score']     
     df_2 = all_match.loc[(all_match['home_team'] == team2) & (all_match['away_team'] == team1),'home_score':'away_score']
     df_2.columns = ['away_score','home_score']
@@ -73,8 +74,10 @@ def form_feature(team,num_recent_matches):
   
 def form_10(row):
     
-    team1= correct_Korea(row.team_1)
-    team2= correct_Korea(row.team_2)
+#    team1= correct_Korea(row.team_1)
+#    team2= correct_Korea(row.team_2)
+    team1= row.team_1
+    team2= row.team_2 
     num_recent_matches = 10
     
     team1_info = form_feature(team1,num_recent_matches)
@@ -87,9 +90,10 @@ def form_10(row):
 wc_match['h_win_diff'], wc_match['h_draw']= zip(*wc_match.apply(hist_feature,axis=1))
 wc_match['f_goalF_1'], wc_match['f_goalF_2'], wc_match['f_goalA_1'], wc_match['f_goalA_2'],wc_match['f_win_1'], wc_match['f_win_2'], wc_match['f_draw_1'], wc_match['f_draw_2'] = zip(*wc_match.apply(form_10,axis=1))
 
-wc_match.to_csv("data/data_WC_2018.csv",index=False)
+wc_match.to_csv("data/data_WC_2018_round2.csv",index=False)
 
 # Check if there is some missing
+print("Check Null")
 print(np.sum(wc_match.isnull()))
 
 
