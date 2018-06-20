@@ -1,0 +1,17 @@
+id,date,team_1,team_2,home_team,tournament,match_type,host,h_win_diff,h_draw,form_diff_goalF,form_diff_goalA,form_diff_win,form_diff_draw,odd_diff_win,odd_draw,game_diff_rank,game_diff_ovr,game_diff_attk,game_diff_mid,game_diff_def,game_diff_prestige,game_diff_age11,game_diff_ageAll,game_diff_bup_speed,game_diff_bup_pass,game_diff_cc_pass,game_diff_cc_cross,game_diff_cc_shoot,game_diff_def_press,game_diff_def_aggr,game_diff_def_teamwidth,result,abnormal,goal_diff
+1,6/8/2012,Russia,Saudi Arabia,a,FIFA World Cup,group_stage_1,1,-1,0,6,-2,0,1,-7.61,4.34,3,7,8,5,4,2,-1.82,-0.3,-19,-17,-9,-11,-27,0,1,-17,win,0,5
+1,6/9/2012,Egypt,Uruguay,a,FIFA World Cup,group_stage_1,0,-1,0,0,-3,1,-2,5.44,3.86,31,-4,-11,0,-6,-2,2.46,0.07,14,13,25,21,-12,0,-9,-30,lose,0,-1
+1,6/10/2012,Morocco,Iran,a,FIFA World Cup,group_stage_1,0,0,2,4,-1,1,-2,-1.56,3.06,4,2,0,4,4,0,2.27,-0.2,-31,-31,-9,21,-9,17,9,46,lose,1,-1
+1,6/11/2012,Portugal,Spain,a,FIFA World Cup,group_stage_1,0,-7,13,-16,-1,0,-1,1.95,3.31,-6,-1,4,-3,-3,-1,-1.18,-0.5,19,22,27,26,42,-9,-4,-14,draw,0,0
+1,6/12/2012,France,Australia,a,FIFA World Cup,group_stage_1,0,1,1,9,-1,3,-3,-11.43,6.63,-29,13,17,12,12,4,-1.18,-1.48,-14,-19,-28,7,-31,4,-5,1,win,0,1
+1,6/13/2012,Argentina,Iceland,a,FIFA World Cup,group_stage_1,0,0,0,-3,1,0,2,-9.31,5.17,-17,9,11,4,7,7,1,1.12,-13,-12,-34,-20,-8,33,-4,-8,draw,1,0
+1,6/14/2012,Peru,Denmark,a,FIFA World Cup,group_stage_1,0,0,0,-4,-1,1,0,0.84,3.29,-1,-2,2,-4,-2,-2,0.82,0.78,3,-4,-22,38,11,-2,8,18,lose,0,-1
+1,6/15/2012,Croatia,Nigeria,aa,FIFA World Cup,group_stage_1,0,0,0,-5,-2,0,-1,-3.53,3.73,-28,5,6,6,6,2,3.82,1.41,-17,-20,-27,3,-16,-9,-23,-7,win,0,2
+1,6/16/2012,Costa Rica,Serbia,a,FIFA World Cup,group_stage_1,0,0,0,-9,5,-3,0,2.77,3.33,-11,-5,-7,-8,-5,-3,1.09,3.13,-1,0,-6,44,-5,-1,-6,-5,lose,0,-1
+1,6/17/2012,Germany,Mexico,a,FIFA World Cup,group_stage_1,0,4,5,9,-2,1,1,-5.54,4.5,-14,7,4,6,8,3,-0.81,-2.65,-12,-6,-20,-20,-34,-2,0,20,lose,1,-1
+1,6/18/2012,Brazil,Switzerland,a,FIFA World Cup,group_stage_1,0,1,3,-5,-1,-2,2,-7.02,4.8,-4,8,11,8,6,5,0.36,1.96,-2,-3,-20,-22,7,30,14,3,draw,1,0
+1,6/19/2012,Sweden,South Korea,a,FIFA World Cup,group_stage_1,0,1,2,1,-3,-1,-1,-2,3.25,-33,4,7,2,7,0,1.54,0.06,3,3,16,-22,-12,22,22,-31,win,0,1
+1,6/20/2012,Belgium,Panama,a,FIFA World Cup,group_stage_1,0,0,0,22,-6,5,1,-20.02,7.5,-52,14,17,14,14,6,-3.82,0.14,-13,-14,-1,35,9,1,-5,-25,win,0,3
+1,6/21/2012,Tunisia,England,a,FIFA World Cup,group_stage_1,0,-1,1,0,3,0,-2,7.22,4.58,9,-8,-10,-9,-8,-5,3.18,0.5,36,29,48,-6,38,1,14,0,lose,0,-1
+1,6/22/2012,Colombia,Japan,a,FIFA World Cup,group_stage_1,0,2,1,5,-7,0,3,-4.24,3.75,-45,4,6,0,5,2,-1.28,0.08,-2,-3,10,-20,-7,-18,-14,28,lose,1,-1
+1,6/23/2012,Poland,Senegal,a,FIFA World Cup,group_stage_1,0,0,0,7,9,1,-4,-0.86,3.23,-19,4,6,1,2,-2,1.18,0.05,-2,1,-7,3,-14,-2,-27,-14,lose,1,-1
