@@ -112,15 +112,24 @@ Team A vs Team B
 __Match Day 1__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
 
-Accuracy = 8 / 15
+Accuracy = 8 / 16
 
-__Match Day 2__ 
+__Match Day 2__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
 
 Accuracy =
 
 __Match Day 3__ (coming soon)
 
+__Round of 16__ (coming soon)
+
+__Quarter-Finals__ (coming soon)
+
+__Semi_Finals__ (coming soon)
+
+__Third Place__ (coming soon)
+
+__Final__ (coming soon)
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
 2. [t-test definition](https://en.wikipedia.org/wiki/Student%27s_t-test)
@@ -135,6 +144,7 @@ __Match Day 3__ (coming soon)
 
 # Task List
 __Ongoing__
+- [ ] Add abnormality detection
 - [ ] Add prediction for Matchday 3
 - [ ] Add summary result for Matchday 1
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
