@@ -83,7 +83,7 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 
 From the graph, we can see that among 4 feature groups "head2head","form", "bet odd" and "squad strength", "bet odd" group plays more important role to predict the match results than other feature groups. In "squad strength" feature, "defense aggression", "build up play passing" and "chance creation Shooting" help us determine goal difference better than other features.
 
-# Preliminary Result
+# Preliminary Result 
 
 |           Model         |10-fold CV error rate (%)|
 |:-----------------------:|:-------------------:|
@@ -112,15 +112,20 @@ Team A vs Team B
 __Match Day 1__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
 
-Accuracy = 8 / 16
+Top 1 Accuracy = 8 / 16
+Top 2 Accuracy = 12 / 16
 
 __Match Day 2__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
 
-Accuracy =
+Top 1 Accuracy = 6 / 16
+Top 2 Accuracy = 9 / 16
 
 __Match Day 3__ (coming soon)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday3.PNG)
 
+Top 1 Accuracy =
+Top 1 Accuracy =
 __Round of 16__ (coming soon)
 
 __Quarter-Finals__ (coming soon)
@@ -145,8 +150,7 @@ __Final__ (coming soon)
 # Task List
 __Ongoing__
 - [ ] Add abnormality detection
-- [ ] Add prediction for Matchday 3
-- [ ] Add summary result for Matchday 1
+- [ ] Add summary result
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
 
 __Complete__
