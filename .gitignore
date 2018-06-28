@@ -17,3 +17,6 @@ web_crawler/player/data pre_clean/*.csv
 web_crawler/player/fragment data/*.csv
 .ipynb_checkpoints/feature_engineering-checkpoint.ipynb
 offline_website
+test
+utilities
+temp
