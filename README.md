@@ -121,11 +121,12 @@ __Match Day 2__
 - Top 1 Accuracy = 6 / 16
 - Top 2 Accuracy = 9 / 16
 
-__Match Day 3__ (coming soon)
+__Match Day 3__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday3.PNG)
 
 - Top 1 Accuracy =
-- Top 1 Accuracy =
+- Top 2 Accuracy =
+
 __Round of 16__ (coming soon)
 
 __Quarter-Finals__ (coming soon)
