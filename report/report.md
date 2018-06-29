@@ -1,13 +1,19 @@
+
+
+
 # Project Description
-__Objective__: Prediction of the winner of FIFA world cup 2018. Prediction results are  Win / Lose / Draw
+__Objective__:
+- Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw" or "goal difference"
+- Apply the model to predict the result of FIFA world cup 2018.
 
 __Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games and I need to build a data crawler.
 
 __Feature Selection__: To determine who will more likely to win a match, based on my knowledge, I come up with 4 main groups of features as follows:
-1. head-to-head match history
+1. head-to-head match history between 2 teams
 2. recent performance of each team (10 recent matches), aka "form"
 3. bet-ratio before matches
-4. squad value or how many players are in top 200 (from video game)
+4. squad strength (from FIFA video game)
+
 Feature list reflects those factors.
 
 __Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/)
@@ -18,13 +24,14 @@ __Lifecycle__
 
 # Data
 ### Data Source
-The dataset are from all international matches from 2000 - 2017, results, bet odds, ranking, title won.
+The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths
 1. [FIFA World Cup 2018](https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data)
-2. [International match 1872 - 2017](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
-3. [Ranking through Time](http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html)
+2. [International match 1872 - 2018](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
+3. [FIFA Ranking through Time](https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html)
 4. [Bet Odd](https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data)
-5. [Player Rating Through time](https://www.futhead.com/10/players/?page=2)
-6. [Squad for each tournament](https://github.com/openfootball/world-cup)
+5. [Bet Odd 2](http://www.oddsportal.com)
+6. [Squad Strength - Sofia](https://sofifa.com/players/top)
+7. [Squad Strength - FIFA index](https://www.fifaindex.com/)
 
 
 [1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
@@ -115,6 +122,13 @@ There are few questions in order to understand data better
 
    While "Win" and "Lose" are while separate, "Draw" seems to be mixed between other labels.
 
+
+__New EDA__ : EDA for new features for World Cup and UEFA EURO
+
+What questions?
+1.
+
+
 # Model Training and Evaluation
 ### Train-Test ratio
 We split data into 70:30
@@ -143,6 +157,16 @@ Each criteria is carried out for each label "win", "lose" and "draw"
 - Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
 
 ### Preliminary Result
+
+|           Model         |10-fold CV error rate (%)|
+|:-----------------------:|:-------------------:|
+|Logistic Regression      |59.05|
+|SVM                      |59.17|
+|Random Forest            |54.22|
+|Gradient Boosting tree   |57.98|
+|ADA boost tree           |59.01|
+|Neural Net               |60.80|
+
 1. __Logistic Regression__
 
   Best parameters:
@@ -371,6 +395,7 @@ We apply the model Gradient Boosted Tree to predict the result for EURO 2016 (no
 |      France      |     Portugal     |  lose  |    draw    |
 
 Accuracy = 0.48
+So far, the results are not so good but it is still better than a random guess of "win, lose and draw". One interesting thing is that our model predicts a "Draw" result in Final Match of EURO 2016, which is correct at 90th minute.
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
@@ -387,29 +412,3 @@ Accuracy = 0.48
 1. If "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose", will adding these data make model better? (You actually did it in EDA)
 2. According to "draw" and "win" in average odd? These two labels seem to be different, why performance of "draw" is bad?
 3. How about classification -> regression
-# Task List
-__Ongoing__
-- [ ] Add more t-test with label "draw"
-- [ ] Group all model results into one graph and draw a preliminary conclusion, set up a baseline
-- [ ] Explore more about result "draw", generate some insight, how to predict these cases?
-- [ ] Explore more about weak team > strong team, generate some insight, how to predict these cases?
-- [ ] Add graph of validation / training curve for hyper-parameters tuning.
-- [ ] Create more data, "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose"
-- [ ] Add feature group 1
-    - [x] Add h_win_diff, h_draw
-    - [ ] Add rank_diff, title_diff
-- [ ] Build a web crawler for Ranking over time
-- [ ] A table of title won for each team
-- [ ] Integrate player rating and squad value to data
-
-__Complete__
-- [x] Add features group 2
-- [x] Add features group 3
-- [x] Simple EDA and a small story
-- [x] Add features group 4
-- [x] Prepare framework for running classifiers
-- [x] Add evaluation metrics and plot
-  - [x] Add accuracy, precision, recall, F1
-  - [x] Add ROC curves
-- [x] Build a data without player rating and squad value
-- [x] Generate data and preform prediction for EURO 2016, ok now my story is more interesting
