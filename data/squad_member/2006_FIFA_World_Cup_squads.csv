@@ -1,0 +1,737 @@
+Country,Coach,player_pos,player_name,player_cap
+Costa Rica,Alexandre Guimaraes,GK,Alvaro Mesen,38
+Costa Rica,Alexandre Guimaraes,DF,Jervis Drummond,56
+Costa Rica,Alexandre Guimaraes,DF,Luis Marin,120
+Costa Rica,Alexandre Guimaraes,DF,Michael Umana,18
+Costa Rica,Alexandre Guimaraes,DF,Gilberto Martinez,57
+Costa Rica,Alexandre Guimaraes,MF,Danny Fonseca,22
+Costa Rica,Alexandre Guimaraes,MF,Christian Bolanos,16
+Costa Rica,Alexandre Guimaraes,MF,Mauricio Solis,107
+Costa Rica,Alexandre Guimaraes,FW,Paulo Wanchope,69
+Costa Rica,Alexandre Guimaraes,MF,Walter Centeno,93
+Costa Rica,Alexandre Guimaraes,FW,Ronald Gomez,80
+Costa Rica,Alexandre Guimaraes,DF,Leonardo Gonzalez,36
+Costa Rica,Alexandre Guimaraes,FW,Kurt Bernard,3
+Costa Rica,Alexandre Guimaraes,MF,Randall Azofeifa,5
+Costa Rica,Alexandre Guimaraes,DF,Harold Wallace,78
+Costa Rica,Alexandre Guimaraes,MF,Carlos Hernandez,17
+Costa Rica,Alexandre Guimaraes,DF,Gabriel Badilla,7
+Costa Rica,Alexandre Guimaraes,GK,Jose Francisco Porras,16
+Costa Rica,Alexandre Guimaraes,FW,Alvaro Saborio,23
+Costa Rica,Alexandre Guimaraes,MF,Douglas Sequeira,29
+Costa Rica,Alexandre Guimaraes,FW,Victor Nunez,3
+Costa Rica,Alexandre Guimaraes,DF,Michael Rodriguez,3
+Costa Rica,Alexandre Guimaraes,GK,Wardy Alfaro,2
+Ecuador,Luis Fernando Suarez,GK,Edwin Villafuerte,15
+Ecuador,Luis Fernando Suarez,DF,Jorge Guagua,18
+Ecuador,Luis Fernando Suarez,DF,Ivan Hurtado,130
+Ecuador,Luis Fernando Suarez,DF,Ulises de la Cruz,84
+Ecuador,Luis Fernando Suarez,DF,Jose Luis Perlaza,3
+Ecuador,Luis Fernando Suarez,MF,Patricio Urrutia,6
+Ecuador,Luis Fernando Suarez,MF,Christian Lara,19
+Ecuador,Luis Fernando Suarez,MF,Edison Mendez,64
+Ecuador,Luis Fernando Suarez,FW,Felix Borja,6
+Ecuador,Luis Fernando Suarez,FW,Ivan Kaviedes,44
+Ecuador,Luis Fernando Suarez,FW,Agustin Delgado,68
+Ecuador,Luis Fernando Suarez,GK,Cristian Mora,8
+Ecuador,Luis Fernando Suarez,DF,Paul Ambrosi,24
+Ecuador,Luis Fernando Suarez,MF,Segundo Castillo,11
+Ecuador,Luis Fernando Suarez,MF,Marlon Ayovi,74
+Ecuador,Luis Fernando Suarez,MF,Antonio Valencia,17
+Ecuador,Luis Fernando Suarez,DF,Giovanny Espinoza,56
+Ecuador,Luis Fernando Suarez,DF,Neicer Reasco,31
+Ecuador,Luis Fernando Suarez,MF,Luis Saritama,15
+Ecuador,Luis Fernando Suarez,MF,Edwin Tenorio,68
+Ecuador,Luis Fernando Suarez,FW,Carlos Tenorio,29
+Ecuador,Luis Fernando Suarez,GK,Damian Lanza,5
+Ecuador,Luis Fernando Suarez,FW,Christian Benitez,5
+Germany,Jurgen Klinsmann,GK,Jens Lehmann,32
+Germany,Jurgen Klinsmann,DF,Marcell Jansen,7
+Germany,Jurgen Klinsmann,DF,Arne Friedrich,36
+Germany,Jurgen Klinsmann,DF,Robert Huth,16
+Germany,Jurgen Klinsmann,MF,Sebastian Kehl,27
+Germany,Jurgen Klinsmann,DF,Jens Nowotny,46
+Germany,Jurgen Klinsmann,MF,Bastian Schweinsteiger,28
+Germany,Jurgen Klinsmann,MF,Torsten Frings,52
+Germany,Jurgen Klinsmann,FW,Mike Hanke,6
+Germany,Jurgen Klinsmann,FW,Oliver Neuville,55
+Germany,Jurgen Klinsmann,FW,Miroslav Klose,55
+Germany,Jurgen Klinsmann,GK,Oliver Kahn,85
+Germany,Jurgen Klinsmann,MF,Michael Ballack,65
+Germany,Jurgen Klinsmann,FW,Gerald Asamoah,40
+Germany,Jurgen Klinsmann,MF,Thomas Hitzlsperger,15
+Germany,Jurgen Klinsmann,DF,Philipp Lahm,18
+Germany,Jurgen Klinsmann,DF,Per Mertesacker,23
+Germany,Jurgen Klinsmann,MF,Tim Borowski,20
+Germany,Jurgen Klinsmann,MF,Bernd Schneider,64
+Germany,Jurgen Klinsmann,FW,Lukas Podolski,25
+Germany,Jurgen Klinsmann,DF,Christoph Metzelder,22
+Germany,Jurgen Klinsmann,MF,David Odonkor,1
+Germany,Jurgen Klinsmann,GK,Timo Hildebrand,3
+Poland,Pawel Janas,GK,Artur Boruc,17
+Poland,Pawel Janas,DF,Mariusz Jop,12
+Poland,Pawel Janas,DF,Seweryn Gancarczyk,2
+Poland,Pawel Janas,DF,Marcin Baszczynski,32
+Poland,Pawel Janas,MF,Kamil Kosowski,45
+Poland,Pawel Janas,DF,Jacek Bak,72
+Poland,Pawel Janas,MF,Radoslaw Sobolewski,19
+Poland,Pawel Janas,MF,Jacek Krzynowek,58
+Poland,Pawel Janas,FW,Maciej Zurawski,50
+Poland,Pawel Janas,MF,Miroslaw Szymkowiak,29
+Poland,Pawel Janas,FW,Grzegorz Rasiak,30
+Poland,Pawel Janas,GK,Tomasz Kuszczak,4
+Poland,Pawel Janas,MF,Sebastian Mila,27
+Poland,Pawel Janas,DF,Michal Zewlakow,56
+Poland,Pawel Janas,FW,Euzebiusz Smolarek,13
+Poland,Pawel Janas,MF,Arkadiusz Radomski,20
+Poland,Pawel Janas,MF,Dariusz Dudka,7
+Poland,Pawel Janas,DF,Mariusz Lewandowski,25
+Poland,Pawel Janas,DF,Bartosz Bosacki,11
+Poland,Pawel Janas,MF,Piotr Giza,4
+Poland,Pawel Janas,FW,Ireneusz Jelen,9
+Poland,Pawel Janas,GK,Lukasz Fabianski,2
+Poland,Pawel Janas,FW,Pawel Brozek,4
+England,Sven-Goran Eriksson,GK,Paul Robinson,21
+England,Sven-Goran Eriksson,DF,Gary Neville,79
+England,Sven-Goran Eriksson,DF,Ashley Cole,46
+England,Sven-Goran Eriksson,MF,Steven Gerrard,42
+England,Sven-Goran Eriksson,DF,Rio Ferdinand,47
+England,Sven-Goran Eriksson,DF,John Terry,24
+England,Sven-Goran Eriksson,MF,David Beckham,89
+England,Sven-Goran Eriksson,MF,Frank Lampard,40
+England,Sven-Goran Eriksson,FW,Wayne Rooney,29
+England,Sven-Goran Eriksson,FW,Michael Owen,77
+England,Sven-Goran Eriksson,MF,Joe Cole,32
+England,Sven-Goran Eriksson,DF,Sol Campbell,68
+England,Sven-Goran Eriksson,GK,David James,34
+England,Sven-Goran Eriksson,DF,Wayne Bridge,23
+England,Sven-Goran Eriksson,DF,Jamie Carragher,25
+England,Sven-Goran Eriksson,MF,Owen Hargreaves,30
+England,Sven-Goran Eriksson,MF,Jermaine Jenas,15
+England,Sven-Goran Eriksson,MF,Michael Carrick,6
+England,Sven-Goran Eriksson,MF,Aaron Lennon,1
+England,Sven-Goran Eriksson,MF,Stewart Downing,2
+England,Sven-Goran Eriksson,FW,Peter Crouch,7
+England,Sven-Goran Eriksson,GK,Scott Carson,0
+England,Sven-Goran Eriksson,FW,Theo Walcott,1
+Paraguay,Anibal Ruiz,GK,Justo Villar,39
+Paraguay,Anibal Ruiz,DF,Jorge Nunez,15
+Paraguay,Anibal Ruiz,DF,Delio Toledo,30
+Paraguay,Anibal Ruiz,DF,Carlos Gamarra,106
+Paraguay,Anibal Ruiz,DF,Julio Cesar Caceres,32
+Paraguay,Anibal Ruiz,MF,Carlos Bonet,29
+Paraguay,Anibal Ruiz,FW,Salvador Cabanas,15
+Paraguay,Anibal Ruiz,MF,Edgar Barreto,15
+Paraguay,Anibal Ruiz,FW,Roque Santa Cruz,42
+Paraguay,Anibal Ruiz,MF,Roberto Acuna,93
+Paraguay,Anibal Ruiz,MF,Diego Gavilan,39
+Paraguay,Anibal Ruiz,GK,Derlis Gomez,5
+Paraguay,Anibal Ruiz,MF,Carlos Paredes,68
+Paraguay,Anibal Ruiz,DF,Paulo da Silva,33
+Paraguay,Anibal Ruiz,DF,Julio Cesar Manzur,13
+Paraguay,Anibal Ruiz,MF,Cristian Riveros,9
+Paraguay,Anibal Ruiz,MF,Jose Montiel,6
+Paraguay,Anibal Ruiz,FW,Nelson Valdez,11
+Paraguay,Anibal Ruiz,MF,Julio dos Santos,17
+Paraguay,Anibal Ruiz,FW,Dante Lopez,7
+Paraguay,Anibal Ruiz,DF,Denis Caniza,74
+Paraguay,Anibal Ruiz,GK,Aldo Bobadilla,5
+Paraguay,Anibal Ruiz,FW,Nelson Cuevas,35
+Sweden,Lars Lagerback,GK,Andreas Isaksson,39
+Sweden,Lars Lagerback,DF,Mikael Nilsson,27
+Sweden,Lars Lagerback,DF,Olof Mellberg,64
+Sweden,Lars Lagerback,DF,Teddy Lucic,81
+Sweden,Lars Lagerback,DF,Erik Edman,37
+Sweden,Lars Lagerback,MF,Tobias Linderoth,58
+Sweden,Lars Lagerback,MF,Niclas Alexandersson,87
+Sweden,Lars Lagerback,MF,Anders Svensson,66
+Sweden,Lars Lagerback,MF,Fredrik Ljungberg,57
+Sweden,Lars Lagerback,FW,Zlatan Ibrahimovic,38
+Sweden,Lars Lagerback,FW,Henrik Larsson,89
+Sweden,Lars Lagerback,GK,John Alvbage,2
+Sweden,Lars Lagerback,DF,Petter Hansson,13
+Sweden,Lars Lagerback,DF,Fredrik Stenman,1
+Sweden,Lars Lagerback,DF,Karl Svensson,1
+Sweden,Lars Lagerback,MF,Kim Kallstrom,34
+Sweden,Lars Lagerback,FW,Johan Elmander,18
+Sweden,Lars Lagerback,MF,Mattias Jonson,53
+Sweden,Lars Lagerback,MF,Daniel Andersson,47
+Sweden,Lars Lagerback,FW,Marcus Allback,56
+Sweden,Lars Lagerback,MF,Christian Wilhelmsson,29
+Sweden,Lars Lagerback,FW,Markus Rosenberg,8
+Sweden,Lars Lagerback,GK,Rami Shaaban,1
+Trinidad and Tobago,Leo Beenhakker,GK,Shaka Hislop,24
+Trinidad and Tobago,Leo Beenhakker,DF,Ian Cox,16
+Trinidad and Tobago,Leo Beenhakker,DF,Avery John,57
+Trinidad and Tobago,Leo Beenhakker,DF,Marvin Andrews,98
+Trinidad and Tobago,Leo Beenhakker,DF,Brent Sancho,40
+Trinidad and Tobago,Leo Beenhakker,DF,Dennis Lawrence,63
+Trinidad and Tobago,Leo Beenhakker,MF,Chris Birchall,19
+Trinidad and Tobago,Leo Beenhakker,DF,Cyd Gray,39
+Trinidad and Tobago,Leo Beenhakker,MF,Aurtis Whitley,24
+Trinidad and Tobago,Leo Beenhakker,MF,Russell Latapy,66
+Trinidad and Tobago,Leo Beenhakker,MF,Carlos Edwards,51
+Trinidad and Tobago,Leo Beenhakker,FW,Collin Samuel,18
+Trinidad and Tobago,Leo Beenhakker,FW,Cornell Glen,35
+Trinidad and Tobago,Leo Beenhakker,FW,Stern John,95
+Trinidad and Tobago,Leo Beenhakker,FW,Kenwyne Jones,29
+Trinidad and Tobago,Leo Beenhakker,MF,Evans Wise,16
+Trinidad and Tobago,Leo Beenhakker,DF,David Atiba Charles,19
+Trinidad and Tobago,Leo Beenhakker,MF,Densill Theobald,38
+Trinidad and Tobago,Leo Beenhakker,FW,Dwight Yorke,54
+Trinidad and Tobago,Leo Beenhakker,FW,Jason Scotland,25
+Trinidad and Tobago,Leo Beenhakker,GK,Kelvin Jack,32
+Trinidad and Tobago,Leo Beenhakker,GK,Clayton Ince,63
+Trinidad and Tobago,Leo Beenhakker,MF,Anthony Wolfe,4
+Argentina,Jose Pekerman,GK,Roberto Abbondanzieri,22
+Argentina,Jose Pekerman,DF,Roberto Ayala,100
+Argentina,Jose Pekerman,DF,Juan Pablo Sorin,71
+Argentina,Jose Pekerman,DF,Fabricio Coloccini,23
+Argentina,Jose Pekerman,MF,Esteban Cambiasso,22
+Argentina,Jose Pekerman,DF,Gabriel Heinze,29
+Argentina,Jose Pekerman,FW,Javier Saviola,31
+Argentina,Jose Pekerman,MF,Javier Mascherano,15
+Argentina,Jose Pekerman,FW,Hernan Crespo,55
+Argentina,Jose Pekerman,MF,Juan Roman Riquelme,31
+Argentina,Jose Pekerman,FW,Carlos Tevez,21
+Argentina,Jose Pekerman,GK,Leo Franco,3
+Argentina,Jose Pekerman,DF,Lionel Scaloni,6
+Argentina,Jose Pekerman,FW,Rodrigo Palacio,2
+Argentina,Jose Pekerman,DF,Gabriel Milito,15
+Argentina,Jose Pekerman,MF,Pablo Aimar,40
+Argentina,Jose Pekerman,DF,Leandro Cufre,2
+Argentina,Jose Pekerman,MF,Maxi Rodriguez,13
+Argentina,Jose Pekerman,FW,Lionel Messi,7
+Argentina,Jose Pekerman,FW,Julio Cruz,15
+Argentina,Jose Pekerman,DF,Nicolas Burdisso,8
+Argentina,Jose Pekerman,MF,Lucho Gonzalez,27
+Argentina,Jose Pekerman,GK,Oscar Ustari,0
+Ivory Coast,Henri Michel,GK,Jean-Jacques Tizie,24
+Ivory Coast,Henri Michel,MF,Kanga Akale,22
+Ivory Coast,Henri Michel,DF,Arthur Boka,23
+Ivory Coast,Henri Michel,DF,Kolo Toure,42
+Ivory Coast,Henri Michel,MF,Didier Zokora,38
+Ivory Coast,Henri Michel,DF,Blaise Kouassi,36
+Ivory Coast,Henri Michel,MF,Emerse Fae,14
+Ivory Coast,Henri Michel,FW,Bonaventure Kalou,49
+Ivory Coast,Henri Michel,FW,Arouna Kone,17
+Ivory Coast,Henri Michel,MF,Gilles Yapi Yapo,26
+Ivory Coast,Henri Michel,FW,Didier Drogba,32
+Ivory Coast,Henri Michel,DF,Abdoulaye Meite,18
+Ivory Coast,Henri Michel,DF,Marco Zoro,13
+Ivory Coast,Henri Michel,FW,Bakari Kone,16
+Ivory Coast,Henri Michel,FW,Aruna Dindane,34
+Ivory Coast,Henri Michel,GK,Gerard Gnanhouan,6
+Ivory Coast,Henri Michel,DF,Cyril Domoraud,50
+Ivory Coast,Henri Michel,MF,Abdul Kader Keita,26
+Ivory Coast,Henri Michel,MF,Yaya Toure,14
+Ivory Coast,Henri Michel,DF,Guy Demel,7
+Ivory Coast,Henri Michel,DF,Emmanuel Eboue,11
+Ivory Coast,Henri Michel,MF,Romaric,8
+Ivory Coast,Henri Michel,GK,Boubacar Barry,6
+Netherlands,Marco van Basten,GK,Edwin van der Sar,109
+Netherlands,Marco van Basten,DF,Kew Jaliens,1
+Netherlands,Marco van Basten,DF,Khalid Boulahrouz,11
+Netherlands,Marco van Basten,DF,Joris Mathijsen,8
+Netherlands,Marco van Basten,DF,Giovanni van Bronckhorst,57
+Netherlands,Marco van Basten,MF,Denny Landzaat,23
+Netherlands,Marco van Basten,FW,Dirk Kuyt,19
+Netherlands,Marco van Basten,MF,Phillip Cocu,97
+Netherlands,Marco van Basten,FW,Ruud van Nistelrooy,51
+Netherlands,Marco van Basten,MF,Rafael van der Vaart,35
+Netherlands,Marco van Basten,MF,Arjen Robben,20
+Netherlands,Marco van Basten,DF,Jan Kromkamp,11
+Netherlands,Marco van Basten,DF,Andre Ooijer,19
+Netherlands,Marco van Basten,DF,John Heitinga,18
+Netherlands,Marco van Basten,DF,Tim de Cler,3
+Netherlands,Marco van Basten,MF,Hedwiges Maduro,11
+Netherlands,Marco van Basten,FW,Robin van Persie,10
+Netherlands,Marco van Basten,MF,Mark van Bommel,37
+Netherlands,Marco van Basten,FW,Jan Vennegoor of Hesselink,7
+Netherlands,Marco van Basten,MF,Wesley Sneijder,23
+Netherlands,Marco van Basten,FW,Ryan Babel,6
+Netherlands,Marco van Basten,GK,Henk Timmer,2
+Netherlands,Marco van Basten,GK,Maarten Stekelenburg,2
+Serbia and Montenegro,Ilija Petkovic,GK,Dragoslav Jevric,40
+Serbia and Montenegro,Ilija Petkovic,MF,Ivan Ergic,1
+Serbia and Montenegro,Ilija Petkovic,DF,Ivica Dragutinovic,26
+Serbia and Montenegro,Ilija Petkovic,MF,Igor Duljaj,37
+Serbia and Montenegro,Ilija Petkovic,DF,Nemanja Vidic,20
+Serbia and Montenegro,Ilija Petkovic,DF,Goran Gavrancic,25
+Serbia and Montenegro,Ilija Petkovic,MF,Ognjen Koroman,25
+Serbia and Montenegro,Ilija Petkovic,FW,Mateja Kezman,47
+Serbia and Montenegro,Ilija Petkovic,FW,Savo Milosevic,98
+Serbia and Montenegro,Ilija Petkovic,MF,Dejan Stankovic,58
+Serbia and Montenegro,Ilija Petkovic,MF,Predrag Dordevic,34
+Serbia and Montenegro,Ilija Petkovic,GK,Oliver Kovacevic,3
+Serbia and Montenegro,Ilija Petkovic,DF,Dusan Basta,2
+Serbia and Montenegro,Ilija Petkovic,DF,Nenad Dordevic,15
+Serbia and Montenegro,Ilija Petkovic,DF,Milan Dudic,11
+Serbia and Montenegro,Ilija Petkovic,DF,Dusan Petkovic,12
+Serbia and Montenegro,Ilija Petkovic,MF,Albert Nad,42
+Serbia and Montenegro,Ilija Petkovic,MF,Zvonimir Vukic,25
+Serbia and Montenegro,Ilija Petkovic,FW,Nikola Zigic,11
+Serbia and Montenegro,Ilija Petkovic,DF,Mladen Krstajic,45
+Serbia and Montenegro,Ilija Petkovic,FW,Danijel Ljuboja,15
+Serbia and Montenegro,Ilija Petkovic,MF,Sasa Ilic,32
+Serbia and Montenegro,Ilija Petkovic,GK,Vladimir Stojkovic,0
+Angola,Luis Oliveira Goncalves,GK,Joao Ricardo,26
+Angola,Luis Oliveira Goncalves,DF,Marco Airosa,2
+Angola,Luis Oliveira Goncalves,DF,Jamba,35
+Angola,Luis Oliveira Goncalves,DF,Lebo Lebo,15
+Angola,Luis Oliveira Goncalves,DF,Kali,21
+Angola,Luis Oliveira Goncalves,MF,Miloy,11
+Angola,Luis Oliveira Goncalves,MF,Paulo Figueiredo,22
+Angola,Luis Oliveira Goncalves,MF,Andre Macanga,33
+Angola,Luis Oliveira Goncalves,FW,Mantorras,11
+Angola,Luis Oliveira Goncalves,FW,Akwa,77
+Angola,Luis Oliveira Goncalves,FW,Mateus,4
+Angola,Luis Oliveira Goncalves,GK,Lama,9
+Angola,Luis Oliveira Goncalves,MF,Edson Nobre,7
+Angola,Luis Oliveira Goncalves,MF,Mendonca,34
+Angola,Luis Oliveira Goncalves,DF,Rui Marques,1
+Angola,Luis Oliveira Goncalves,FW,Flavio,46
+Angola,Luis Oliveira Goncalves,MF,Ze Kalanga,23
+Angola,Luis Oliveira Goncalves,FW,Love,35
+Angola,Luis Oliveira Goncalves,FW,Titi Buengo,2
+Angola,Luis Oliveira Goncalves,DF,Loco,11
+Angola,Luis Oliveira Goncalves,DF,Delgado,17
+Angola,Luis Oliveira Goncalves,GK,Mario Hipolito,1
+Angola,Luis Oliveira Goncalves,DF,Marco Abreu,3
+Iran,Branko Ivankovic,GK,Ebrahim Mirzapour,64
+Iran,Branko Ivankovic,MF,Mehdi Mahdavikia,89
+Iran,Branko Ivankovic,DF,Sohrab Bakhtiarizadeh,31
+Iran,Branko Ivankovic,DF,Yahya Golmohammadi,69
+Iran,Branko Ivankovic,DF,Rahman Rezaei,43
+Iran,Branko Ivankovic,MF,Javad Nekounam,71
+Iran,Branko Ivankovic,MF,Ferydoon Zandi,10
+Iran,Branko Ivankovic,MF,Ali Karimi,90
+Iran,Branko Ivankovic,FW,Vahid Hashemian,28
+Iran,Branko Ivankovic,FW,Ali Daei,147
+Iran,Branko Ivankovic,FW,Rasoul Khatibi,12
+Iran,Branko Ivankovic,GK,Hassan Roudbarian,3
+Iran,Branko Ivankovic,DF,Hossein Kaebi,44
+Iran,Branko Ivankovic,MF,Andranik Teymourian,7
+Iran,Branko Ivankovic,FW,Arash Borhani,20
+Iran,Branko Ivankovic,FW,Reza Enayati,15
+Iran,Branko Ivankovic,FW,Javad Kazemian,25
+Iran,Branko Ivankovic,MF,Moharram Navidkia,24
+Iran,Branko Ivankovic,DF,Amir Hossein Sadeghi,1
+Iran,Branko Ivankovic,DF,Mohammad Nosrati,44
+Iran,Branko Ivankovic,MF,Mehrzad Madanchi,6
+Iran,Branko Ivankovic,GK,Vahid Talebloo,1
+Iran,Branko Ivankovic,MF,Masoud Shojaei,3
+Mexico,Ricardo Lavolpe,GK,Oswaldo Sanchez,70
+Mexico,Ricardo Lavolpe,DF,Claudio Suarez,178
+Mexico,Ricardo Lavolpe,DF,Carlos Salcido,32
+Mexico,Ricardo Lavolpe,DF,Rafael Marquez,65
+Mexico,Ricardo Lavolpe,DF,Ricardo Osorio,39
+Mexico,Ricardo Lavolpe,MF,Gerardo Torrado,56
+Mexico,Ricardo Lavolpe,MF,Sinha,32
+Mexico,Ricardo Lavolpe,MF,Pavel Pardo,125
+Mexico,Ricardo Lavolpe,FW,Jared Borgetti,75
+Mexico,Ricardo Lavolpe,FW,Guillermo Franco,7
+Mexico,Ricardo Lavolpe,MF,Ramon Morales,46
+Mexico,Ricardo Lavolpe,GK,Jose de Jesus Corona,6
+Mexico,Ricardo Lavolpe,GK,Guillermo Ochoa,1
+Mexico,Ricardo Lavolpe,DF,Gonzalo Pineda,30
+Mexico,Ricardo Lavolpe,DF,Jose Antonio Castro,12
+Mexico,Ricardo Lavolpe,DF,Mario Mendez,32
+Mexico,Ricardo Lavolpe,FW,Francisco Fonseca,29
+Mexico,Ricardo Lavolpe,MF,Andres Guardado,7
+Mexico,Ricardo Lavolpe,FW,Omar Bravo,33
+Mexico,Ricardo Lavolpe,MF,Rafael Garcia,52
+Mexico,Ricardo Lavolpe,MF,Jesus Arellano,69
+Mexico,Ricardo Lavolpe,DF,Francisco Javier Rodriguez,32
+Mexico,Ricardo Lavolpe,MF,Luis Ernesto Perez,52
+Portugal,Luiz Felipe Scolari,GK,Ricardo,49
+Portugal,Luiz Felipe Scolari,DF,Paulo Ferreira,30
+Portugal,Luiz Felipe Scolari,DF,Marco Caneira,14
+Portugal,Luiz Felipe Scolari,DF,Ricardo Costa,3
+Portugal,Luiz Felipe Scolari,DF,Fernando Meira,30
+Portugal,Luiz Felipe Scolari,MF,Costinha,44
+Portugal,Luiz Felipe Scolari,MF,Luis Figo,120
+Portugal,Luiz Felipe Scolari,MF,Petit,36
+Portugal,Luiz Felipe Scolari,FW,Pauleta,82
+Portugal,Luiz Felipe Scolari,MF,Hugo Viana,21
+Portugal,Luiz Felipe Scolari,FW,Simao,43
+Portugal,Luiz Felipe Scolari,GK,Quim,24
+Portugal,Luiz Felipe Scolari,DF,Miguel,28
+Portugal,Luiz Felipe Scolari,DF,Nuno Valente,23
+Portugal,Luiz Felipe Scolari,FW,Luis Boa Morte,24
+Portugal,Luiz Felipe Scolari,DF,Ricardo Carvalho,24
+Portugal,Luiz Felipe Scolari,FW,Cristiano Ronaldo,32
+Portugal,Luiz Felipe Scolari,MF,Maniche,31
+Portugal,Luiz Felipe Scolari,MF,Tiago,22
+Portugal,Luiz Felipe Scolari,MF,Deco,35
+Portugal,Luiz Felipe Scolari,FW,Nuno Gomes,53
+Portugal,Luiz Felipe Scolari,GK,Paulo Santos,1
+Portugal,Luiz Felipe Scolari,FW,Helder Postiga,24
+Czech Republic,Karel Bruckner,GK,Petr Cech,41
+Czech Republic,Karel Bruckner,DF,Zdenek Grygera,41
+Czech Republic,Karel Bruckner,DF,Pavel Mares,10
+Czech Republic,Karel Bruckner,MF,Tomas Galasek,49
+Czech Republic,Karel Bruckner,DF,Radoslav Kovac,6
+Czech Republic,Karel Bruckner,DF,Marek Jankulovski,48
+Czech Republic,Karel Bruckner,MF,Libor Sionko,17
+Czech Republic,Karel Bruckner,MF,Karel Poborsky,115
+Czech Republic,Karel Bruckner,FW,Jan Koller,68
+Czech Republic,Karel Bruckner,MF,Tomas Rosicky,54
+Czech Republic,Karel Bruckner,MF,Pavel Nedved,87
+Czech Republic,Karel Bruckner,FW,Vratislav Lokvenc,72
+Czech Republic,Karel Bruckner,DF,Martin Jiranek,24
+Czech Republic,Karel Bruckner,MF,David Jarolim,3
+Czech Republic,Karel Bruckner,FW,Milan Baros,49
+Czech Republic,Karel Bruckner,GK,Jaromir Blazek,11
+Czech Republic,Karel Bruckner,FW,Jiri Stajner,21
+Czech Republic,Karel Bruckner,FW,Marek Heinz,28
+Czech Republic,Karel Bruckner,MF,Jan Polak,18
+Czech Republic,Karel Bruckner,MF,Jaroslav Plasil,14
+Czech Republic,Karel Bruckner,DF,Tomas Ujfalusi,48
+Czech Republic,Karel Bruckner,DF,David Rozehnal,22
+Czech Republic,Karel Bruckner,GK,Antonin Kinsky,5
+Ghana,Ratomir Dujkovic,GK,Sammy Adjei,31
+Ghana,Ratomir Dujkovic,MF,Hans Sarpei,7
+Ghana,Ratomir Dujkovic,FW,Asamoah Gyan,13
+Ghana,Ratomir Dujkovic,DF,Samuel Kuffour,58
+Ghana,Ratomir Dujkovic,DF,John Mensah,33
+Ghana,Ratomir Dujkovic,DF,Emmanuel Pappoe,27
+Ghana,Ratomir Dujkovic,DF,Illiasu Shilla,2
+Ghana,Ratomir Dujkovic,MF,Michael Essien,17
+Ghana,Ratomir Dujkovic,MF,Derek Boateng,11
+Ghana,Ratomir Dujkovic,MF,Stephen Appiah,42
+Ghana,Ratomir Dujkovic,MF,Sulley Muntari,16
+Ghana,Ratomir Dujkovic,FW,Alex Tachie-Mensah,5
+Ghana,Ratomir Dujkovic,DF,Habib Mohamed,1
+Ghana,Ratomir Dujkovic,FW,Matthew Amoah,16
+Ghana,Ratomir Dujkovic,MF,John Paintsil,21
+Ghana,Ratomir Dujkovic,GK,George Owu,6
+Ghana,Ratomir Dujkovic,DF,Daniel Quaye,7
+Ghana,Ratomir Dujkovic,DF,Eric Addo,6
+Ghana,Ratomir Dujkovic,FW,Razak Pimpong,4
+Ghana,Ratomir Dujkovic,FW,Otto Addo,13
+Ghana,Ratomir Dujkovic,DF,Issah Ahmed,10
+Ghana,Ratomir Dujkovic,GK,Richard Kingson,33
+Ghana,Ratomir Dujkovic,MF,Haminu Draman,7
+Italy,Marcello Lippi,GK,Gianluigi Buffon,60
+Italy,Marcello Lippi,DF,Cristian Zaccardo,12
+Italy,Marcello Lippi,DF,Fabio Grosso,17
+Italy,Marcello Lippi,MF,Daniele De Rossi,17
+Italy,Marcello Lippi,DF,Fabio Cannavaro,93
+Italy,Marcello Lippi,DF,Andrea Barzagli,8
+Italy,Marcello Lippi,FW,Alessandro Del Piero,74
+Italy,Marcello Lippi,MF,Gennaro Gattuso,43
+Italy,Marcello Lippi,FW,Luca Toni,18
+Italy,Marcello Lippi,FW,Francesco Totti,51
+Italy,Marcello Lippi,FW,Alberto Gilardino,15
+Italy,Marcello Lippi,GK,Angelo Peruzzi,31
+Italy,Marcello Lippi,DF,Alessandro Nesta,74
+Italy,Marcello Lippi,GK,Marco Amelia,1
+Italy,Marcello Lippi,FW,Vincenzo Iaquinta,12
+Italy,Marcello Lippi,MF,Mauro Camoranesi,21
+Italy,Marcello Lippi,MF,Simone Barone,13
+Italy,Marcello Lippi,FW,Filippo Inzaghi,49
+Italy,Marcello Lippi,DF,Gianluca Zambrotta,52
+Italy,Marcello Lippi,MF,Simone Perrotta,24
+Italy,Marcello Lippi,MF,Andrea Pirlo,24
+Italy,Marcello Lippi,DF,Massimo Oddo,20
+Italy,Marcello Lippi,DF,Marco Materazzi,28
+United States,Bruce Arena,GK,Tim Howard,16
+United States,Bruce Arena,DF,Chris Albright,20
+United States,Bruce Arena,DF,Carlos Bocanegra,40
+United States,Bruce Arena,MF,Pablo Mastroeni,48
+United States,Bruce Arena,MF,John O'Brien,31
+United States,Bruce Arena,DF,Steve Cherundolo,35
+United States,Bruce Arena,MF,Eddie Lewis,69
+United States,Bruce Arena,MF,Clint Dempsey,21
+United States,Bruce Arena,FW,Eddie Johnson,18
+United States,Bruce Arena,MF,Claudio Reyna,109
+United States,Bruce Arena,FW,Brian Ching,20
+United States,Bruce Arena,DF,Gregg Berhalter,44
+United States,Bruce Arena,DF,Jimmy Conrad,15
+United States,Bruce Arena,MF,Ben Olsen,34
+United States,Bruce Arena,MF,Bobby Convey,39
+United States,Bruce Arena,FW,Josh Wolff,47
+United States,Bruce Arena,MF,DaMarcus Beasley,58
+United States,Bruce Arena,GK,Kasey Keller,93
+United States,Bruce Arena,GK,Marcus Hahnemann,6
+United States,Bruce Arena,FW,Brian McBride,92
+United States,Bruce Arena,FW,Landon Donovan,81
+United States,Bruce Arena,DF,Oguchi Onyewu,14
+United States,Bruce Arena,DF,Eddie Pope,80
+Australia,Guus Hiddink,GK,Mark Schwarzer,37
+Australia,Guus Hiddink,DF,Lucas Neill,25
+Australia,Guus Hiddink,DF,Craig Moore,33
+Australia,Guus Hiddink,MF,Tim Cahill,16
+Australia,Guus Hiddink,MF,Jason Culina,13
+Australia,Guus Hiddink,DF,Tony Popovic,56
+Australia,Guus Hiddink,DF,Brett Emerton,48
+Australia,Guus Hiddink,MF,Josip Skoko,46
+Australia,Guus Hiddink,FW,Mark Viduka,33
+Australia,Guus Hiddink,FW,Harry Kewell,20
+Australia,Guus Hiddink,DF,Stan Lazaridis,59
+Australia,Guus Hiddink,GK,Ante Covic,1
+Australia,Guus Hiddink,MF,Vince Grella,17
+Australia,Guus Hiddink,MF,Scott Chipperfield,46
+Australia,Guus Hiddink,FW,John Aloisi,41
+Australia,Guus Hiddink,DF,Michael Beauchamp,2
+Australia,Guus Hiddink,FW,Archie Thompson,20
+Australia,Guus Hiddink,GK,Zeljko Kalac,52
+Australia,Guus Hiddink,FW,Joshua Kennedy,1
+Australia,Guus Hiddink,DF,Luke Wilkshire,8
+Australia,Guus Hiddink,MF,Mile Sterjovski,22
+Australia,Guus Hiddink,DF,Mark Milligan,1
+Australia,Guus Hiddink,MF,Mark Bresciano,24
+Brazil,Carlos Alberto Parreira,GK,Dida,86
+Brazil,Carlos Alberto Parreira,DF,Cafu,138
+Brazil,Carlos Alberto Parreira,DF,Lucio,50
+Brazil,Carlos Alberto Parreira,DF,Juan,38
+Brazil,Carlos Alberto Parreira,MF,Emerson,70
+Brazil,Carlos Alberto Parreira,DF,Roberto Carlos,121
+Brazil,Carlos Alberto Parreira,FW,Adriano,32
+Brazil,Carlos Alberto Parreira,MF,Kaka,38
+Brazil,Carlos Alberto Parreira,FW,Ronaldo,92
+Brazil,Carlos Alberto Parreira,MF,Ronaldinho,63
+Brazil,Carlos Alberto Parreira,MF,Ze Roberto,79
+Brazil,Carlos Alberto Parreira,GK,Rogerio Ceni,15
+Brazil,Carlos Alberto Parreira,DF,Cicinho,10
+Brazil,Carlos Alberto Parreira,DF,Luisao,19
+Brazil,Carlos Alberto Parreira,DF,Cris,16
+Brazil,Carlos Alberto Parreira,DF,Gilberto,9
+Brazil,Carlos Alberto Parreira,MF,Gilberto Silva,36
+Brazil,Carlos Alberto Parreira,MF,Mineiro,2
+Brazil,Carlos Alberto Parreira,MF,Juninho,37
+Brazil,Carlos Alberto Parreira,MF,Ricardinho,19
+Brazil,Carlos Alberto Parreira,FW,Fred,3
+Brazil,Carlos Alberto Parreira,GK,Julio Cesar,11
+Brazil,Carlos Alberto Parreira,FW,Robinho,23
+Croatia,Zlatko Kranjcar,GK,Stipe Pletikosa,50
+Croatia,Zlatko Kranjcar,MF,Darijo Srna,36
+Croatia,Zlatko Kranjcar,DF,Josip Simunic,42
+Croatia,Zlatko Kranjcar,DF,Robert Kovac,56
+Croatia,Zlatko Kranjcar,DF,Igor Tudor,52
+Croatia,Zlatko Kranjcar,MF,Jurica Vranjes,24
+Croatia,Zlatko Kranjcar,DF,Dario Simic,80
+Croatia,Zlatko Kranjcar,MF,Marko Babic,33
+Croatia,Zlatko Kranjcar,FW,Dado Prso,29
+Croatia,Zlatko Kranjcar,MF,Niko Kovac,58
+Croatia,Zlatko Kranjcar,DF,Mario Tokic,28
+Croatia,Zlatko Kranjcar,GK,Joey Didulica,4
+Croatia,Zlatko Kranjcar,DF,Stjepan Tomas,48
+Croatia,Zlatko Kranjcar,MF,Luka Modric,5
+Croatia,Zlatko Kranjcar,MF,Ivan Leko,13
+Croatia,Zlatko Kranjcar,MF,Jerko Leko,36
+Croatia,Zlatko Kranjcar,FW,Ivan Klasnic,20
+Croatia,Zlatko Kranjcar,FW,Ivica Olic,36
+Croatia,Zlatko Kranjcar,MF,Niko Kranjcar,21
+Croatia,Zlatko Kranjcar,MF,Anthony Seric,14
+Croatia,Zlatko Kranjcar,FW,Bosko Balaban,27
+Croatia,Zlatko Kranjcar,FW,Ivan Bosnjak,13
+Croatia,Zlatko Kranjcar,GK,Tomislav Butina,28
+Japan,Zico,GK,Seigo Narazaki,50
+Japan,Zico,DF,Teruyuki Moniwa,8
+Japan,Zico,DF,Yuichi Komano,8
+Japan,Zico,MF,Yasuhito Endo,40
+Japan,Zico,DF,Tsuneyasu Miyamoto,69
+Japan,Zico,DF,Koji Nakata,55
+Japan,Zico,MF,Hidetoshi Nakata,74
+Japan,Zico,MF,Mitsuo Ogasawara,51
+Japan,Zico,FW,Naohiro Takahara,41
+Japan,Zico,MF,Shunsuke Nakamura,60
+Japan,Zico,FW,Seiichiro Maki,10
+Japan,Zico,GK,Yoichi Doi,4
+Japan,Zico,FW,Atsushi Yanagisawa,56
+Japan,Zico,DF,Alex,72
+Japan,Zico,MF,Takashi Fukunishi,62
+Japan,Zico,FW,Masashi Oguro,18
+Japan,Zico,MF,Junichi Inamoto,63
+Japan,Zico,MF,Shinji Ono,54
+Japan,Zico,DF,Keisuke Tsuboi,33
+Japan,Zico,FW,Keiji Tamada,39
+Japan,Zico,DF,Akira Kaji,43
+Japan,Zico,DF,Yuji Nakazawa,50
+Japan,Zico,GK,Yoshikatsu Kawaguchi,89
+France,Raymond Domenech,GK,Mickael Landreau,3
+France,Raymond Domenech,DF,Jean-Alain Boumsong,19
+France,Raymond Domenech,DF,Eric Abidal,8
+France,Raymond Domenech,MF,Patrick Vieira,87
+France,Raymond Domenech,DF,William Gallas,40
+France,Raymond Domenech,MF,Claude Makelele,43
+France,Raymond Domenech,MF,Florent Malouda,13
+France,Raymond Domenech,MF,Vikash Dhorasoo,16
+France,Raymond Domenech,FW,Sidney Govou,19
+France,Raymond Domenech,MF,Zinedine Zidane,102
+France,Raymond Domenech,FW,Sylvain Wiltord,80
+France,Raymond Domenech,FW,Thierry Henry,78
+France,Raymond Domenech,DF,Mikael Silvestre,39
+France,Raymond Domenech,FW,Louis Saha,9
+France,Raymond Domenech,DF,Lilian Thuram,114
+France,Raymond Domenech,GK,Fabien Barthez,80
+France,Raymond Domenech,DF,Gael Givet,11
+France,Raymond Domenech,MF,Alou Diarra,9
+France,Raymond Domenech,DF,Willy Sagnol,38
+France,Raymond Domenech,FW,David Trezeguet,63
+France,Raymond Domenech,DF,Pascal Chimbonda,1
+France,Raymond Domenech,MF,Franck Ribery,3
+France,Raymond Domenech,GK,Gregory Coupet,18
+South Korea,Dick Advocaat,GK,Lee Woon-jae,97
+South Korea,Dick Advocaat,DF,Kim Young-chul,12
+South Korea,Dick Advocaat,DF,Kim Dong-jin,34
+South Korea,Dick Advocaat,DF,Choi Jin-cheul,62
+South Korea,Dick Advocaat,MF,Kim Nam-il,66
+South Korea,Dick Advocaat,DF,Kim Jin-kyu,23
+South Korea,Dick Advocaat,MF,Park Ji-sung,60
+South Korea,Dick Advocaat,MF,Kim Do-heon,75
+South Korea,Dick Advocaat,FW,Ahn Jung-hwan,61
+South Korea,Dick Advocaat,FW,Park Chu-young,18
+South Korea,Dick Advocaat,FW,Seol Ki-hyeon,67
+South Korea,Dick Advocaat,DF,Lee Young-pyo,85
+South Korea,Dick Advocaat,MF,Lee Eul-yong,47
+South Korea,Dick Advocaat,FW,Lee Chun-soo,62
+South Korea,Dick Advocaat,MF,Baek Ji-hoon,12
+South Korea,Dick Advocaat,FW,Chung Kyung-ho,40
+South Korea,Dick Advocaat,MF,Lee Ho,11
+South Korea,Dick Advocaat,DF,Kim Sang-sik,42
+South Korea,Dick Advocaat,FW,Cho Jae-jin,21
+South Korea,Dick Advocaat,GK,Kim Yong-dae,15
+South Korea,Dick Advocaat,GK,Kim Young-kwang,6
+South Korea,Dick Advocaat,DF,Song Chong-gug,51
+South Korea,Dick Advocaat,DF,Cho Won-hee,13
+Switzerland,Kobi Kuhn,GK,Pascal Zuberbuhler,40
+Switzerland,Kobi Kuhn,DF,Johan Djourou,2
+Switzerland,Kobi Kuhn,DF,Ludovic Magnin,30
+Switzerland,Kobi Kuhn,DF,Philippe Senderos,12
+Switzerland,Kobi Kuhn,MF,Xavier Margairaz,3
+Switzerland,Kobi Kuhn,MF,Johann Vogel,85
+Switzerland,Kobi Kuhn,MF,Ricardo Cabanas,37
+Switzerland,Kobi Kuhn,DF,Raphael Wicky,67
+Switzerland,Kobi Kuhn,FW,Alexander Frei,45
+Switzerland,Kobi Kuhn,FW,Daniel Gygax,22
+Switzerland,Kobi Kuhn,FW,Marco Streller,10
+Switzerland,Kobi Kuhn,GK,Diego Benaglio,1
+Switzerland,Kobi Kuhn,DF,Stephane Grichting,6
+Switzerland,Kobi Kuhn,MF,David Degen,3
+Switzerland,Kobi Kuhn,MF,Blerim Dzemaili,3
+Switzerland,Kobi Kuhn,MF,Tranquillo Barnetta,13
+Switzerland,Kobi Kuhn,DF,Christoph Spycher,21
+Switzerland,Kobi Kuhn,FW,Mauro Lustrinelli,5
+Switzerland,Kobi Kuhn,MF,Valon Behrami,6
+Switzerland,Kobi Kuhn,DF,Patrick Muller,64
+Switzerland,Kobi Kuhn,GK,Fabio Coltorti,2
+Switzerland,Kobi Kuhn,MF,Hakan Yakin,46
+Switzerland,Kobi Kuhn,DF,Philipp Degen,15
+Togo,Otto Pfister,GK,Ouro-Nimini Tchagnirou,9
+Togo,Otto Pfister,DF,Dare Nibombe,16
+Togo,Otto Pfister,DF,Jean-Paul Abalo,65
+Togo,Otto Pfister,FW,Emmanuel Adebayor,29
+Togo,Otto Pfister,DF,Massamasso Tchangai,34
+Togo,Otto Pfister,MF,Yao Aziawonou,32
+Togo,Otto Pfister,FW,Moustapha Salifou,34
+Togo,Otto Pfister,MF,Kuami Agboh,4
+Togo,Otto Pfister,MF,Thomas Dossevi,10
+Togo,Otto Pfister,MF,Mamam Cherif Toure,39
+Togo,Otto Pfister,FW,Robert Malm,1
+Togo,Otto Pfister,DF,Eric Akoto,32
+Togo,Otto Pfister,DF,Richmond Forson,8
+Togo,Otto Pfister,MF,Adekambi Olufade,24
+Togo,Otto Pfister,MF,Alaixys Romao,11
+Togo,Otto Pfister,GK,Kossi Agassa,49
+Togo,Otto Pfister,FW,Mohamed Kader,46
+Togo,Otto Pfister,MF,Yao Junior Senaya,16
+Togo,Otto Pfister,DF,Ludovic Assemoassa,5
+Togo,Otto Pfister,FW,Affo Erassa,6
+Togo,Otto Pfister,MF,Franck Atsou,13
+Togo,Otto Pfister,GK,Kodjovi Obilale,0
+Togo,Otto Pfister,DF,Assimiou Toure,1
+Saudi Arabia,Marcos Paqueta,GK,Mohamed Al-Deayea,175
+Saudi Arabia,Marcos Paqueta,DF,Ahmed Dokhi Al-Dosari,68
+Saudi Arabia,Marcos Paqueta,DF,Redha Tukar,37
+Saudi Arabia,Marcos Paqueta,DF,Hamad Al-Montashari,32
+Saudi Arabia,Marcos Paqueta,DF,Naif Al-Qadi,28
+Saudi Arabia,Marcos Paqueta,MF,Omar Al-Ghamdi,38
+Saudi Arabia,Marcos Paqueta,MF,Mohammed Ameen,16
+Saudi Arabia,Marcos Paqueta,MF,Mohammed Noor,63
+Saudi Arabia,Marcos Paqueta,FW,Sami Al-Jaber,160
+Saudi Arabia,Marcos Paqueta,MF,Mohammad Al-Shalhoub,48
+Saudi Arabia,Marcos Paqueta,FW,Saad Al-Harthi,15
+Saudi Arabia,Marcos Paqueta,DF,Abdulaziz Khathran,19
+Saudi Arabia,Marcos Paqueta,DF,Hussein Sulaimani,97
+Saudi Arabia,Marcos Paqueta,MF,Saud Khariri,34
+Saudi Arabia,Marcos Paqueta,DF,Ahmed Al-Bahri,11
+Saudi Arabia,Marcos Paqueta,MF,Khaled Aziz,14
+Saudi Arabia,Marcos Paqueta,DF,Mohamed Al-Bishi,0
+Saudi Arabia,Marcos Paqueta,MF,Nawaf Al-Temyat,56
+Saudi Arabia,Marcos Paqueta,DF,Mohammad Massad,5
+Saudi Arabia,Marcos Paqueta,FW,Yasser Al-Qahtani,45
+Saudi Arabia,Marcos Paqueta,GK,Mabrouk Zaid,33
+Saudi Arabia,Marcos Paqueta,GK,Mohammad Khouja,8
+Saudi Arabia,Marcos Paqueta,FW,Malek Mouath,5
+Spain,Luis Aragones,GK,Iker Casillas,58
+Spain,Luis Aragones,DF,Michel Salgado,50
+Spain,Luis Aragones,DF,Mariano Pernia,1
+Spain,Luis Aragones,DF,Carlos Marchena,27
+Spain,Luis Aragones,DF,Carles Puyol,47
+Spain,Luis Aragones,MF,David Albelda,33
+Spain,Luis Aragones,FW,Raul,95
+Spain,Luis Aragones,MF,Xavi,36
+Spain,Luis Aragones,FW,Fernando Torres,30
+Spain,Luis Aragones,MF,Jose Antonio Reyes,19
+Spain,Luis Aragones,MF,Luis Garcia,10
+Spain,Luis Aragones,DF,Antonio Lopez,8
+Spain,Luis Aragones,MF,Andres Iniesta,3
+Spain,Luis Aragones,MF,Xabi Alonso,26
+Spain,Luis Aragones,DF,Sergio Ramos,11
+Spain,Luis Aragones,MF,Marcos Senna,3
+Spain,Luis Aragones,MF,Joaquin,38
+Spain,Luis Aragones,MF,Cesc Fabregas,4
+Spain,Luis Aragones,GK,Santiago Canizares,45
+Spain,Luis Aragones,DF,Juanito,15
+Spain,Luis Aragones,FW,David Villa,8
+Spain,Luis Aragones,DF,Pablo Ibanez,11
+Spain,Luis Aragones,GK,Pepe Reina,3
+Tunisia,Roger Lemerre,GK,Ali Boumnijel,48
+Tunisia,Roger Lemerre,DF,Karim Essediri,7
+Tunisia,Roger Lemerre,DF,Karim Haggui,26
+Tunisia,Roger Lemerre,DF,Alaeddine Yahia,13
+Tunisia,Roger Lemerre,FW,Ziad Jaziri,61
+Tunisia,Roger Lemerre,DF,Hatem Trabelsi,56
+Tunisia,Roger Lemerre,FW,Haykel Guemamdia,13
+Tunisia,Roger Lemerre,MF,Mehdi Nafti,29
+Tunisia,Roger Lemerre,FW,Yassine Chikhaoui,1
+Tunisia,Roger Lemerre,MF,Kaies Ghodhbane,89
+Tunisia,Roger Lemerre,FW,Francileudo Santos,28
+Tunisia,Roger Lemerre,MF,Jawhar Mnari,37
+Tunisia,Roger Lemerre,MF,Riadh Bouazizi,85
+Tunisia,Roger Lemerre,MF,Adel Chedli,38
+Tunisia,Roger Lemerre,DF,Radhi Jaidi,89
+Tunisia,Roger Lemerre,GK,Adel Nefzi,0
+Tunisia,Roger Lemerre,FW,Chaouki Ben Saada,11
+Tunisia,Roger Lemerre,DF,David Jemmali,2
+Tunisia,Roger Lemerre,DF,Anis Ayari,24
+Tunisia,Roger Lemerre,MF,Hamed Namouchi,14
+Tunisia,Roger Lemerre,DF,Karim Saidi,15
+Tunisia,Roger Lemerre,GK,Hamdi Kasraoui,6
+Tunisia,Roger Lemerre,MF,Sofiane Melliti,14
+Ukraine,Oleg Blokhin,GK,Oleksandr Shovkovskiy,68
+Ukraine,Oleg Blokhin,DF,Andriy Nesmachniy,49
+Ukraine,Oleg Blokhin,DF,Oleksandr Yatsenko,1
+Ukraine,Oleg Blokhin,MF,Anatoliy Tymoshchuk,55
+Ukraine,Oleg Blokhin,DF,Volodymyr Yezerskiy,24
+Ukraine,Oleg Blokhin,DF,Andriy Rusol,23
+Ukraine,Oleg Blokhin,FW,Andriy Shevchenko,64
+Ukraine,Oleg Blokhin,MF,Oleh Shelayev,19
+Ukraine,Oleg Blokhin,MF,Oleh Husyev,25
+Ukraine,Oleg Blokhin,FW,Andriy Voronin,32
+Ukraine,Oleg Blokhin,FW,Serhiy Rebrov,70
+Ukraine,Oleg Blokhin,GK,Andriy Pyatov,1
+Ukraine,Oleg Blokhin,DF,Dmytro Chygrynskiy,0
+Ukraine,Oleg Blokhin,MF,Andriy Husin,64
+Ukraine,Oleg Blokhin,FW,Artem Milevskiy,0
+Ukraine,Oleg Blokhin,FW,Andriy Vorobey,53
+Ukraine,Oleg Blokhin,DF,Vladyslav Vashchuk,58
+Ukraine,Oleg Blokhin,MF,Serhiy Nazarenko,15
+Ukraine,Oleg Blokhin,MF,Maksym Kalynychenko,21
+Ukraine,Oleg Blokhin,FW,Oleksiy Byelik,15
+Ukraine,Oleg Blokhin,MF,Ruslan Rotan,19
+Ukraine,Oleg Blokhin,DF,Vyacheslav Sviderskyi,6
+Ukraine,Oleg Blokhin,GK,Bohdan Shust,2
