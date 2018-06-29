@@ -85,17 +85,8 @@ From the graph, we can see that among 4 feature groups "head2head","form", "bet 
 
 # Preliminary Result
 
-|           Model         |10-fold CV error rate (%)|
-|:-----------------------:|:-------------------:|
-|Logistic Regression      |59.05|
-|SVM                      |59.17|
-|Random Forest            |54.22|
-|Gradient Boosting tree   |57.98|
-|ADA boost tree           |59.01|
-|Neural Net               |60.80|
-
 ### World Cup 2018
-Now the model is applying for World Cup 2018 in Russia with __simulation time = 100 000__. While the model didn't perform so well in train/test phase, it has shown stunning results so far, 8 correct results out of 14 matches including matches such as __Portugal - Spain (3-3)__, __Brazil - Switzerland (1-1)__. Here is the result of my model for all matches in Match Day 1 of Group Stage
+Now the model is applying for World Cup 2018 in Russia with __simulation time = 100 000__.
 
 __Result Explanation:__
 
@@ -109,17 +100,19 @@ Team A vs Team B
 - "lose_3": A wins with 3 or more goal differences
 - "draw_0": Draw
 
-__Match Day 1__
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
+__Final__ (coming soon)
 
-- Top 1 Accuracy = 8 / 16
-- Top 2 Accuracy = 12 / 16
+__Third Place__ (coming soon)
 
-__Match Day 2__
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
+__Semi_Finals__ (coming soon)
 
-- Top 1 Accuracy = 6 / 16
-- Top 2 Accuracy = 9 / 16
+__Quarter-Finals__ (coming soon)
+
+__Round of 16__ (coming soon)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_round16.PNG)
+
+- Top 1 Accuracy =
+- Top 2 Accuracy =
 
 __Match Day 3__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday3.PNG)
@@ -127,15 +120,18 @@ __Match Day 3__
 - Top 1 Accuracy =
 - Top 2 Accuracy =
 
-__Round of 16__ (coming soon)
+__Match Day 2__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
 
-__Quarter-Finals__ (coming soon)
+- Top 1 Accuracy = 6 / 16
+- Top 2 Accuracy = 9 / 16
 
-__Semi_Finals__ (coming soon)
+__Match Day 1__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
 
-__Third Place__ (coming soon)
+- Top 1 Accuracy = 8 / 16
+- Top 2 Accuracy = 12 / 16
 
-__Final__ (coming soon)
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
 2. [t-test definition](https://en.wikipedia.org/wiki/Student%27s_t-test)
@@ -150,6 +146,8 @@ __Final__ (coming soon)
 
 # Task List
 __Ongoing__
+- [ ] Add "Dummy Classifier" based on Odds
+- [ ] Add "FIFA Rank" crawler
 - [ ] Add abnormality detection
 - [ ] Add summary result
 - [ ] Add graph of validation / training curve for hyper-parameters tuning.
