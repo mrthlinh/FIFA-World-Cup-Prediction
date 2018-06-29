@@ -108,7 +108,7 @@ __Semi_Finals__ (coming soon)
 
 __Quarter-Finals__ (coming soon)
 
-__Round of 16__ (coming soon)
+__Round of 16__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_round16.PNG)
 
 - Top 1 Accuracy =
@@ -117,8 +117,8 @@ __Round of 16__ (coming soon)
 __Match Day 3__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday3.PNG)
 
-- Top 1 Accuracy =
-- Top 2 Accuracy =
+- Top 1 Accuracy = 2 / 16
+- Top 2 Accuracy = 8 / 16
 
 __Match Day 2__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
