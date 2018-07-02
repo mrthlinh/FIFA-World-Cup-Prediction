@@ -3,25 +3,25 @@
 1. [Introduction](#introduction)
 2. [Feature Selection](#feature-selection): How do you determine feature list and how do you collect data?
 3. [Exploratory Data Analysis](#exploratory-data-analysis): charts and hypothesis testing
-  1. [Correlation between variables]()
-  2. [How head-to-head matchup history affect the current match?]()
-  3. [How recent performances affect the current match?]()
-  4. [Is ratio-odd usually right? How much are they likely to be correct?]()
-  5. [Do strong teams usually win?]()
-  6. [Data Distrubution in PCA]()
+    1. [Correlation between variables]()
+    2. [How head-to-head matchup history affect the current match?]()
+    3. [How recent performances affect the current match?]()
+    4. [Is ratio-odd usually right? How much are they likely to be correct?]()
+    5. [Do strong teams usually win?]()
+    6. [Data Distrubution in PCA]()
 4. [Methodology](#methodology): Details about your procedure
-  1. [Classifiers](#classifier): Definition and parameters meaning
-    - [Dummy Classifiers]() Define a dummy classifier
-    - [Logistic Regression]()
-    - [Support Vector Machine]()
-    - [Ensemble Trees]()
-    - [Neural Network]()
-  2. [Evaluation Criteria](#evaluation-criteria): Definition, strength and weakness
-    - [Accuracy]()
-    - [Recall, Precision, F1]()
-    - [Out of Bag Error]()
-    - [10-fold cross validation error]()
-  3. [Hyper Parameter Tuning](#hyper-parameter-yuning)
+    1. [Classifiers](#classifier): Definition and parameters meaning
+      - [Dummy Classifiers]() Define a dummy classifier
+      - [Logistic Regression]()
+      - [Support Vector Machine]()
+      - [Ensemble Trees]()
+      - [Neural Network]()
+    2. [Evaluation Criteria](#evaluation-criteria): Definition, strength and weakness
+      - [Accuracy]()
+      - [Recall, Precision, F1]()
+      - [Out of Bag Error]()
+      - [10-fold cross validation error]()
+    3. [Hyper Parameter Tuning](#hyper-parameter-yuning)
 
 4. [Results](#results)
 5. [Data Source](#data-dource)
