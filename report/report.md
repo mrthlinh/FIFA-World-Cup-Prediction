@@ -1,36 +1,34 @@
 
 # Table of Contents
 1. [Introduction](#Introduction)
-- [Feature Selection](#example2): How do you determine feature list and how do you collect data?
-- [Exploratory Data Analysis](#third-example): charts and hypothesis testing
+- [Feature Selection](#feature-selection): How do you determine feature list and how do you collect data?
+- [Exploratory Data Analysis](#exploratory-data-analysis): charts and hypothesis testing
   1. [Correlation between variables]()
   - [How head-to-head matchup history affect the current match?]()
   - [How recent performances affect the current match?]()
   - [Is ratio-odd usually right? How much are they likely to be correct?]()
   - [Do strong teams usually win?]()
   - [Data Distrubution in PCA]()
-- [Methodology](): Details about your procedure
-  1. [Classifiers](): Definition and parameters meaning
+- [Methodology](#Methodology): Details about your procedure
+  1. [Classifiers](#Classifier): Definition and parameters meaning
     - [Dummy Classifiers]() Define a dummy classifier
     - [Logistic Regression]()
     - [Support Vector Machine]()
     - [Ensemble Trees]()
     - [Neural Network]()
-  - [Evaluation Criteria](): Definition, strength and weakness
+  - [Evaluation Criteria](#Evaluation-Criteria): Definition, strength and weakness
     - [Accuracy]()
     - [Recall, Precision, F1]()
     - [Out of Bag Error]()
     - [10-fold cross validation error]()
-  - [Hyper Parameter Tuning]()
+  - [Hyper Parameter Tuning](#Hyper-Parameter-Tuning)
 
-- [Results]()
-- [Data Source](#Data Source)
-- [References]()
-- [Appendix]()
+- [Results](#Results)
+- [Data Source](#Data-Source)
+- [References](#References)
+- [Appendix](#Appendix)
 
-
-<a name="Introduction"/>
-# 1. Introduction
+# Introduction
 __Objective__:
 - Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw" or "goal difference"
 - Apply the model to predict the result of FIFA world cup 2018.
@@ -43,7 +41,7 @@ __Lifecycle__
 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
 
-# 2. Feature Selection
+# Feature Selection
 __Feature Selection__: To determine who will more likely to win a match, based on my knowledge, I come up with 4 main groups of features as follows:
 1. head-to-head match history between 2 teams
 2. recent performance of each team (10 recent matches), aka "form"
@@ -78,27 +76,7 @@ Feature list reflects those factors.
 |top_200        |   4   |number of players in top 200         |5||
 
 
-# Data Source
-The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths
-1. [FIFA World Cup 2018](https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data)
-2. [International match 1872 - 2018](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
-3. [FIFA Ranking through Time](https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html)
-4. [Bet Odd](https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data)
-5. [Bet Odd 2](http://www.oddsportal.com)
-6. [Squad Strength - Sofia](https://sofifa.com/players/top)
-7. [Squad Strength - FIFA index](https://www.fifaindex.com/)
-
-
-[1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
-[2]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
-[3]: http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html
-[4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
-[5]: https://www.futhead.com/10/players/?page=2
-[6]: https://github.com/openfootball/world-cup
-
-
-
-### Exploratory Data
+# Exploratory Data Analysis
 There are few questions in order to understand data better
 
 1. Is playing as "Home Team" better than playing as "Away Team"?
@@ -158,20 +136,20 @@ __New EDA__ : EDA for new features for World Cup and UEFA EURO
 What questions?
 1.
 
-
-# Model Training and Evaluation
-### Train-Test ratio
+# Methodology
 We split data into 70:30
-### Model
+- First we perform "normalization" of features, convert category to number
+- Second we perform k-fold cross validation to select the best parameters for each model based on above criteria.
+- Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
+
+## Classifiers
 1. Logistic Regression
 2. SVM
 3. Random Random Forest
 4. Gradient Boosting Tree
 5. ADA Boost Tree
 6. Neural Network
-
-
-### Evaluation Criteria
+## Evaluation Criteria
 Each criteria is carried out for each label "win", "lose" and "draw"
 - __Precision__: Among our prediction of "True" value, how many percentage we hit?, the higher value, the better prediction
 - __Recall__: Among actual "True" value, how many percentage we hit?, the higher value, the better prediction
@@ -180,13 +158,10 @@ Each criteria is carried out for each label "win", "lose" and "draw"
   - __F1-macro__:
 - __10-fold cross validation test error__: A reliable estimation of test error of model evaluation (no need to split to train and test)
 - __ROC curve__:
+## Hyper Parameter Tuning
 
-### Procedure
-- First we perform "normalization" of features, convert category to number
-- Second we perform k-fold cross validation to select the best parameters for each model based on above criteria.
-- Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
 
-### Preliminary Result
+# Results
 
 |           Model         |10-fold CV error rate (%)|
 |:-----------------------:|:-------------------:|
@@ -426,6 +401,23 @@ We apply the model Gradient Boosted Tree to predict the result for EURO 2016 (no
 
 Accuracy = 0.48
 So far, the results are not so good but it is still better than a random guess of "win, lose and draw". One interesting thing is that our model predicts a "Draw" result in Final Match of EURO 2016, which is correct at 90th minute.
+# Data Source
+The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths
+1. [FIFA World Cup 2018](https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data)
+2. [International match 1872 - 2018](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
+3. [FIFA Ranking through Time](https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html)
+4. [Bet Odd](https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data)
+5. [Bet Odd 2](http://www.oddsportal.com)
+6. [Squad Strength - Sofia](https://sofifa.com/players/top)
+7. [Squad Strength - FIFA index](https://www.fifaindex.com/)
+
+
+[1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
+[2]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+[3]: http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html
+[4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+[5]: https://www.futhead.com/10/players/?page=2
+[6]: https://github.com/openfootball/world-cup
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
@@ -438,6 +430,7 @@ So far, the results are not so good but it is still better than a random guess o
 8. [Validation curves](http://scikit-learn.org/stable/modules/learning_curve.html)
 9. [Understand Bet odd format](https://www.pinnacle.com/en/betting-articles/educational/odds-formats-available-at-pinnacle-sports/ZWSJD9PPX69V3YXZ)
 10. [EURO 2016 bet odd](http://www.oddsportal.com/soccer/europe/euro-2016/results/#/)
+
 # Challenge / Question
 1. If "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose", will adding these data make model better? (You actually did it in EDA)
 2. According to "draw" and "win" in average odd? These two labels seem to be different, why performance of "draw" is bad?
