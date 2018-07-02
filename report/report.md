@@ -1,6 +1,6 @@
 
 # Table of Contents
-1. [Introduction](#1. Introduction)
+1. [Introduction](#Introduction)
 - [Feature Selection](#example2): How do you determine feature list and how do you collect data?
 - [Exploratory Data Analysis](#third-example): charts and hypothesis testing
   1. [Correlation between variables]()
@@ -27,6 +27,7 @@
 - [Data Source](#Data Source)
 - [References]()
 - [Appendix]()
+
 
 
 # 1. Introduction
