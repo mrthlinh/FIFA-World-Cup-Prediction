@@ -1,13 +1,48 @@
 
+# Table of Contents
+1. [Introduction](#1.-Introduction)
+- [Feature Selection](#example2): How do you determine feature list and how do you collect data?
+- [Exploratory Data Analysis](#third-example): charts and hypothesis testing
+  1. [Correlation between variables]()
+  - [How head-to-head matchup history affect the current match?]()
+  - [How recent performances affect the current match?]()
+  - [Is ratio-odd usually right? How much are they likely to be correct?]()
+  - [Do strong teams usually win?]()
+  - [Data Distrubution in PCA]()
+- [Methodology](): Details about your procedure
+  1. [Classifiers](): Definition and parameters meaning
+    - [Dummy Classifiers]() Define a dummy classifier
+    - [Logistic Regression]()
+    - [Support Vector Machine]()
+    - [Ensemble Trees]()
+    - [Neural Network]()
+  - [Evaluation Criteria](): Definition, strength and weakness
+    - [Accuracy]()
+    - [Recall, Precision, F1]()
+    - [Out of Bag Error]()
+    - [10-fold cross validation error]()
+  - [Hyper Parameter Tuning]()
+
+- [Results]()
+- [Data Source](#Data Source)
+- [References]()
+- [Appendix]()
 
 
-# Project Description
+# 1. Introduction
 __Objective__:
 - Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw" or "goal difference"
 - Apply the model to predict the result of FIFA world cup 2018.
 
-__Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games and I need to build a data crawler.
+__Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games.
 
+__Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/)
+
+__Lifecycle__
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
+
+# 2. Feature Selection
 __Feature Selection__: To determine who will more likely to win a match, based on my knowledge, I come up with 4 main groups of features as follows:
 1. head-to-head match history between 2 teams
 2. recent performance of each team (10 recent matches), aka "form"
@@ -16,32 +51,7 @@ __Feature Selection__: To determine who will more likely to win a match, based o
 
 Feature list reflects those factors.
 
-__Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/)
-
-__Lifecycle__
-
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
-
-# Data
-### Data Source
-The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths
-1. [FIFA World Cup 2018](https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data)
-2. [International match 1872 - 2018](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
-3. [FIFA Ranking through Time](https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html)
-4. [Bet Odd](https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data)
-5. [Bet Odd 2](http://www.oddsportal.com)
-6. [Squad Strength - Sofia](https://sofifa.com/players/top)
-7. [Squad Strength - FIFA index](https://www.fifaindex.com/)
-
-
-[1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
-[2]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
-[3]: http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html
-[4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
-[5]: https://www.futhead.com/10/players/?page=2
-[6]: https://github.com/openfootball/world-cup
 ### Feature List
-
 | Feature Name  | Group | Description              | Source | Status |
 |:-------------:|:-----:|:------------------------:|:------:|:------:|
 | team_1        |   N/A |Nation Code (e.g US, NZ)      |   2    |Done|
@@ -65,6 +75,25 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 |avg_odds_win_2 |   3   |average of bet odd for team 2        |4|Done|
 |avg_odds_draw  |   3   |average of bet odd of draw           |4|Done|
 |top_200        |   4   |number of players in top 200         |5||
+
+
+# Data Source
+The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths
+1. [FIFA World Cup 2018](https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data)
+2. [International match 1872 - 2018](https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data)
+3. [FIFA Ranking through Time](https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html)
+4. [Bet Odd](https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data)
+5. [Bet Odd 2](http://www.oddsportal.com)
+6. [Squad Strength - Sofia](https://sofifa.com/players/top)
+7. [Squad Strength - FIFA index](https://www.fifaindex.com/)
+
+
+[1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
+[2]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+[3]: http://www.fifa.com/fifa-world-ranking/associations/association=usa/men/index.html
+[4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+[5]: https://www.futhead.com/10/players/?page=2
+[6]: https://github.com/openfootball/world-cup
 
 
 
