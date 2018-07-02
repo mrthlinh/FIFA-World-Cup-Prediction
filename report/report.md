@@ -1,32 +1,32 @@
 
 # Table of Contents
-1. [Introduction](#Introduction)
-- [Feature Selection](#feature-selection): How do you determine feature list and how do you collect data?
-- [Exploratory Data Analysis](#exploratory-data-analysis): charts and hypothesis testing
+1. [Introduction](#introduction)
+2. [Feature Selection](#feature-selection): How do you determine feature list and how do you collect data?
+3. [Exploratory Data Analysis](#exploratory-data-analysis): charts and hypothesis testing
   1. [Correlation between variables]()
-  - [How head-to-head matchup history affect the current match?]()
-  - [How recent performances affect the current match?]()
-  - [Is ratio-odd usually right? How much are they likely to be correct?]()
-  - [Do strong teams usually win?]()
-  - [Data Distrubution in PCA]()
-- [Methodology](#Methodology): Details about your procedure
-  1. [Classifiers](#Classifier): Definition and parameters meaning
+  2. [How head-to-head matchup history affect the current match?]()
+  3. [How recent performances affect the current match?]()
+  4. [Is ratio-odd usually right? How much are they likely to be correct?]()
+  5. [Do strong teams usually win?]()
+  6. [Data Distrubution in PCA]()
+4. [Methodology](#methodology): Details about your procedure
+  1. [Classifiers](#classifier): Definition and parameters meaning
     - [Dummy Classifiers]() Define a dummy classifier
     - [Logistic Regression]()
     - [Support Vector Machine]()
     - [Ensemble Trees]()
     - [Neural Network]()
-  - [Evaluation Criteria](#Evaluation-Criteria): Definition, strength and weakness
+  2. [Evaluation Criteria](#evaluation-criteria): Definition, strength and weakness
     - [Accuracy]()
     - [Recall, Precision, F1]()
     - [Out of Bag Error]()
     - [10-fold cross validation error]()
-  - [Hyper Parameter Tuning](#Hyper-Parameter-Tuning)
+  3. [Hyper Parameter Tuning](#hyper-parameter-yuning)
 
-- [Results](#Results)
-- [Data Source](#Data-Source)
-- [References](#References)
-- [Appendix](#Appendix)
+4. [Results](#results)
+5. [Data Source](#data-dource)
+6. [References](#references)
+7. [Appendix](#appendix)
 
 # Introduction
 __Objective__:
