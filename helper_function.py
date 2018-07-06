@@ -43,7 +43,7 @@ def convert_moneyline_decimal(st):
     return round(result,2)
 
 
-def hist_feature(row,df_hist):     
+def hist_feature(row,df_hist,bool_diff):     
     '''
     Description: Lookup "head-to-head" feature - difference of wins and number of draw
     Input:
@@ -70,9 +70,14 @@ def hist_feature(row,df_hist):
     
     diff_win = num_win - num_lose
     
-    return [diff_win,num_draw]
+#    diff = True
+    if bool_diff:
+        return [diff_win,num_draw]
+    else:    
+        return [num_win,num_lose,num_draw]
 
-def form_feature(row,df_hist):
+
+def form_feature(row,df_hist,num_recent_matches,bool_diff):
     '''
     Description: Lookup "form" feature - "goal for", "goal against", "win", "draw"
     Input:
@@ -118,15 +123,154 @@ def form_feature(row,df_hist):
 #    team2= correct_Korea(row.team_2)
     team1= row.team_1
     team2= row.team_2 
-    num_recent_matches = 10
+#    num_recent_matches = 10
     
     team1_info = form(team1,num_recent_matches)
     team2_info = form(team2,num_recent_matches)
     
-    return [team1_info['f_goalF'],team2_info['f_goalF'],team1_info['f_goalA'],team2_info['f_goalA'],
-            team1_info['f_win'],team2_info['f_win'],team1_info['f_draw'],team2_info['f_draw']]
-      
+    if bool_diff:    
+        return [team1_info['f_goalF'] - team2_info['f_goalF'],team1_info['f_goalA'] - team2_info['f_goalA'],
+                team1_info['f_win'] - team2_info['f_win'],team1_info['f_draw'] - team2_info['f_draw']]
+    else:
+        return [team1_info['f_goalF'],team2_info['f_goalF'],team1_info['f_goalA'],team2_info['f_goalA'],
+                team1_info['f_win'],team2_info['f_win'],team1_info['f_draw'],team2_info['f_draw']]
 
+def hist_feature_new(row,df_hist,bool_diff):     
+    '''
+    Description: Lookup "head-to-head" feature - difference of wins and number of draw
+    Input:
+        row: Pandas Series with name "team_1" and "team_2"
+        df_hist: Pandas Dataframe, all matches (database)
+    Output:
+        [diff_win,num_draw]
+    '''
+#    team1= correct_Korea(row.team_1)
+#    team2= correct_Korea(row.team_2)
+    team1= row.team_1
+    team2= row.team_2  
+    df_1 = df_hist.loc[(df_hist['team_1'] == team1) & (df_hist['team_2'] == team2),['score_1','score_2']]     
+    df_2 = df_hist.loc[(df_hist['team_1'] == team2) & (df_hist['team_2'] == team1),['score_1','score_2']]
+    df_2.columns = ['score_2','score_1']
+    df_3 = pd.concat([df_1,df_2])
+    diff = df_3['score_1'] - df_3['score_2']
+    result = diff.apply(w_d_l)
+    result = result.value_counts()
+    
+    num_win = result.get('win',0)
+    num_draw = result.get('draw',0)
+    num_lose = result.get('lose',0)
+    
+    diff_win = num_win - num_lose
+    
+#    diff = True
+    if bool_diff:
+        return [diff_win,num_draw]
+    else:    
+        return [num_win,num_lose,num_draw]
+
+def form(team,df_hist,num_recent_matches):
+        '''
+        Description:
+        Input:
+            
+        Output:
+            
+        '''
+    
+        df = df_hist.loc[(df_hist['team_1'] == team) | (df_hist['team_2'] == team),'match_date':'score_2']
+        df = df.tail(num_recent_matches)
+        
+        df_team1 = df.loc[df['team_1'] == team,['score_1','score_2']]
+        df_team2 = df.loc[df['team_2'] == team,['score_1','score_2']]
+        df_team2.columns = ['score_2','score_1']
+        df_sum = pd.concat([df_team1,df_team2])    
+        goal = df_sum.apply(np.sum,axis=0) 
+        
+        diff = df_sum['score_1'] - df_sum['score_2']
+        result = diff.apply(w_d_l)
+        result = result.value_counts()
+        
+        f_goalF = goal['score_1']
+        f_goalA = goal['score_2']
+        f_win   = result.get('win',0)
+        f_draw   = result.get('draw',0)
+        
+        return {"f_goalF":f_goalF,"f_goalA":f_goalA,
+                "f_win":f_win, "f_draw":f_draw }
+        
+def form_feature_new(row,df_hist,num_recent_matches,bool_diff):
+    '''
+    Description: Lookup "form" feature - "goal for", "goal against", "win", "draw"
+    Input:
+        row: Pandas Series with name "team_1" and "team_2"
+        df_hist: Pandas Dataframe, all matches (database)
+    Output:
+        [team1_info['f_goalF'],team2_info['f_goalF'],team1_info['f_goalA'],team2_info['f_goalA'],
+            team1_info['f_win'],team2_info['f_win'],team1_info['f_draw'],team2_info['f_draw']]
+    '''    
+    
+    def form(team,num_recent_matches):
+        '''
+        Description:
+        Input:
+            
+        Output:
+            
+        '''
+    
+        df = df_hist.loc[(df_hist['team_1'] == team) | (df_hist['team_2'] == team),'match_date':'score_2']
+        df = df.tail(num_recent_matches)
+        
+        df_team1 = df.loc[df['team_1'] == team,['score_1','score_2']]
+        df_team2 = df.loc[df['team_2'] == team,['score_1','score_2']]
+        df_team2.columns = ['score_2','score_1']
+        df_sum = pd.concat([df_team1,df_team2])    
+        goal = df_sum.apply(np.sum,axis=0) 
+        
+        diff = df_sum['score_1'] - df_sum['score_2']
+        result = diff.apply(w_d_l)
+        result = result.value_counts()
+        
+        f_goalF = goal['score_1']
+        f_goalA = goal['score_2']
+        f_win   = result.get('win',0)
+        f_draw   = result.get('draw',0)
+        
+        return {"f_goalF":f_goalF,"f_goalA":f_goalA,
+                "f_win":f_win, "f_draw":f_draw }
+
+    
+#    team1= correct_Korea(row.team_1)
+#    team2= correct_Korea(row.team_2)
+    team1= row.team_1
+    team2= row.team_2 
+#    num_recent_matches = 10
+    
+    team1_info = form(team1,num_recent_matches)
+    team2_info = form(team2,num_recent_matches)
+    
+    if bool_diff:    
+        return [team1_info['f_goalF'] - team2_info['f_goalF'],team1_info['f_goalA'] - team2_info['f_goalA'],
+                team1_info['f_win'] - team2_info['f_win'],team1_info['f_draw'] - team2_info['f_draw']]
+    else:
+        return [team1_info['f_goalF'],team2_info['f_goalF'],team1_info['f_goalA'],team2_info['f_goalA'],
+                team1_info['f_win'],team2_info['f_win'],team1_info['f_draw'],team2_info['f_draw']]
+  
+#def addFeature_diff(new_features,old_features,my_df,drop=True):  
+#    df = my_df.copy()
+#    for i in range(len(new_features)-1):
+#        new_feature = new_features[i]
+#        old_feature_1 = old_features[i] + "1"
+#        old_feature_2 = old_features[i] + "2"
+#        
+#        df[new_feature] = df.apply(lambda row: (row[old_feature_1] - row[old_feature_2]),axis=1)
+#        if (drop):
+#            df = df.drop([old_feature_1,old_feature_2],axis=1)
+##    'avg_odds_draw' -> no need to take difference
+#    df[new_features[-1]] = my_df[old_features[-1]]
+#    if (drop):
+#        df = df.drop([old_features[-1]],axis=1)
+#    return df
 
 
 
