@@ -22,5 +22,6 @@ utilities
 temp
 data/delete
 old model
-EDA/.ipynb_checkpoints/EDA-checkpoint.ipynb
+EDA/.ipynb_checkpoints
 geckodriver.log
+url_list/delete

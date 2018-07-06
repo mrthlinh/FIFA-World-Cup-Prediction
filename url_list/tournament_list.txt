@@ -1,0 +1,12 @@
+http://www.oddsportal.com/soccer/world/world-cup-2018/results/	World: FIFA World Cup
+http://www.oddsportal.com/soccer/world/fifa-confederations-cup/results/	World: FIFA Confederations Cup
+http://www.oddsportal.com/soccer/world/friendly-international/results/	World: Friendly International
+http://www.oddsportal.com/soccer/europe/euro-2016/results/	Europe: Euro
+http://www.oddsportal.com/soccer/north-central-america/gold-cup/results/	North&South America: Gold Cup
+http://www.oddsportal.com/soccer/south-america/copa-america/results/	South America: Copa America
+http://www.oddsportal.com/soccer/africa/africa-cup-of-nations/results/	Africa: Africa Cup of Nations
+http://www.oddsportal.com/soccer/asia/asian-cup/results/	Asia: Asian Cup
+http://www.oddsportal.com/soccer/asia/gulf-cup-of-nations/results/	Asia: Gulf Cup
+http://www.oddsportal.com/soccer/asia/aff-suzuki-cup/results/	Asia: AFF Suzuki Cup
+http://www.oddsportal.com/soccer/europe/nations-cup/results/	Europe: Nations Cup
+http://www.oddsportal.com/soccer/africa/african-nations-championship/results/	Africa: African Nations Championship
