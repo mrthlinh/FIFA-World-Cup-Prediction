@@ -107,6 +107,23 @@ __Third Place__ (coming soon)
 __Semi_Finals__ (coming soon)
 
 __Quarter-Finals__ (coming soon)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_quarter.PNG)
+
+I picked significant features and compare those between two teams. A notetaking feature is "Age" where younger teams tend to play better than older ones
+
+ __France vs Uruguay__
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-form.png.PNG)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-h2h.png.PNG)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-ss-simple.png.PNG)
+
+ __Belgium vs Brazil__
+
+ ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-form.png.PNG)
+ ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-h2h.png.PNG)
+ ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/picbelg-brazil-ss-simple.png.PNG)
+
+
 
 __Round of 16__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_round16.PNG)
