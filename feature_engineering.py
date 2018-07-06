@@ -161,13 +161,7 @@ data_EUR_2016.to_csv('data/data_full_feature/data_EUR_2016.csv',index=False)
 
 # Round 2
 data_WC_2018.to_csv('data/data_full_feature/data_WC_2018_round2.csv',index=False)
-#
-#squad_features = ['f_goalF_',
-#                  'f_goalA_',
-#                  'f_win_',
-#                  'f_draw_',
-#                  'avg_odds_win_',
-#                  'avg_odds_draw']
+
 
 
 
