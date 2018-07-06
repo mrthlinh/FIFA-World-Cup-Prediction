@@ -113,19 +113,19 @@ I picked significant features and compare those between two teams. A notetaking 
 
  __France vs Uruguay__
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-form.PNG)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-form.png)
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-h2h.PNG)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-h2h.png)
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-ss-simple.PNG)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-ss-simple.png)
 
  __Belgium vs Brazil__
 
- ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-form.PNG)
+ ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-form.png)
 
- ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-h2h.PNG)
+ ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-h2h.png)
 
- ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-ss-simple.PNG)
+ ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-ss-simple.png)
 
 
 __Round of 16__
