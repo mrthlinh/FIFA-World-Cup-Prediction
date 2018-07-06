@@ -1,7 +1,7 @@
 
 # Table of Contents
 1. [Introduction](#introduction)
-2. [Feature Selection](#feature-selection): How do you determine feature list and how do you collect data?
+2. [Data](#data): How do you determine feature list and how do you collect data?
 3. [Exploratory Data Analysis](#exploratory-data-analysis): charts and hypothesis testing
     1. [Correlation between variables]()
     2. [How head-to-head matchup history affect the current match?]()
@@ -10,21 +10,21 @@
     5. [Do strong teams usually win?]()
     6. [Data Distrubution in PCA]()
 4. [Methodology](#methodology): Details about your procedure
-    1. [Classifiers](#classifier): Definition and parameters meaning
-      - [Dummy Classifiers]() Define a dummy classifier
-      - [Logistic Regression]()
-      - [Support Vector Machine]()
-      - [Ensemble Trees]()
-      - [Neural Network]()
+    1. [Classifiers](#classifiers): Definition and parameters meaning
+        - [Dummy Classifiers]() Define a dummy classifier
+        - [Logistic Regression]()
+        - [Support Vector Machine]()
+        - [Ensemble Trees]()
+        - [Neural Network]()
     2. [Evaluation Criteria](#evaluation-criteria): Definition, strength and weakness
-      - [Accuracy]()
-      - [Recall, Precision, F1]()
-      - [Out of Bag Error]()
-      - [10-fold cross validation error]()
+        - [Accuracy]()
+        - [Recall, Precision, F1]()
+        - [Out of Bag Error]()
+        - [10-fold cross validation error]()
     3. [Hyper Parameter Tuning](#hyper-parameter-yuning)
 
 4. [Results](#results)
-5. [Data Source](#data-dource)
+5. [Data Source](#data-source)
 6. [References](#references)
 7. [Appendix](#appendix)
 
@@ -33,51 +33,181 @@ __Objective__:
 - Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw" or "goal difference"
 - Apply the model to predict the result of FIFA world cup 2018.
 
-__Data__: Data are assembled from multiple sources, most of them are from Kaggle, others come from FIFA website / EA games.
-
 __Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/)
 
 __Lifecycle__
 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
 
-# Feature Selection
+__Previous Work__:
+
+
+# Data
+__Data__: The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths.
+1. [FIFA World Cup 2018][1]
+2. [International match 1872 - 2018][2]
+3. [FIFA Ranking through Time][3]
+4. [Bet Odd][4]
+5. [Bet Odd 2][5]
+6. [Squad Strength - Sofia][6]
+7. [Squad Strength - FIFA index][7]
+
+[1]: https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data
+[2]: https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017/data
+[3]: https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html
+[4]: https://www.kaggle.com/austro/beat-the-bookie-worldwide-football-dataset/data
+[5]: http://www.oddsportal.com
+[6]: https://sofifa.com/players/top
+[7]: https://www.fifaindex.com/
+
 __Feature Selection__: To determine who will more likely to win a match, based on my knowledge, I come up with 4 main groups of features as follows:
-1. head-to-head match history between 2 teams
-2. recent performance of each team (10 recent matches), aka "form"
-3. bet-ratio before matches
-4. squad strength (from FIFA video game)
+1. __head-to-head match history between 2 teams__. Some teams have few opponents who they hardly win no matter how strong they currently are. For example [Germany team usually loses / couldn't beat Italian team in 90 minute matches.](https://www.11v11.com/teams/italy/tab/opposingTeams/opposition/Germany/)
+2. __Recent performance of each team (10 recent matches), aka "form"__ A team with "good" form usually has higher chance to win next matches.
+3. __Bet-ratio before matches__ Odd bookmarkers already did many analysis before matches to select the best betting odds so why don't we include them.
+4. __Squad strength (from FIFA video game).__ We want a real squad strength but these data are not free and not always available so we use strength from FIFA video games which have updated regularly to catch up with the real strength.
 
-Feature list reflects those factors.
+__Feature List__ Feature list reflects those four factors.
 
-### Feature List
-| Feature Name  | Group | Description              | Source | Status |
-|:-------------:|:-----:|:------------------------:|:------:|:------:|
-| team_1        |   N/A |Nation Code (e.g US, NZ)      |   2    |Done|
-| team_2        |   N/A |Nation Code  (e.g US, NZ)     |   2    |Done|
-| date          |   N/A |Date of match yyyy - mm - dd  |   2    |Done|
-| home_team     |   N/A |Who is the home team          |   2    |Done|
-| tournament    |   N/A |Friendly,EURO, AFC, FIFA WC   |   2    |Done|
-| h_win_diff    |   1   |#Win T1 - T2         |   2    |Done|
-| h_draw        |   1   |#Draw                |   2    |Done|
-| rank_diff     |   1   |#Rank T1 - T2                 |   3    ||
-| title_diff    |   1   |#Title won T1 - T2            |   3    ||
-| f_goalF_1     |   2   |#Goal of T1 in 10 recent matches    |2|Done|
-| f_goalF_2     |   2   |#Goal of T2 in 10 recent matches    |2|Done|
-| f_goalA_1     |   2   |#Goal conceded of T1 in 10 recent matches    |2|Done|
-| f_goalA_2     |   2   |#Goal conceded of T2 in 10 recent matches    |2|Done|
-| f_win_1       |   2   |#Win of T1 in 10 recent matches     |2|Done|
-| f_win_2       |   2   |#Win of T2 in 10 recent matches     |2|Done|
-| f_draw_1      |   2   |#Draw of T1 in 10 recent matches     |2|Done|
-| f_draw_2      |   2   |#Draw of T2 in 10 recent matches     |2|Done|
-|avg_odds_win_1 |   3   |average of bet odd for team 1        |4|Done|
-|avg_odds_win_2 |   3   |average of bet odd for team 2        |4|Done|
-|avg_odds_draw  |   3   |average of bet odd of draw           |4|Done|
-|top_200        |   4   |number of players in top 200         |5||
+- _*difference: team1 - team2_
+- _*form: performance in 10 recent matches_
+
+| Feature Name  | Description              | Source |
+|:-------------:|:------------------------:|:------:|
+| team_1        | Nation Code (e.g US, NZ)      | [1] & [2] |
+| team_2        | Nation Code  (e.g US, NZ)     | [1] & [2] |
+| date          | Date of match yyyy - mm - dd  | [1] & [2] |
+| tournament    | Friendly,EURO, AFC, FIFA WC   | [1] & [2] |
+| h_win_diff    | Head2Head: win difference      |   [2]   |
+| h_draw        | Head2Head: number of draw      |   [2]    |
+| form_diff_goalF | Form: difference in "Goal For" |   [2]   |
+| form_diff_goalA | Form: difference in "Goal Against" |   [2]    |
+| form_diff_win   | Form: difference in number of win  |   [2]    |
+| form_diff_draw  | Form: difference in number of draw |   [2]    |
+| odd_diff_win    | Betting Odd: difference bet rate for win  | [4] & [5] |
+| odd_draw        | Betting Odd: bet rate for draw            | [4] & [5] |
+| game_diff_rank  | Squad Strength: difference in FIFA Rank   | [3] |
+| game_diff_ovr   | Squad Strength: difference in Overall Strength  | [6] |
+|game_diff_attk   | Squad Strength: difference in Attack Strength   | [6] |
+|game_diff_mid    | Squad Strength: difference in Midfield Strength | [6] |
+|game_diff_def    | Squad Strength: difference in Defense Strength  | [6] |
+|game_diff_prestige | Squad Strength: difference in prestige        | [6] |
+|game_diff_age11    | Squad Strength: difference in age of 11 starting players  | [6] |
+|game_diff_ageAll   | Squad Strength: difference in age of all players          | [6] |
+|game_diff_bup_speed| Squad Strength: difference in Build Up Play Speed         | [6] |
+|game_diff_bup_pass | Squad Strength: difference in Build Up Play Passing       | [6] |
+|game_diff_cc_pass  | Squad Strength: difference in Chance Creation Passing     | [6] |
+|game_diff_cc_cross | Squad Strength: difference in Chance Creation Crossing    | [6] |
+|game_diff_cc_shoot | Squad Strength: difference in Chance Creation Shooting    | [6] |
+|game_diff_def_press| Squad Strength: difference in Defense Pressure            | [6] |
+|game_diff_def_aggr | Squad Strength: difference in Defense Aggression          | [6] |
+|game_diff_def_teamwidth  | Squad Strength: difference in Defense Team Width    | [6] |
 
 
 # Exploratory Data Analysis
 There are few questions in order to understand data better
+
+__1. Correlation between variables__
+
+First we draw correlation matrix of large dataset which contains all matches from 2005-2018 with features group 1,2 and 3
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/corr_matrix.png)
+
+In general, features are not correlated. "odd_win_diff" is quite negatively correlated with "form_diff_win" (-0.5), indicating that form of two teams reflex belief of odd bookmarkers on winners. One more interesting point is when difference of bet odd increases we would see more goal differences (correlation score = -0.6).
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/odd-vs-goal.png)
+
+Second, we draw correlation matrix of small dataset which contains all matches from World Cup 2010, 2014, 2018 and EURO 2012, 2016
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/corr_matrix_full.png)
+
+Overall rating is just an average of "attack", "defense" and "midfield" index therefore we see high correlation between them. In addition, some of new features of squad strength show high correlation for example "FIFA Rank", "Overall rating" and "Difference in winning odd"
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/rank-odd-rating.png)
+
+__2. How head-to-head matchup history affect the current match?__
+
+You may think when head-to-head win difference is positive, match result should be "Win" (Team 1 wins Team 2) and vice versa, when head-to-head win difference is negative, match result should be "Lose" (Team 2 wins Team 1). In fact, positive head-to-head win difference indicates that there is 51.8% chance the match results end up with "Win" and negative head-to-head win difference indicates that there is 55.5% chance the match results end up with "Lose"
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-positive-h2h.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-negative-h2h.png)
+
+Let's perform our hypothesis testing with two-sampled t-test
+Null Hypothesis: There is no difference of 'h2h win difference' between "Win" and "Lose"
+Alternative Hypothesis: There are differences of 'h2h win difference' between "Win" and "Lose"
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/win_diff.png)
+
+```
+T-test between win and lose:
+Ttest_indResult(statistic=24.30496036405259, pvalue=2.503882847793891e-126)
+```
+Very small of p-value means we can reject the null hypothesis and accept alternative hypothesis.
+
+We can do the same procedure with win-draw and lose-draw
+
+```
+T-test between win and draw:
+Ttest_indResult(statistic=7.8385466293651023, pvalue=5.395456011352264e-15)
+
+T-test between lose and draw:
+Ttest_indResult(statistic=-8.6759649601068887, pvalue=5.2722587025773183e-18)
+
+```
+Therefore, we can say __history of head-to-head matches of two teams contribute significantly to the result__
+
+__3. How 10-recent performances affect the current match?__
+
+We consider differences in "Goal For" (how many goals they got), "Goal Against" (how many goals they conceded), "number of winning matches" and "number of drawing matches". We performed same procedure as previous questions. From pie charts, we can see a clear distinction in "number of wins" where proportion of "Win" result decreases from 49% to 25% while "Lose" result increases from 26.5% to 52.3%.
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-goalF.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-goalA.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-win.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-draw.png)
+
+Pie charts are not enough we should do the hypothesis testing to see significance of each feature
+
+| Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
+|:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
+| Goal For | pvalue = 2.50e-126 | pvalue = 5.39e-15 | pvalue = 5.27e-18 |
+| Goal Against | pvalue = 0.60 | pvalue = 0.17 | pvalue = 0.08 |
+| Number of Winning Matches | pvalue = 3.02e-23 | pvalue = 1.58e-33 | pvalue = 2.57e-29 |
+| Number of Draw Matches | pvalue = 1.53e-06 | pvalue = 0.21 | pvalue = 0.03 |
+
+We see many small value of p-value in cases of "Goal For" and "Number of Winning Matches". Based on t-test, __we know difference in "Goal For" and "Number of Winning Matches" are helpful features__
+
+__4. Do stronger teams usually win?__
+
+We define stronger teams based on
+ - Higher FIFA Ranking
+ - Higher Overall Rating
+
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-rank.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-rating.png)
+
+| Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
+|:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
+| FIFA Rank | pvalue = 2.11e-10 | pvalue=0.65 | pvalue=0.00068 |
+| Overall Rating| pvalue = 1.53e-16 | pvalue = 0.0804 | pvalue = 0.000696 |
+
+
+
+__5. Do young players play better than old one ?__
+
+Young players may have better stamina and more energy while older players have more experience. We want to see how age affects match results.
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-age11.png)
+
+According to the pie chart, team with younger players tend to win more games than teams with older players.
+
+| Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
+|:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
+| Age | pvalue = 2.07e-05| pvalue = 0.312 | pvalue=0.090 |
+
+Based on t-test, we know the  
+
+__6. Is short pass better than long pass ?__
+
+
+
+
+6. Data Distrubution in PCA
+
 
 1. Is playing as "Home Team" better than playing as "Away Team"?
 
@@ -88,15 +218,7 @@ There are few questions in order to understand data better
 
 2. Does head-to-head matchup history affect the current match?
 
-    Now we compare the difference between "win difference" of winner / loser and draw-er
-    "Win difference" is defined as number of wins of team A - number of wins of team B
-    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/win_diff.png)
 
-    Perform to t-test with hypothesis "mean of win difference between winner and loser are the same"
-    ```python
-    Ttest_indResult(statistic=35.432781367462361, pvalue=5.3865361955241691e-266)
-    ```
-    Very small of p-value means we can reject the hypothesis. Therefore, we can say __history of head-to-head matches of two teams contribute significantly to the result__
 
 3. Is there any difference between "form" of winning team and lose team?
     We compare the difference between goals / goals conceded / number of wins / number of draws of winner, loser or draw-er.
@@ -419,7 +541,7 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 [5]: https://www.futhead.com/10/players/?page=2
 [6]: https://github.com/openfootball/world-cup
 
-# Reference
+# References
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
 2. [t-test definition](https://en.wikipedia.org/wiki/Student%27s_t-test)
 3. [Confusion Matrix Multi-Label example](http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py)
@@ -431,7 +553,8 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 9. [Understand Bet odd format](https://www.pinnacle.com/en/betting-articles/educational/odds-formats-available-at-pinnacle-sports/ZWSJD9PPX69V3YXZ)
 10. [EURO 2016 bet odd](http://www.oddsportal.com/soccer/europe/euro-2016/results/#/)
 
-# Challenge / Question
+# Appendix
+Challenge / Question
 1. If "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose", will adding these data make model better? (You actually did it in EDA)
 2. According to "draw" and "win" in average odd? These two labels seem to be different, why performance of "draw" is bad?
 3. How about classification -> regression
