@@ -104,12 +104,13 @@ __Final__ (coming soon)
 
 __Third Place__ (coming soon)
 
-__Semi_Finals__ (coming soon)
+__Semi_Finals__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_semi.PNG)
 
-__Quarter-Finals__ (coming soon)
+__Quarter-Finals__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_quarter.PNG)
 
-I picked significant features and compare those between two teams. A notetaking feature is "Age" where younger teams tend to play better than older ones
+I picked significant features and compare those between two teams. A notetaking feature is "Age" where younger teams tend to play better than older ones.
 
  __France vs Uruguay__
 
