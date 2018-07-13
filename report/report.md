@@ -193,45 +193,29 @@ Young players may have better stamina and more energy while older players have m
 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-age11.png)
 
-According to the pie chart, team with younger players tend to win more games than teams with older players.
-
 | Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
 |:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
 | Age | pvalue = 2.07e-05| pvalue = 0.312 | pvalue=0.090 |
 
-Based on t-test, we know the  
+Based on t-test and pie chart, we know that the age contributes significantly to the result. More specifically, younger teams tends to play better than older ones
 
 __6. Is short pass better than long pass ?__
+Higher value of "Build Up Play Passing" means "Long Pass" and lower value  means "Short Pass", value in middle mean "Mixed-Type Pass"
 
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-bup-pass.png)
 
+| Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
+|:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
+| Age | pvalue = 1.05e-07| pvalue = 0.0062 | pvalue = 0.571 |
 
+Based on t-test and pie chart, we know that the age contributes significantly to the result. More specifically, teams who replies on "Longer Pass" usually loses the game.
 
-6. Data Distrubution in PCA
+__7. How does crossing pass affect match result ?__
+__8. How does chance creation shooting affect match result ?__
+__9. How does defence pressure affect match result ?__
+__10. How does defence aggression affect match result ?__
+__11. How does defence team width affect match result ?__
 
-
-1. Is playing as "Home Team" better than playing as "Away Team"?
-
-   To answer this question, we investigate the how frequent a home-team wins a match.
-   According to the bar graph, home teams are more likely, twice exactly, to win the game.
-
-    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/home_team.png)
-
-2. Does head-to-head matchup history affect the current match?
-
-
-
-3. Is there any difference between "form" of winning team and lose team?
-    We compare the difference between goals / goals conceded / number of wins / number of draws of winner, loser or draw-er.
-
-    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/recent_form.png)
-
-    As you can see, while goals, goals conceded and number of draw show no significant difference, number of wins tell us more about who is more likely to win.
-    t-test also confirms our assumption
-    ```python
-    Ttest_indResult(statistic=29.488698758378064, pvalue=9.6646508941629036e-187)
-    ```
-- How many time a bad-form team won a good-form team?
-- What is a good-form / bad-form team?
 
 4. Is ratio-odd usually right? How much are they likely to be correct?
     For this question, we use the average odd getting from [Bet Odd][2] before matches.
@@ -252,27 +236,50 @@ __6. Is short pass better than long pass ?__
 
    While "Win" and "Lose" are while separate, "Draw" seems to be mixed between other labels.
 
-
-__New EDA__ : EDA for new features for World Cup and UEFA EURO
-
-What questions?
-1.
-
 # Methodology
-We split data into 70:30
-- First we perform "normalization" of features, convert category to number
-- Second we perform k-fold cross validation to select the best parameters for each model based on above criteria.
-- Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
+Our main objectives of prediction are "Win / Lose / Draw" and "Goal Difference".
+In this work, we do two main experiments:
 
-## Classifiers
+ 1. Build classifiers for "Win / Lose / Draw" from 2005. Because feature "Bet Odds" are only available after 2005 so we only conduct experiments for this period of time.
+
+ 2. Build classifiers for "Goal Difference" for "World Cup" and "UEFA EURO" after 2010. The reason is because features of "Squad Strength" are not always available before 2010, some national teams does not have database of squad strength in FIFA Video Games. We know that tackling prediction with regression would be hard so we turn "Goal Difference" into classification by defining labels as follows:
+
+ __Team A vs Team B__
+ - "win_1": A wins with 1 goal differences
+ - "win_2": A wins with 2 goal differences
+ - "win_3": A wins with 3 or more goal differences
+ - "lose_1": B wins with 1 goal differences
+ - "lose_2": B wins with 2 goal differences
+ - "lose_3": A wins with 3 or more goal differences
+ - "draw_0": Draw
+
+For each experiment we follow these procedure
+ - Split data into 70:30
+ - First we perform "normalization" of features, convert category to number
+ - Second we perform k-fold cross validation to select the best parameters for each model based on some criteria.
+ - Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
+
+## Models
+__Baseline Model:__
+
+Bet odds are results of analysis from bet bookmarkers to each match, therefore we want to see whether we can beat the bet odds to determine who is more likely to win. However, we also want to predict "Draw" matches so we use the following rules for Win / Lose / Draw as a baseline
+---- Rules -----
+
+We also take advantage of "dummy classifier" from sklearn library which automatically derive a simple rule for classification
+
+__Enhanced Model:__
+
+To beat the baseline model we try to use several machine algorithm as follows
 1. Logistic Regression
 2. SVM
 3. Random Random Forest
 4. Gradient Boosting Tree
 5. ADA Boost Tree
 6. Neural Network
+
+
 ## Evaluation Criteria
-Each criteria is carried out for each label "win", "lose" and "draw"
+Models are evaluated on these criteria which are carried out for each label "win", "lose" and "draw"
 - __Precision__: Among our prediction of "True" value, how many percentage we hit?, the higher value, the better prediction
 - __Recall__: Among actual "True" value, how many percentage we hit?, the higher value, the better prediction
 - __F1__: A balance of Precision and Recall, the higher value, the better prediction, there are 2 types of F1
@@ -280,8 +287,6 @@ Each criteria is carried out for each label "win", "lose" and "draw"
   - __F1-macro__:
 - __10-fold cross validation test error__: A reliable estimation of test error of model evaluation (no need to split to train and test)
 - __ROC curve__:
-## Hyper Parameter Tuning
-
 
 # Results
 
@@ -461,68 +466,9 @@ MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
 | avg / total |   0.46   |   0.61  |    0.52  |
 
 
-0-fold CV Test accuracy = 0.60801393728223
+10-fold CV Test accuracy = 0.60801393728223
 
-### EURO 2016
 
-We apply the model Gradient Boosted Tree to predict the result for EURO 2016 (not in the dataset)
-
-|      team_1      |      team_2      | result | prediction |
-|:----------------:|:----------------:|:------:|:----------:|
-|      France      |      Romania     |   win  |     win    |
-|      Albania     |    Switzerland   |  lose  |    lose    |
-|      England     |      Russia      |  draw  |     win    |
-|     Slovakia     |       Wales      |  lose  |    lose    |
-|      Germany     |      Ukraine     |   win  |     win    |
-| Northern Ireland |      Poland      |  lose  |    draw    |
-|      Croatia     |      Turkey      |   win  |     win    |
-|      Belgium     |       Italy      |  lose  |    lose    |
-|      Ireland     |      Sweden      |  draw  |    lose    |
-|  Czech Republic  |       Spain      |  lose  |    lose    |
-|      Austria     |      Hungary     |  lose  |     win    |
-|      Iceland     |     Portugal     |  draw  |    lose    |
-|      Albania     |      France      |  lose  |    lose    |
-|      Romania     |    Switzerland   |  draw  |     win    |
-|      Russia      |     Slovakia     |  lose  |    lose    |
-|      England     |       Wales      |   win  |     win    |
-|      Germany     |      Poland      |  draw  |     win    |
-| Northern Ireland |      Ukraine     |   win  |    draw    |
-|      Croatia     |  Czech Republic  |  draw  |     win    |
-|       Italy      |      Sweden      |   win  |     win    |
-|       Spain      |      Turkey      |   win  |     win    |
-|      Belgium     |      Ireland     |   win  |    draw    |
-|      Hungary     |      Iceland     |  draw  |    lose    |
-|      Austria     |     Portugal     |  draw  |    lose    |
-|      Albania     |      Romania     |   win  |    lose    |
-|      France      |    Switzerland   |  draw  |     win    |
-|      Russia      |       Wales      |  lose  |    lose    |
-|      England     |     Slovakia     |  draw  |     win    |
-|      Croatia     |       Spain      |   win  |    lose    |
-|  Czech Republic  |      Turkey      |  lose  |    lose    |
-|      Germany     | Northern Ireland |   win  |     win    |
-|      Poland      |      Ukraine     |   win  |     win    |
-|      Hungary     |     Portugal     |  draw  |    lose    |
-|      Austria     |      Iceland     |  lose  |     win    |
-|      Ireland     |       Italy      |   win  |    lose    |
-|      Belgium     |      Sweden      |   win  |    draw    |
-|      Croatia     |     Portugal     |  lose  |    lose    |
-|      Poland      |    Switzerland   |  draw  |    lose    |
-| Northern Ireland |       Wales      |  lose  |    lose    |
-|      France      |      Ireland     |   win  |     win    |
-|      Germany     |     Slovakia     |   win  |     win    |
-|      Belgium     |      Hungary     |   win  |     win    |
-|      England     |      Iceland     |  lose  |     win    |
-|       Italy      |       Spain      |   win  |    lose    |
-|      Poland      |     Portugal     |  draw  |    lose    |
-|      Belgium     |       Wales      |  lose  |    lose    |
-|      Germany     |       Italy      |  draw  |     win    |
-|      France      |      Iceland     |   win  |     win    |
-|     Portugal     |       Wales      |   win  |     win    |
-|      France      |      Germany     |   win  |    lose    |
-|      France      |     Portugal     |  lose  |    draw    |
-
-Accuracy = 0.48
-So far, the results are not so good but it is still better than a random guess of "win, lose and draw". One interesting thing is that our model predicts a "Draw" result in Final Match of EURO 2016, which is correct at 90th minute.
 # Data Source
 The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths
 1. [FIFA World Cup 2018](https://www.kaggle.com/ahmedelnaggar/fifa-worldcup-2018-dataset/data)
