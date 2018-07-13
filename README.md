@@ -90,7 +90,7 @@ Now the model is applying for World Cup 2018 in Russia with __simulation time = 
 
 __Result Explanation:__
 
-Team A vs Team B
+Team A vs Team B __(only valid until 90th minute)__
 
 - "win_1": A wins with 1 goal differences
 - "win_2": A wins with 2 goal differences
@@ -100,34 +100,14 @@ Team A vs Team B
 - "lose_3": A wins with 3 or more goal differences
 - "draw_0": Draw
 
-__Final__ (coming soon)
-
-__Third Place__ (coming soon)
+__Final__ and __Third Place__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_final.PNG)
 
 __Semi_Finals__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_semi.PNG)
 
 __Quarter-Finals__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_quarter.PNG)
-
-I picked significant features and compare those between two teams. A notetaking feature is "Age" where younger teams tend to play better than older ones.
-
- __France vs Uruguay__
-
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-form.png)
-
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-h2h.png)
-
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/uru-france-ss-simple.png)
-
- __Belgium vs Brazil__
-
- ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-form.png)
-
- ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-h2h.png)
-
- ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/belg-brazil-ss-simple.png)
-
 
 __Round of 16__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_round16.PNG)
