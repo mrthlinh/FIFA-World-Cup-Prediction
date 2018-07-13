@@ -101,6 +101,7 @@ Team A vs Team B __(only valid until 90th minute)__
 - "draw_0": Draw
 
 __Final__ and __Third Place__
+
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_final.PNG)
 
 __Semi_Finals__
@@ -109,29 +110,18 @@ __Semi_Finals__
 __Quarter-Finals__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_quarter.PNG)
 
-__Round of 16__
+__Round of 16_
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_round16.PNG)
-
-- Top 1 Accuracy =
-- Top 2 Accuracy =
 
 __Match Day 3__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday3.PNG)
 
-- Top 1 Accuracy = 2 / 16
-- Top 2 Accuracy = 8 / 16
-
 __Match Day 2__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
 
-- Top 1 Accuracy = 6 / 16
-- Top 2 Accuracy = 9 / 16
 
 __Match Day 1__
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
-
-- Top 1 Accuracy = 8 / 16
-- Top 2 Accuracy = 12 / 16
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
