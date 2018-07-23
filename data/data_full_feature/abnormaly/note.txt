@@ -1,4 +1,0 @@
-add host country 
-add abnormaly feature
-add match_type
-correct result "draw" -> "win" / "lose"
