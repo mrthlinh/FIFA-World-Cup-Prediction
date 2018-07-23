@@ -25,3 +25,7 @@ old model
 EDA/.ipynb_checkpoints
 geckodriver.log
 url_list/delete
+data/data_event
+data/raw
+dev_temp
+LE/*
