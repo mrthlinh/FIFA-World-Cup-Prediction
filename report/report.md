@@ -1,9 +1,9 @@
 
 # Table of Contents
 1. [Introduction](#introduction)
-2. [Data](#data): How do you determine feature list and how do you collect data?
-3. [Exploratory Data Analysis](#exploratory-data-analysis): charts and hypothesis testing
-    1. [Correlation between variables]()
+2. [Data](#data):
+3. [Exploratory Data Analysis](#exploratory-data-analysis):
+    1. [Correlation between variables](#correlation-between-variables)
     2. [How head-to-head matchup history affect the current match?]()
     3. [How recent performances affect the current match?]()
     4. [Is ratio-odd usually right? How much are they likely to be correct?]()
@@ -24,6 +24,7 @@
     3. [Hyper Parameter Tuning](#hyper-parameter-yuning)
 
 4. [Results](#results)
+5. [Conclusion](#conclusion)
 5. [Data Source](#data-source)
 6. [References](#references)
 7. [Appendix](#appendix)
@@ -38,8 +39,6 @@ __Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/
 __Lifecycle__
 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
-
-__Previous Work__:
 
 
 # Data
@@ -105,8 +104,12 @@ __Feature List__ Feature list reflects those four factors.
 
 # Exploratory Data Analysis
 There are few questions in order to understand data better
+__Imbalance of data__
 
-__1. Correlation between variables__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/class_imbalance_1.png.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/class_imbalance_2.png.png)
+
+__Correlation between variables__
 
 First we draw correlation matrix of large dataset which contains all matches from 2005-2018 with features group 1,2 and 3
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/corr_matrix.png)
@@ -120,7 +123,7 @@ Second, we draw correlation matrix of small dataset which contains all matches f
 Overall rating is just an average of "attack", "defense" and "midfield" index therefore we see high correlation between them. In addition, some of new features of squad strength show high correlation for example "FIFA Rank", "Overall rating" and "Difference in winning odd"
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/rank-odd-rating.png)
 
-__2. How head-to-head matchup history affect the current match?__
+__How head-to-head matchup history affect the current match?__
 
 You may think when head-to-head win difference is positive, match result should be "Win" (Team 1 wins Team 2) and vice versa, when head-to-head win difference is negative, match result should be "Lose" (Team 2 wins Team 1). In fact, positive head-to-head win difference indicates that there is 51.8% chance the match results end up with "Win" and negative head-to-head win difference indicates that there is 55.5% chance the match results end up with "Lose"
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-positive-h2h.png)
@@ -150,7 +153,7 @@ Ttest_indResult(statistic=-8.6759649601068887, pvalue=5.2722587025773183e-18)
 ```
 Therefore, we can say __history of head-to-head matches of two teams contribute significantly to the result__
 
-__3. How 10-recent performances affect the current match?__
+__How 10-recent performances affect the current match?__
 
 We consider differences in "Goal For" (how many goals they got), "Goal Against" (how many goals they conceded), "number of winning matches" and "number of drawing matches". We performed same procedure as previous questions. From pie charts, we can see a clear distinction in "number of wins" where proportion of "Win" result decreases from 49% to 25% while "Lose" result increases from 26.5% to 52.3%.
 
@@ -170,7 +173,7 @@ Pie charts are not enough we should do the hypothesis testing to see significanc
 
 We see many small value of p-value in cases of "Goal For" and "Number of Winning Matches". Based on t-test, __we know difference in "Goal For" and "Number of Winning Matches" are helpful features__
 
-__4. Do stronger teams usually win?__
+__Do stronger teams usually win?__
 
 We define stronger teams based on
  - Higher FIFA Ranking
@@ -187,7 +190,7 @@ We define stronger teams based on
 
 
 
-__5. Do young players play better than old one ?__
+__Do young players play better than old one ?__
 
 Young players may have better stamina and more energy while older players have more experience. We want to see how age affects match results.
 
@@ -199,7 +202,7 @@ Young players may have better stamina and more energy while older players have m
 
 Based on t-test and pie chart, we know that the age contributes significantly to the result. More specifically, younger teams tends to play better than older ones
 
-__6. Is short pass better than long pass ?__
+__Is short pass better than long pass ?__
 Higher value of "Build Up Play Passing" means "Long Pass" and lower value  means "Short Pass", value in middle mean "Mixed-Type Pass"
 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-bup-pass.png)
@@ -210,25 +213,17 @@ Higher value of "Build Up Play Passing" means "Long Pass" and lower value  means
 
 Based on t-test and pie chart, we know that the age contributes significantly to the result. More specifically, teams who replies on "Longer Pass" usually loses the game.
 
-__7. How does crossing pass affect match result ?__
-__8. How does chance creation shooting affect match result ?__
-__9. How does defence pressure affect match result ?__
-__10. How does defence aggression affect match result ?__
-__11. How does defence team width affect match result ?__
+__How does crossing pass affect match result ?__
 
+__How does chance creation shooting affect match result ?__
 
-4. Is ratio-odd usually right? How much are they likely to be correct?
-    For this question, we use the average odd getting from [Bet Odd][2] before matches.
+__How does defence pressure affect match result ?__
 
-    ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/avg_odd_win.png)
+__How does defence aggression affect match result ?__
 
+__How does defence team width affect match result ?__
 
-    ```python
-    Ttest_indResult(statistic=-43.22461132125629, pvalue=0.0)
-    ```
-
-    We can say that we can reply on bet odd to predict the match results.
-5. How labels distribute in reduced dimension?
+__How labels distribute in reduced dimension?__
 
   For this question, we use PCA to pick two first principal components which best explained data. Then we plot data in new dimension
 
@@ -238,11 +233,15 @@ __11. How does defence team width affect match result ?__
 
 # Methodology
 Our main objectives of prediction are "Win / Lose / Draw" and "Goal Difference".
-In this work, we do two main experiments:
+In this work, we do two main experiments, for each experiment we follow these procedure
+ - Split data into 70:30
+ - First we perform "normalization" of features, convert category to number
+ - Second we perform k-fold cross validation to select the best parameters for each model based on some criteria.
+ - Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
 
- 1. Build classifiers for "Win / Lose / Draw" from 2005. Because feature "Bet Odds" are only available after 2005 so we only conduct experiments for this period of time.
+__Experiment 1.__ Build classifiers for "Win / Lose / Draw" from 2005. Because feature "Bet Odds" are only available after 2005 so we only conduct experiments for this period of time.
 
- 2. Build classifiers for "Goal Difference" for "World Cup" and "UEFA EURO" after 2010. The reason is because features of "Squad Strength" are not always available before 2010, some national teams does not have database of squad strength in FIFA Video Games. We know that tackling prediction with regression would be hard so we turn "Goal Difference" into classification by defining labels as follows:
+__Experiment 2.__ Build classifiers for "Goal Difference" for "World Cup" and "UEFA EURO" after 2010. The reason is because features of "Squad Strength" are not always available before 2010, some national teams does not have database of squad strength in FIFA Video Games. We know that tackling prediction with regression would be hard so we turn "Goal Difference" into classification by defining labels as follows:
 
  __Team A vs Team B__
  - "win_1": A wins with 1 goal differences
@@ -253,220 +252,117 @@ In this work, we do two main experiments:
  - "lose_3": A wins with 3 or more goal differences
  - "draw_0": Draw
 
-For each experiment we follow these procedure
- - Split data into 70:30
- - First we perform "normalization" of features, convert category to number
- - Second we perform k-fold cross validation to select the best parameters for each model based on some criteria.
- - Third we use the best model to do prediction on 10-fold cross validation (9 folds for training and 1 fold for testing) to achieve the mean of test error. This error is more reliable.
+__Experiment 3.__ In addition, we want to test how our trained model in __Experiment 2__ to predict the "Goal Difference" and "Win/Draw/Lose" of matches in World Cup 2018.
 
 ## Models
 __Baseline Model:__
+In EDA part, we already investigate importance of features and see that odd, history, form and squad strength are all significant. Now we divide features into three groups: odd, h2h-form, squad strength and build "Baseline Models" based on these groups. To keep the baseline model simple, we set hyper-parameter of Decision Tree maximum depth = 2, maximum leaf nodes = 3
 
-Bet odds are results of analysis from bet bookmarkers to each match, therefore we want to see whether we can beat the bet odds to determine who is more likely to win. However, we also want to predict "Draw" matches so we use the following rules for Win / Lose / Draw as a baseline
----- Rules -----
+1. __Odd-based model:__
 
-We also take advantage of "dummy classifier" from sklearn library which automatically derive a simple rule for classification
+For experiment 1
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex1/tree-odd.png)
+
+For experiment 2
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-odd.png)
+
+2. __History-Form-based model:__
+
+For experiment 1
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex1/tree-h2h-form.png)
+
+For experiment 2
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-h2h-form.png)
+
+3. __Squad-strength based model:__
+
+For experiment 2
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-ss.png)
 
 __Enhanced Model:__
 
-To beat the baseline model we try to use several machine algorithm as follows
+To beat the baseline models we use all features and several machine algorithms as follows
+
 1. Logistic Regression
-2. SVM
-3. Random Random Forest
-4. Gradient Boosting Tree
-5. ADA Boost Tree
-6. Neural Network
+2. Random Forest
+3. Gradient Boosting Tree
+4. ADA Boost Tree
+5. Neural Network
+6. LightGBM
 
 
 ## Evaluation Criteria
 Models are evaluated on these criteria which are carried out for each label "win", "lose" and "draw"
 - __Precision__: Among our prediction of "True" value, how many percentage we hit?, the higher value, the better prediction
+
 - __Recall__: Among actual "True" value, how many percentage we hit?, the higher value, the better prediction
+
 - __F1__: A balance of Precision and Recall, the higher value, the better prediction, there are 2 types of F1
-  - __F1-micro__:
-  - __F1-macro__:
-- __10-fold cross validation test error__: A reliable estimation of test error of model evaluation (no need to split to train and test)
-- __ROC curve__:
+  - __F1-micro__: compute F1 by aggregating True Positive and False Positive or each class
+  - __F1-macro__: compute F1 independently for each class and take the average (all classed equally)
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/micro-vs-macro-f1.PNG)
+
+In a multi-class classification setup, micro-average is preferable if you suspect there might be class imbalance (i.e you may have many more examples of one class than of other classes). In this case, we should stick with F1-micro
+
+- __10-fold cross validation accuracy__: Mean of accuracy for each cross-validation fold. This is a reliable estimation of test error of model evaluation (no need to split to train and test)
+
+- __Area under ROC__: For binary classification, True Positive Rate vs False Positive Rate for all threshold.
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_intro.png)
 
 # Results
 
-|           Model         |10-fold CV error rate (%)|
-|:-----------------------:|:-------------------:|
-|Logistic Regression      |59.05|
-|SVM                      |59.17|
-|Random Forest            |54.22|
-|Gradient Boosting tree   |57.98|
-|ADA boost tree           |59.01|
-|Neural Net               |60.80|
+__Experiment 1__ "Draw / Lose /Win"
 
-1. __Logistic Regression__
+|           Model         |10-fold CV accuracy (%)| F1 - micro average | AUROC - micro average |
+|:-----------------------:|:---------------------:|:------------------:|:---------------------:|
+|Odd-based Decision Tree  |59.28|60.22|0.76|
+|H2H-Form based Decision Tree  |51.22|51.52|0.66|
+|Logistic Regression      |59.37|59.87|0.76|
+|Random Forest            |54.40|55.92|0.74|
+|Gradient Boosting tree   |58.60|59.47|0.77|
+|ADA boost tree           |59.08|60.22|0.77|
+|Neural Net               |58.96|58.36|0.77|
+|LightGBM                 |59.49|60.28|0.78|
 
-  Best parameters:
-  ```python
-  LogisticRegression(C=0.00046415888336127773, class_weight=None, dual=False,
-          fit_intercept=True, intercept_scaling=1, max_iter=100,
-          multi_class='multinomial', n_jobs=1, penalty='l2',
-          random_state=None, solver='lbfgs', tol=0.0001, verbose=0,
-          warm_start=False)
-  ```
+Results from experiment 1 show little improvement between enhanced models and baseline models based on three evaluation criteria: 10-fold cross validation, F1 and Area Under Curve. A simple Odd-based Decision Tree is enough to classify Win/Draw/Lose . However, according to confusion matrix in [Appendix](#appendix) of experiment 1, we see that most of classifiers failed to classify "Draw" label, only Random Forest and Gradient Boosting Tree can predict "Draw" label, 74 hits and 29 hits respectively. Furthermore, as we mentioned, there is not much difference of classifiers in other criteria so our recommendation for classify "Win / Draw / Lose" is __"Gradient Boosting Tree"__ and __"Random Forest"__
 
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_lr]    | ![alt text][roc_lr]  |
+__Experiment 2__ "Goal Difference"
 
-[cm_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_lr.png
-[roc_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_lr.png
+|           Model         |10-fold CV accuracy (%)| F1 - micro average | AUROC - micro average |
+|:-----------------------:|:---------------------:|:------------------:|:---------------------:|
+|Odd-based Decision Tree  |26.41|25.37|0.62|
+|H2H-Form-based Decision Tree  |16.74|18.94|0.59|
+|Squad-strength-based Decision Tree  |31.64|31.34|0.66|
+|Logistic Regression      |21.39|22.38|0.64|
+|Random Forest            |25.36|25.37|0.60|
+|Gradient Boosting tree   |27.27|16.42|0.58|
+|ADA boost tree           |26.92|16.41|0.59|
+|Neural Net               |22.42|25.37|0.63|
+|LightGBM                 |25.62|20.89|0.57|
 
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.25    |   0.01 |   0.01   |
-| Win   |   0.60    |   0.85 |   0.70   |
-| Lose  |   0.61    |   0.74 |   0.66   |
-| avg / total |   0.51  |    0.60   |   0.52   |
+In experiment 2, "Squad Strength" based Decision Tree tends to superior to other classifiers.
 
-10-fold CV Test accuracy = 0.5905079026832715
+__Experiment 3__ "Goal Difference" and "Win/Draw/Lose" in World Cup 2018
 
-2. __SVM__
+|           Model         |"Goal Difference" Accuracy| "Win/Draw/Lose" Accuracy (%)| F1 - micro average |
+|:-----------------------:|:------------------------:|:---------------------------:|:------------------:|
+|Odd-based Decision Tree              |31.25|48.43|31.25|
+|H2H-Form based Decision Tree         |25.00|34.37|25.00|
+|Squad strength based Decision Tree   |28.12|43.75|28.12|
+|Logistic Regression                  |32.81|57.81|32.81|
+|Random Forest                        |32.81|56.25|32.81|
+|Gradient Boosting tree               |21.87|45.31|21.87|
+|ADA boost tree                       |28.12|51.56|28.12|
+|Neural Net                           |20.31|35.94|20.31|
+|LightGBM                             |32.81|56.25|32.81|
 
-Best parameters:
-```python
-grid_SVM = [{'kernel': ['rbf','linear'], 'C': np.logspace(-6, 0, 3)}]
-SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape='ovr', degree=3, gamma='auto', kernel='linear',
-  max_iter=-1, probability=False, random_state=None, shrinking=True,
-  tol=0.001, verbose=False)
-```
+# Conclusion
 
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_SVM]    | ![alt text][roc_SVM]  |
+In conclusion, odd-based features from bet bookmarkers are reliable to determine who is the winner of matches. However, it is very bad at finding out whether matches end up a draw result. Instead, Ensemble method like Random Forest and Gradient Boosting tree
 
-[cm_SVM]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_svm.png
-[roc_SVM]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_svm.png
-
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.00    |   0.00 |   0.00   |
-| Win   |   0.60    |  0.82  |    0.69   |
-| Lose  |    0.59   |   0.75 |     0.66 |
-| avg / total |   0.44  |    0.59  |    0.51    |
-
-Test Accuracy = 0.591753774680604
-
-3. __Random Forest__
-
-Current parameters:
-```python
-RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
-            max_depth=None, max_features='auto', max_leaf_nodes=None,
-            min_impurity_decrease=0.0, min_impurity_split=None,
-            min_samples_leaf=1, min_samples_split=2,
-            min_weight_fraction_leaf=0.0, n_estimators=2000, n_jobs=-1,
-            oob_score=False, random_state=0, verbose=True,
-            warm_start=False)
-```
-
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_rf]    | N/A  |
-
-[cm_rf]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_rf.png
-
-
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.37    |  0.08  |    0.14   |
-| Win   |   0.60    |  0.80  |    0.68  |
-| Lose  |   0.61    |  0.71  |    0.66    |
-| avg / total |    0.55  |    0.59  |    0.54    |
-
-10-fold CV Test accuracy = 0.5422216762135833
-
-4. __Gradient Boosting tree__
-
-Best parameters:
-```python
-grid_GBT = [{'max_depth': [3,5,7], 'n_estimators': [100,1000,2000]}]
-GradientBoostingClassifier(criterion='friedman_mse', init=None,
-              learning_rate=0.1, loss='deviance', max_depth=3,
-              max_features=None, max_leaf_nodes=None,
-              min_impurity_decrease=0.0, min_impurity_split=None,
-              min_samples_leaf=1, min_samples_split=2,
-              min_weight_fraction_leaf=0.0, n_estimators=100,
-              presort='auto', random_state=0, subsample=1.0, verbose=True,
-              warm_start=False)
-```
-
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_gbt]    | ![alt text][roc_gbt]  |
-
-[cm_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_gbt.png
-[roc_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_gbt.png
-
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.39    |  0.11  |    0.18    |
-| Win   |    0.61   |   0.80 |     0.69   |
-| Lose  |  0.61     | 0.71   |   0.66    |
-| avg / total |   0.56   |   0.60  |    0.55   |
-
-10-fold CV Test accuracy = 0.5798773361822063
-
-5. __ADA boost tree__
-
-Best parameters:
-```python
-grid_ADA = [{'base_estimator': [DT_3,DT_5], 'n_estimators': [100,1000,2000,3000]}]
-AdaBoostClassifier(algorithm='SAMME',
-          base_estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=3,
-            max_features=None, max_leaf_nodes=None,
-            min_impurity_decrease=0.0, min_impurity_split=None,
-            min_samples_leaf=1, min_samples_split=2,
-            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
-            splitter='best'),
-          learning_rate=1, n_estimators=100, random_state=None)
-```
-
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_ada]    | ![alt text][roc_ada]    |
-
-[cm_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_ada.png
-[roc_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/roc_ada.png
-
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |  0.32     | 0.15   |   0.20   |
-| Win   |   0.60    |  0.75  |    0.67  |
-| Lose  |   0.60    |  0.66  |    0.63    |
-| avg / total |   0.53  |    0.57  |    0.54    |
-
-10-fold CV Test accuracy = 0.5901621943365096
-
-6. __Neural Net__
-
-Best parameters:
-```python
-MLPClassifier(hidden_layer_sizes = (13,10), max_iter = 1000, alpha=1e-4,
-                    solver='adam', verbose=True, tol=1e-10, random_state=1, learning_rate_init=.1)
-```
-| Confusion matrix      |       ROC curve      |
-|:---------------------:|:--------------------:|
-| ![alt text][cm_nn]    | N/A  |
-
-[cm_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/cm_nn.png
-
-
-| Label | Precision | Recall | F1-score |
-|:-----:|:---------:|:------:|:--------:|
-| Draw  |   0.00    |   0.00 |   0.00   |
-| Win   |   0.62    |  0.82  |    0.71  |
-| Lose  |   0.59    |  0.80  |    0.68   |
-| avg / total |   0.46   |   0.61  |    0.52  |
-
-
-10-fold CV Test accuracy = 0.60801393728223
+This shows an interesting fact that features from video games can help us to predict what is happening in real life.
+In experiment 3,
 
 
 # Data Source
@@ -500,7 +396,287 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 10. [EURO 2016 bet odd](http://www.oddsportal.com/soccer/europe/euro-2016/results/#/)
 
 # Appendix
-Challenge / Question
-1. If "teamA vs teamB -> win" is equivalent to "teamB vs teamA -> lose", will adding these data make model better? (You actually did it in EDA)
-2. According to "draw" and "win" in average odd? These two labels seem to be different, why performance of "draw" is bad?
-3. How about classification -> regression
+
+__Experiment 1__
+
+1. __Odd-based Decision Tree__:
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_odd]    | ![alt text][roc_odd]  |
+
+[cm_odd]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-odd.png
+[roc_odd]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/roc-odd.png
+
+2. __h2h-Form-based Decision Tree__:
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_h2h]    | ![alt text][roc_h2h]  |
+
+[cm_h2h]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-h2h-form.png
+[roc_h2h]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/roc-h2h-form.png
+
+3. __Logistic Regression__
+
+Best parameters:
+```
+LogisticRegression(C=0.002154434690031882, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='multinomial', n_jobs=1, penalty='l2',
+          random_state=None, solver='lbfgs', tol=0.0001, verbose=0,
+          warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_lr]    | ![alt text][roc_lr]  |
+
+[cm_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-lr.png
+[roc_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/roc-lr.png
+
+2. __Random Forest__
+
+Best parameters:
+```
+RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=15, n_jobs=1,
+            oob_score=False, random_state=85, verbose=0, warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_rf]    | ![alt text][roc_rf] |
+
+[cm_rf]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-rf.png
+[roc_rf]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/roc-lr.png
+
+
+3. __Gradient Boosting tree__
+
+Best parameters:
+```
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=100,
+              presort='auto', random_state=0, subsample=1.0, verbose=False,
+              warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_gbt]    | ![alt text][roc_gbt]  |
+
+[cm_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-gbt.png
+[roc_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/roc-gbt.png
+
+4. __ADA boost tree__
+
+```
+AdaBoostClassifier(algorithm='SAMME',
+          base_estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=3,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
+            splitter='best'),
+          learning_rate=1, n_estimators=100, random_state=0)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_ada]   | ![alt text][roc_ada] |
+
+[cm_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-ada.png
+[roc_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/roc-ada.png
+
+5. __Neural Net__
+
+Best parameters:
+```
+MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(10, 5), learning_rate='constant',
+       learning_rate_init=0.1, max_iter=1000, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='adam', tol=1e-10, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+```
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_nn]    | ![alt text][roc_nn]   |
+
+[cm_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-nn.png
+[roc_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-nn.png
+
+6. __Light GBM__
+
+Best parameters:
+```
+LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+        learning_rate=0.1, max_depth=-1, min_child_samples=20,
+        min_child_weight=0.001, min_split_gain=0.0, n_estimators=20,
+        n_jobs=-1, num_leaves=31, objective=None, random_state=1,
+        reg_alpha=0.0, reg_lambda=0.0, silent=True, subsample=1.0,
+        subsample_for_bin=200000, subsample_freq=0)
+```
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_lgbm]    | ![alt text][roc_lgbm]   |
+
+[cm_lgbm]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-lgbm.png
+[roc_lgbm]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex1/cm-lgbm.png
+
+
+
+__Experiment 2__
+
+1. __Odd-based Decision Tree__:
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_odd]    | ![alt text][roc_odd]  |
+
+[cm_odd]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-odd.png
+[roc_odd]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/roc-odd.png
+
+2. __h2h-Form-based Decision Tree__:
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_h2h]    | ![alt text][roc_h2h]  |
+
+[cm_h2h]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-h2h-form.png
+[roc_h2h]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/roc-h2h-form.png
+
+2. __squad-strength-based Decision Tree__:
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_ss]    | ![alt text][roc_ss]  |
+
+[cm_ss]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cam-ss.png
+[roc_ss]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/roc-ss.png
+
+
+1. __Logistic Regression__
+
+Best parameters:
+```
+LogisticRegression(C=2.1544346900318823e-05, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=100,
+          multi_class='multinomial', n_jobs=1, penalty='l2',
+          random_state=None, solver='lbfgs', tol=0.0001, verbose=0,
+          warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_lr]    | ![alt text][roc_lr]  |
+
+[cm_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-lr.png
+[roc_lr]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/roc-lr.png
+
+2. __Random Forest__
+
+Best parameters:
+```
+RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=15, n_jobs=1,
+            oob_score=False, random_state=85, verbose=0, warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_rf]    | ![alt text][roc_rf] |
+
+[cm_rf]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-rf.png
+[roc_rf]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/roc-lr.png
+
+
+3. __Gradient Boosting tree__
+
+Best parameters:
+```
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=1000,
+              presort='auto', random_state=0, subsample=1.0, verbose=False,
+              warm_start=False)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_gbt]    | ![alt text][roc_gbt]  |
+
+[cm_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-gbt.png
+[roc_gbt]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/roc-gbt.png
+
+4. __ADA boost tree__
+
+```
+AdaBoostClassifier(algorithm='SAMME',
+          base_estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=3,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
+            splitter='best'),
+          learning_rate=1, n_estimators=100, random_state=0)
+```
+
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_ada]   | ![alt text][roc_ada] |
+
+[cm_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-ada.png
+[roc_ada]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/roc-ada.png
+
+5. __Neural Net__
+
+Best parameters:
+```
+MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(30, 15), learning_rate='constant',
+       learning_rate_init=0.1, max_iter=1000, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='adam', tol=1e-10, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+```
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_nn]    | ![alt text][roc_nn]   |
+
+[cm_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-nn.png
+[roc_nn]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-nn.png
+
+6. __Light GBM__
+
+Best parameters:
+```
+LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+        learning_rate=0.1, max_depth=-1, min_child_samples=20,
+        min_child_weight=0.001, min_split_gain=0.0, n_estimators=15,
+        n_jobs=-1, num_leaves=31, objective=None, random_state=1,
+        reg_alpha=0.0, reg_lambda=0.0, silent=True, subsample=1.0,
+        subsample_for_bin=200000, subsample_freq=0)
+```
+| Confusion matrix      |       ROC curve      |
+|:---------------------:|:--------------------:|
+| ![alt text][cm_lgbm]    | ![alt text][roc_lgbm]   |
+
+[cm_lgbm]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-lgbm.png
+[roc_lgbm]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-lgbm.png
