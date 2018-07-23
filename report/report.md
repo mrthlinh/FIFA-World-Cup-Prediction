@@ -3,33 +3,41 @@
 1. [Introduction](#introduction)
 2. [Data](#data):
 3. [Exploratory Data Analysis](#exploratory-data-analysis):
-    1. [Correlation between variables](#correlation-between-variables)
-    2. [How head-to-head matchup history affect the current match?]()
-    3. [How recent performances affect the current match?]()
-    4. [Is ratio-odd usually right? How much are they likely to be correct?]()
-    5. [Do strong teams usually win?]()
-    6. [Data Distrubution in PCA]()
+    1. Correlation between variables
+    2. How head-to-head matchup history affect the current match?
+    3. How recent performances affect the current match?
+    4. Do strong teams usually win?
+    5. Do young players play better than old one ?
+    6. Is short pass better than long pass ?
+    7. How labels distribute in reduced dimension?
 4. [Methodology](#methodology): Details about your procedure
-    1. [Classifiers](#classifiers): Definition and parameters meaning
-        - [Dummy Classifiers]() Define a dummy classifier
-        - [Logistic Regression]()
-        - [Support Vector Machine]()
-        - [Ensemble Trees]()
-        - [Neural Network]()
-    2. [Evaluation Criteria](#evaluation-criteria): Definition, strength and weakness
-        - [Accuracy]()
-        - [Recall, Precision, F1]()
-        - [Out of Bag Error]()
-        - [10-fold cross validation error]()
-    3. [Hyper Parameter Tuning](#hyper-parameter-yuning)
-
-4. [Results](#results)
-5. [Conclusion](#conclusion)
-5. [Data Source](#data-source)
-6. [References](#references)
-7. [Appendix](#appendix)
+5. [Models](#models)
+    1. Baseline models
+      - odd-based model
+      - history and form based model
+      - squad-strength-based model
+    2. Enhance models
+      - Logistic Regression
+      - Random Forest
+      - Gradient Boosting tree
+      - ADA boost tree
+      - Neural Network
+      - Light GBM
+6. [Evaluation Criteria](#evaluation-criteria)
+  - F1
+  - 10-fold Cross Validation accuracy
+  - Area under ROC
+7. [Results](#results)
+8. [Conclusion](#conclusion)
+9. [References](#references)
+10. [Appendix](#appendix)
 
 # Introduction
+
+__Abstract__:
+
+In this work, we compare 9 different modeling approaches for the soccer matches and goal difference on all international matches from 2005 - 2017,  FIFA World Cup 2010 - 2014 and FIFA EURO 2012-2016. Within this comparison, while performance of "Win / Draw / Lose" predictions shows not much difference, "Goal Difference" prediction is quite favored to Random Forest and squad-strength based decision tree. We also apply these models in World Cup 2018 and again, Random Forest and Logistic Regression predicts about 33% acccuracy for "Goal Difference" and about 57% for "Win / Draw / Lose". However a simple decision tree based on bet odd and squad-strength are also comparable.
+
 __Objective__:
 - Prediction of the winner of an international matches Prediction results are  "Win / Lose / Draw" or "goal difference"
 - Apply the model to predict the result of FIFA world cup 2018.
@@ -39,7 +47,6 @@ __Supervisor__: [Pratibha Rathore](https://www.linkedin.com/in/pratibha-rathore/
 __Lifecycle__
 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
-
 
 # Data
 __Data__: The dataset are from all international matches from 2000 - 2018, results, bet odds, ranking, squad strengths.
@@ -104,36 +111,37 @@ __Feature List__ Feature list reflects those four factors.
 
 # Exploratory Data Analysis
 There are few questions in order to understand data better
+
 __Imbalance of data__
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/class_imbalance_1.png.png)
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/class_imbalance_2.png.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/class_imbalance_1.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/class_imbalance_2.png)
 
 __Correlation between variables__
 
 First we draw correlation matrix of large dataset which contains all matches from 2005-2018 with features group 1,2 and 3
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/corr_matrix.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/corr_matrix.png)
 
 In general, features are not correlated. "odd_win_diff" is quite negatively correlated with "form_diff_win" (-0.5), indicating that form of two teams reflex belief of odd bookmarkers on winners. One more interesting point is when difference of bet odd increases we would see more goal differences (correlation score = -0.6).
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/odd-vs-goal.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/odd-vs-goal.png)
 
 Second, we draw correlation matrix of small dataset which contains all matches from World Cup 2010, 2014, 2018 and EURO 2012, 2016
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/corr_matrix_full.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/corr_matrix_full.png)
 
 Overall rating is just an average of "attack", "defense" and "midfield" index therefore we see high correlation between them. In addition, some of new features of squad strength show high correlation for example "FIFA Rank", "Overall rating" and "Difference in winning odd"
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/rank-odd-rating.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/rank-odd-rating.png)
 
 __How head-to-head matchup history affect the current match?__
 
 You may think when head-to-head win difference is positive, match result should be "Win" (Team 1 wins Team 2) and vice versa, when head-to-head win difference is negative, match result should be "Lose" (Team 2 wins Team 1). In fact, positive head-to-head win difference indicates that there is 51.8% chance the match results end up with "Win" and negative head-to-head win difference indicates that there is 55.5% chance the match results end up with "Lose"
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-positive-h2h.png)
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-negative-h2h.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-positive-h2h.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-negative-h2h.png)
 
 Let's perform our hypothesis testing with two-sampled t-test
 Null Hypothesis: There is no difference of 'h2h win difference' between "Win" and "Lose"
 Alternative Hypothesis: There are differences of 'h2h win difference' between "Win" and "Lose"
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/win_diff.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/win_diff.png)
 
 ```
 T-test between win and lose:
@@ -157,10 +165,10 @@ __How 10-recent performances affect the current match?__
 
 We consider differences in "Goal For" (how many goals they got), "Goal Against" (how many goals they conceded), "number of winning matches" and "number of drawing matches". We performed same procedure as previous questions. From pie charts, we can see a clear distinction in "number of wins" where proportion of "Win" result decreases from 49% to 25% while "Lose" result increases from 26.5% to 52.3%.
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-goalF.png)
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-goalA.png)
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-win.png)
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-form-diff-draw.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-form-diff-goalF.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-form-diff-goalA.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-form-diff-win.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-form-diff-draw.png)
 
 Pie charts are not enough we should do the hypothesis testing to see significance of each feature
 
@@ -180,8 +188,8 @@ We define stronger teams based on
  - Higher Overall Rating
 
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-rank.png)
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-rating.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-game-diff-rank.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-game-rating.png)
 
 | Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
 |:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
@@ -194,7 +202,7 @@ __Do young players play better than old one ?__
 
 Young players may have better stamina and more energy while older players have more experience. We want to see how age affects match results.
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-age11.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-game-diff-age11.png)
 
 | Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
 |:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
@@ -205,7 +213,7 @@ Based on t-test and pie chart, we know that the age contributes significantly to
 __Is short pass better than long pass ?__
 Higher value of "Build Up Play Passing" means "Long Pass" and lower value  means "Short Pass", value in middle mean "Mixed-Type Pass"
 
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/pie-game-diff-bup-pass.png)
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/pie-game-diff-bup-pass.png)
 
 | Feature Name  | t-test between 'win' and 'lose' | t-test between 'win' and 'draw' | t-test between 'lose' and 'draw' |
 |:-------------:|:-------------------------------:|:-------------------------------:|:--------------------------------:|
@@ -227,7 +235,7 @@ __How labels distribute in reduced dimension?__
 
   For this question, we use PCA to pick two first principal components which best explained data. Then we plot data in new dimension
 
-   ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/2pc.png)
+   ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/EDA/2pc.png)
 
    While "Win" and "Lose" are while separate, "Draw" seems to be mixed between other labels.
 
@@ -260,23 +268,27 @@ In EDA part, we already investigate importance of features and see that odd, his
 
 1. __Odd-based model:__
 
-For experiment 1
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex1/tree-odd.png)
+| Experiment 1 | Experiment 2 |
+|:------------:|:------------:|
+| ![alt text][tree_odd_1] | ![alt text][tree_odd_2]  |
 
-For experiment 2
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-odd.png)
+[tree_odd_1]:https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex1/tree-odd.png
+[tree_odd_2]:https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-odd.png
 
 2. __History-Form-based model:__
 
-For experiment 1
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex1/tree-h2h-form.png)
+| Experiment 1 | Experiment 2 |
+|:------------:|:------------:|
+| ![alt text][tree_odd_1] | ![alt text][tree_odd_2]  |
 
-For experiment 2
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-h2h-form.png)
+[tree_h2h_1]:https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex1/tree-h2h-form.png
+[tree_h2hd_2]:https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-h2h-form.png
+
 
 3. __Squad-strength based model:__
 
 For experiment 2
+
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/ex2/tree-ss.png)
 
 __Enhanced Model:__
@@ -359,10 +371,7 @@ __Experiment 3__ "Goal Difference" and "Win/Draw/Lose" in World Cup 2018
 
 # Conclusion
 
-In conclusion, odd-based features from bet bookmarkers are reliable to determine who is the winner of matches. However, it is very bad at finding out whether matches end up a draw result. Instead, Ensemble method like Random Forest and Gradient Boosting tree
-
-This shows an interesting fact that features from video games can help us to predict what is happening in real life.
-In experiment 3,
+In conclusion, odd-based features from bet bookmarkers are reliable to determine who is the winner of matches. However, it is very bad at finding out whether matches end up a draw result. Instead, Ensemble method like Random Forest and Gradient Boosting tree are superior in this case. Squad index from FIFA video games provide more information and also contribute significantly for prediction of "Goal Difference". Other complex machine learning models show not much difference against simple odd-based or strength-based tree, this is reasonable because the amount of data are limited and a simple decision tree can provide an easy solution.
 
 
 # Data Source

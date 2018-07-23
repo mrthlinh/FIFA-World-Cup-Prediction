@@ -136,13 +136,6 @@ __Match Day 1__
 10. [EURO 2016 bet odd](http://www.oddsportal.com/soccer/europe/euro-2016/results/#/)
 
 # Task List
-__Ongoing__
-- [ ] Add "Dummy Classifier" based on Odds
-- [ ] Add "FIFA Rank" crawler
-- [ ] Add abnormality detection
-- [ ] Add summary result
-- [ ] Add graph of validation / training curve for hyper-parameters tuning.
-
 __Complete__
 - [x] Add prediction for Matchday 2
 - [x] Add feature Importance
