@@ -82,12 +82,6 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 |game_diff_def_aggr | Squad Strength: difference in Defense Aggression          | [6] |
 |game_diff_def_teamwidth  | Squad Strength: difference in Defense Team Width    | [6] |
 
-## Feature Importance:
-![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/feature_importance.png)
-
-From the graph, we can see that among 4 feature groups "head2head","form", "bet odd" and "squad strength", "bet odd" group plays more important role to predict the match results than other feature groups. In "squad strength" feature, "defense aggression", "build up play passing" and "chance creation Shooting" help us determine goal difference better than other features.
-
-
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
 2. [t-test definition](https://en.wikipedia.org/wiki/Student%27s_t-test)
