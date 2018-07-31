@@ -689,3 +689,43 @@ LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
 
 [cm_lgbm]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-lgbm.png
 [roc_lgbm]: https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/appendix/ex2/cm-lgbm.png
+
+__World Cup 2018 result__
+
+### World Cup 2018
+Now the model is applying for World Cup 2018 in Russia with __simulation time = 100 000__.
+
+__Result Explanation:__
+
+Team A vs Team B __(only valid until 90th minute)__
+
+- "win_1": A wins with 1 goal differences
+- "win_2": A wins with 2 goal differences
+- "win_3": A wins with 3 or more goal differences
+- "lose_1": B wins with 1 goal differences
+- "lose_2": B wins with 2 goal differences
+- "lose_3": A wins with 3 or more goal differences
+- "draw_0": Draw
+
+__Final__ and __Third Place__
+
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_final.PNG)
+
+__Semi_Finals__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_semi.PNG)
+
+__Quarter-Finals__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_quarter.PNG)
+
+__Round of 16_
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_round16.PNG)
+
+__Match Day 3__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday3.PNG)
+
+__Match Day 2__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday2.PNG)
+
+
+__Match Day 1__
+![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/WC_2018_matchday1.PNG)
