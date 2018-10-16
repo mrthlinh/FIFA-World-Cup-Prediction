@@ -17,8 +17,13 @@ __Lifecycle__
 
 ![](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/pic/life_cycle.png)
 
-__Report__:
-Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project
+# Report
+Check the [Full Report](https://github.com/mrthlinh/FIFA-World-Cup-Prediction/blob/master/report/report.md) to gain more insight about this Project. The report contains:  
+- Exploratory Data Analysis: Investigate correlations, importance of features to results, hypothesis interesting
+- Methodology: How I carried out this project, which experiments I did.
+- Models: baseline model, logistic regression, random forest, gradient boosting tree, ADA boost tree, Neural Network.
+- Evaluation Criteria: F1, 10-fold cross validation accuracy
+- Results and Conclusion
 
 # Project Structure
 1. __EDA__: Data Exploratory Analysis
@@ -81,6 +86,14 @@ The dataset are from all international matches from 2000 - 2018, results, bet od
 |game_diff_def_press| Squad Strength: difference in Defense Pressure            | [6] |
 |game_diff_def_aggr | Squad Strength: difference in Defense Aggression          | [6] |
 |game_diff_def_teamwidth  | Squad Strength: difference in Defense Team Width    | [6] |
+
+# How to Run:
+
+```
+python experiment1-W-D-L.py
+python experiment2-GoalDiff.py
+python experiment3-WorldCup.py
+```
 
 # Reference
 1. [A machine learning framework for sport result prediction](https://www.sciencedirect.com/science/article/pii/S2210832717301485)
